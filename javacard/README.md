@@ -125,6 +125,7 @@ collection cover the Classic Edition only.
 |----------|------|
 | Virtual Machine Specification, Classic Edition | `3.0.5/JCVMSpec_3.0.5.pdf` |
 | Runtime Environment Specification, Classic Edition | `3.0.5/JCRESpec_3.0.5.pdf` |
+| Spec + API Javadoc archive | `java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015.tar.gz` |
 
 ### Changes from 2.2.2
 
@@ -153,6 +154,7 @@ Published by Oracle. Provided under the Oracle Technology Network Developer Lice
 |----------|------|
 | Virtual Machine Specification, Classic Edition | `3.1/JCVMSpec_3.1.pdf` |
 | Runtime Environment Specification, Classic Edition | `3.1/JCRESpec_3.1.pdf` |
+| Spec + API Javadoc archive | `java_card_spec-3_1_0-u5-b_70-09_mar_2021.tar.gz` |
 
 ### Changes from 3.0.5
 
@@ -181,6 +183,7 @@ Published by Oracle. The most recent specification version in this collection.
 | Virtual Machine Specification, Classic Edition | `3.2/JCVMSpec_3.2.pdf` |
 | Runtime Environment Specification, Classic Edition | `3.2/JCRESpec_3.2.pdf` |
 | Options List | `3.2/JCOptions_3.2.pdf` |
+| Spec + API Javadoc archive | `java_card_spec-3_2_0-b_185-18_jan_2023.tar.gz` |
 
 ### Changes from 3.1
 

@@ -1,4 +1,4 @@
-# Telecom Standards Collection -- GlobalPlatform / JavaCard / JCOP
+# Electronic Embedded Card Reference/Standards Library
 
 GlobalPlatform, JavaCard, EMV, and JCOP specification collection.
 Run `./download.sh` to fetch or update all freely available documents.
@@ -34,11 +34,14 @@ Run `./download.sh` to fetch or update all freely available documents.
 | JavaCard API | 2.2.2 | API for 2.2.2 applet targets |
 | JCVM Specification | 3.0.5 | Current classic edition (from GitHub mirror) |
 | JCRE Specification | 3.0.5 | Runtime for classic edition |
+| Spec + API Javadoc archive | 3.0.5 | Oracle spec bundle with API documentation |
 | JCVM Specification | 3.1 | Latest normative clarity for ambiguous 2.1.1 areas |
 | JCRE Specification | 3.1 | Latest runtime semantics |
+| Spec + API Javadoc archive | 3.1.0 | Oracle spec bundle with API documentation |
 | JCVM Specification | 3.2 | From GitHub mirror (usasmartcard/Javacard-API) |
 | JCRE Specification | 3.2 | From GitHub mirror |
 | JC Platform Options | 3.2 | Configuration options reference |
+| Spec + API Javadoc archive | 3.2.0 | Oracle spec bundle with API documentation |
 | Applet Developers Guide | -- | From GitHub mirror |
 
 ## IBM JCOP Product Documentation
@@ -65,10 +68,10 @@ Run `./download.sh` to fetch or update all freely available documents.
 | Book 2: Security and Key Management | v4.3 | RSA, SHA-1, certificate chain |
 | Book 3: Application Specification | v4.3 | SELECT, GPO, READ RECORD, auth flow |
 | Book 4: Other Interfaces | v4.3 | Cardholder/attendant interface |
-| Contactless Book A | -- | Architecture overview |
-| Contactless Book B | -- | Entry point protocol |
-| Contactless Book C-2 | -- | Kernel 2 (MasterCard) |
-| Contactless Book D | -- | Communication protocol, ISO 14443-4 |
+| Contactless Book A | v2.6 | Architecture and general requirements |
+| Contactless Book B | v2.6 | Entry point specification |
+| Contactless Book C-2 | v2.6 | Kernel 2 (MasterCard) specification |
+| Contactless Book D | v2.6 | Contactless communication protocol |
 
 ## Research
 
@@ -76,6 +79,17 @@ Run `./download.sh` to fetch or update all freely available documents.
 |----------|-------|
 | CARDIS 2023: JavaCard feature adoption | Certified product + OSS feature coverage |
 | JavaCard Curated Applet List | Ecosystem catalog for certification testing |
+
+## Reference Implementations
+
+| Archive | Notes |
+|---------|-------|
+| Oracle JCDK Simulator (Linux x86) | v25.1, jcsl binary + samples + client libs |
+| Oracle JCDK Simulator (Windows) | v25.1, same contents as Linux variant |
+| Oracle JCDK Tools | v25.1, converter + verifier for CAP files |
+| Oracle JCDK Eclipse Plugin | v25.1, IDE integration for applet development |
+
+See `reference-implementations/README.md` for extraction and usage instructions.
 
 ## Not Freely Available (require account/purchase)
 
