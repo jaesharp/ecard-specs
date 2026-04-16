@@ -1,6 +1,6 @@
 # Telecom Standards Collection -- GlobalPlatform / JavaCard / JCOP
 
-Standards referenced by the simrs GlobalPlatform card emulator implementation.
+GlobalPlatform, JavaCard, EMV, and JCOP specification collection.
 Run `./download.sh` to fetch or update all freely available documents.
 
 ## GlobalPlatform Card Specifications
@@ -76,8 +76,6 @@ Run `./download.sh` to fetch or update all freely available documents.
 |----------|-------|
 | CARDIS 2023: JavaCard feature adoption | Certified product + OSS feature coverage |
 | JavaCard Curated Applet List | Ecosystem catalog for certification testing |
-| GP/JavaCard Security Vulnerabilities | SCP02 padding oracle, VM type confusion, EMV logical flaws |
-| JavaCard Bytecode Attacks | 7 families of bytecode-level JCVM attacks from literature |
 
 ## Not Freely Available (require account/purchase)
 
