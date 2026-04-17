@@ -1,4 +1,5 @@
-@jcre @apdu-dispatch
+@jcre
+@apdu-dispatch
 Feature: APDU Command Dispatching
   The Java Card RE intercepts all APDU messages coming into the card, performs
   card management functions (such as selecting or deselecting applet instances),
@@ -6,10 +7,9 @@ Feature: APDU Command Dispatching
   dispatches APDUs based on the CLA byte logical channel encoding and the command
   type (SELECT FILE, MANAGE CHANNEL, or other).
 
-  # Source: [JCRE 3.0.5, s4 Logical Channels and Applet Selection](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
-  # Source: [JCRE 3.1, s4 Logical Channels and Applet Selection](../refs/3.1/JCRESpec_3.1.pdf#page=27)
-  # Source: [JCRE 3.2, s4 Logical Channels and Applet Selection](../refs/3.2/JCRESpec_3.2.pdf#page=27)
-
+  # Source: [JCRE 3.0.5, s4 Logical Channels and Applet Selection](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
+  # Source: [JCRE 3.1, s4 Logical Channels and Applet Selection](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
+  # Source: [JCRE 3.2, s4 Logical Channels and Applet Selection](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
   Background:
     Given a Java Card secure element with a compliant JCRE implementation
     And the Java Card RE is initialized
@@ -18,31 +18,36 @@ Feature: APDU Command Dispatching
   # ---------------------------------------------------------------------------
   # 4.4 Forwarding APDU Commands To a Logical Channel
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
-  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.1/JCRESpec_3.1.pdf#page=34)
-  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
+  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.1/JCRESpec_3.1.pdf#page=34)
+  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: CLA byte logical channel encoding - Type 4
     Given the platform supports Type 4 logical channel encoding
     Then interindustry CLA byte values 0x0X and 0x1X encode channel numbers 0-3 in bits (b2,b1)
     And proprietary CLA byte values 0x8X, 0x9X, 0xAX, 0xBX encode channel numbers 0-3
     And the two least significant bits (b2,b1) of the X nibble encode channel numbers 0-3
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
-  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.1/JCRESpec_3.1.pdf#page=34)
-  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
+  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.1/JCRESpec_3.1.pdf#page=34)
+  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: CLA byte logical channel encoding - Type 16
     Given the platform supports Type 16 logical channel encoding
     Then interindustry CLA byte values 0x4Y, 0x5Y, 0x6Y, 0x7Y encode channel numbers 4-19 in nibble Y (b4-b1)
     And proprietary CLA byte values 0xCY, 0xDY, 0xEY, 0xFY encode channel numbers 4-19
     And CLA byte 0xFX cannot encode logical channel 19 because CLA=0xFF is reserved for Protocol Type Selection
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
-  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.1/JCRESpec_3.1.pdf#page=34)
-  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
+  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.1/JCRESpec_3.1.pdf#page=34)
+  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: APDU dispatching by CLA byte channel information
     Given an APDU command is received
     When the Java Card RE processes the CLA byte
@@ -50,10 +55,12 @@ Feature: APDU Command Dispatching
     And if logical channel information is encoded, the card dispatches the APDU to the appropriate logical channel
     And all other APDU commands are forwarded to the basic logical channel (channel 0) on that I/O interface
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
-  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.1/JCRESpec_3.1.pdf#page=34)
-  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  # Source: [JCRE 3.0.5, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=31)
+  # Source: [JCRE 3.1, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.1/JCRESpec_3.1.pdf#page=34)
+  # Source: [JCRE 3.2, s4.4 Forwarding APDU Commands To a Logical Channel](../../refs/3.2/JCRESpec_3.2.pdf#page=34)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: APDU forwarded as-is to applet
     Given the Java Card RE dispatches an APDU to an applet instance
     Then the Java Card RE always forwards the command "as is" to the appropriate applet instance
@@ -63,11 +70,12 @@ Feature: APDU Command Dispatching
   # ---------------------------------------------------------------------------
   # 4.6.2 Applet Selection with SELECT FILE
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.6.2 Applet Selection with SELECT FILE](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=35)
-  # Source: [JCRE 3.1, s4.6.2 Applet Selection with SELECT FILE](../refs/3.1/JCRESpec_3.1.pdf#page=39)
-  # Source: [JCRE 3.2, s4.6.2 Applet Selection with SELECT FILE](../refs/3.2/JCRESpec_3.2.pdf#page=39)
+  # Source: [JCRE 3.0.5, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=35)
+  # Source: [JCRE 3.1, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.1/JCRESpec_3.1.pdf#page=39)
+  # Source: [JCRE 3.2, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.2/JCRESpec_3.2.pdf#page=39)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: SELECT FILE step-by-step processing
     Given the Java Card RE receives a SELECT FILE command on an I/O interface
     # Step 1: CLA byte and DF Name
@@ -100,10 +108,12 @@ Feature: APDU Command Dispatching
     And a context switch into the applet instance's context occurs
     And the response from process is sent as the response to the SELECT FILE command
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.6.2 Applet Selection with SELECT FILE](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=35)
-  # Source: [JCRE 3.1, s4.6.2 Applet Selection with SELECT FILE](../refs/3.1/JCRESpec_3.1.pdf#page=39)
-  # Source: [JCRE 3.2, s4.6.2 Applet Selection with SELECT FILE](../refs/3.2/JCRESpec_3.2.pdf#page=39)
+  # Source: [JCRE 3.0.5, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=35)
+  # Source: [JCRE 3.1, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.1/JCRESpec_3.1.pdf#page=39)
+  # Source: [JCRE 3.2, s4.6.2 Applet Selection with SELECT FILE](../../refs/3.2/JCRESpec_3.2.pdf#page=39)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Reselection of already-active applet still deselects first
     Given an applet is the active applet instance on a specified logical channel
     When a SELECT FILE command with the same matching AID is received on the same channel
@@ -113,11 +123,12 @@ Feature: APDU Command Dispatching
   # ---------------------------------------------------------------------------
   # 4.7 Applet Deselection
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.7 Applet Deselection](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=38)
-  # Source: [JCRE 3.1, s4.7 Applet Deselection](../refs/3.1/JCRESpec_3.1.pdf#page=41)
-  # Source: [JCRE 3.2, s4.7 Applet Deselection](../refs/3.2/JCRESpec_3.2.pdf#page=42)
+  # Source: [JCRE 3.0.5, s4.7 Applet Deselection](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=38)
+  # Source: [JCRE 3.1, s4.7 Applet Deselection](../../refs/3.1/JCRESpec_3.1.pdf#page=41)
+  # Source: [JCRE 3.2, s4.7 Applet Deselection](../../refs/3.2/JCRESpec_3.2.pdf#page=42)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Applet deselection procedure
     Given an applet instance is being deselected (MANAGE CHANNEL CLOSE or SELECT FILE for different applet)
     When the applet is active on more than one logical channel or another applet from the same context is also active
@@ -132,30 +143,35 @@ Feature: APDU Command Dispatching
   # ---------------------------------------------------------------------------
   # 4.8 Other Command Processing
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
-  # Source: [JCRE 3.1, s4.8 Other Command Processing](../refs/3.1/JCRESpec_3.1.pdf#page=42)
-  # Source: [JCRE 3.2, s4.8 Other Command Processing](../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
+  # Source: [JCRE 3.1, s4.8 Other Command Processing](../../refs/3.1/JCRESpec_3.1.pdf#page=42)
+  # Source: [JCRE 3.2, s4.8 Other Command Processing](../../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Non-SELECT non-MANAGE-CHANNEL APDU dispatching
     Given an APDU other than SELECT FILE or MANAGE CHANNEL is received
     When the logical channel is determined from the CLA byte
     And the logical channel number is unsupported or the channel is not open
     Then the RE responds with 0x6881 (SW_LOGICAL_CHANNEL_NOT_SUPPORTED)
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
-  # Source: [JCRE 3.1, s4.8 Other Command Processing](../refs/3.1/JCRESpec_3.1.pdf#page=42)
-  # Source: [JCRE 3.2, s4.8 Other Command Processing](../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
+  # Source: [JCRE 3.1, s4.8 Other Command Processing](../../refs/3.1/JCRESpec_3.1.pdf#page=42)
+  # Source: [JCRE 3.2, s4.8 Other Command Processing](../../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: No active applet on logical channel for other command
     Given an APDU other than SELECT FILE or MANAGE CHANNEL is received
     And no active applet instance exists on the logical channel for dispatching
     Then the RE responds with 0x6999 (SW_APPLET_SELECT_FAILED)
 
-  @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
-  # Source: [JCRE 3.1, s4.8 Other Command Processing](../refs/3.1/JCRESpec_3.1.pdf#page=42)
-  # Source: [JCRE 3.2, s4.8 Other Command Processing](../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  # Source: [JCRE 3.0.5, s4.8 Other Command Processing](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=39)
+  # Source: [JCRE 3.1, s4.8 Other Command Processing](../../refs/3.1/JCRESpec_3.1.pdf#page=42)
+  # Source: [JCRE 3.2, s4.8 Other Command Processing](../../refs/3.2/JCRESpec_3.2.pdf#page=43)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Context switch on other command dispatch to applet
     Given an APDU other than SELECT FILE or MANAGE CHANNEL is received
     And there is an active applet instance on the logical channel

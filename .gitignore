@@ -2,6 +2,7 @@
 *.swo
 *~
 .DS_Store
+node_modules/
 
 # Extracted spec/SDK archives (tracked as .tar.gz via LFS, extracted locally)
 javacard/java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/
