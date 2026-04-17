@@ -1,0 +1,22 @@
+name: Format Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Install tools
+        run: npm --prefix tools ci
+
+      - name: Check formatting
+        run: cd tools && npm test

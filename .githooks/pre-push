@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Pre-push hook: fail if markdown or gherkin files are not formatted.
+# Activate: git config core.hooksPath .githooks  (or run tools/setup.sh)
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+if [ ! -d "$REPO_ROOT/tools/node_modules" ]; then
+  echo "pre-push: tools not installed, run 'npm --prefix tools install' first"
+  exit 1
+fi
+
+echo "pre-push: checking formatting..."
+cd "$REPO_ROOT" && npx --prefix tools prettier --check '**/*.md' '**/*.feature'
