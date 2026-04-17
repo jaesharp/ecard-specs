@@ -1,0 +1,184 @@
+Preface|Preface|14
+Preface.1|Who Should Use This Specification|14
+Preface.2|Before You Read This Specification|14
+Preface.3|Shell Prompts|14
+Preface.4|Typographic Conventions|15
+Preface.5|Related Documentation|15
+Preface.6|Third-Party Web Sites|15
+Preface.7|Documentation Accessibility|16
+Preface.8|Access to Oracle Support|16
+Preface.9|Oracle Welcomes Your Comments|16
+1|Introduction|17
+2|Lifetime of the Java Card Virtual Machine|19
+2.1|Initialization|19
+3|Java Card Applet Lifetime|21
+3.1|install Method|21
+3.2|select Method|22
+3.3|process Method|22
+3.4|deselect Method(s)|23
+3.5|uninstall Method|23
+3.6|Power Loss and Reset|23
+3.6.1|Concurrent Operations Over Multiple Interfaces|24
+4|Logical Channels and Applet Selection|27
+4.1|Logical Channels Overview|27
+4.2|Default Applets|30
+4.2.1|Card Reset Behavior|30
+4.2.2|Proximity Card (PICC) Activation Behavior|31
+4.2.3|Default Applet Selection Behavior on Opening a New Channel|31
+4.3|Multiselectable Applets|32
+4.4|Forwarding APDU Commands To a Logical Channel|34
+4.5|Opening and Closing Logical Channels|36
+4.5.1|MANAGE CHANNEL Command Processing|36
+4.6|Applet Selection|37
+4.6.1|Applet Selection with MANAGE CHANNEL OPEN|37
+4.6.2|Applet Selection with SELECT FILE|39
+4.7|Applet Deselection|41
+4.7.1|MANAGE CHANNEL CLOSE Command|42
+4.8|Other Command Processing|42
+5|Memory Model|45
+5.1|Transient Objects|46
+5.1.1|Transient Objects Characteristics|46
+5.1.2|Events That Clear Transient Objects|46
+5.2|Temporary Objects|47
+5.3|Array views|48
+5.3.1|Characteristics of an Array View|48
+5.3.2|Creating and Using an Array View|49
+6|Applet Isolation and Object Sharing|51
+6.1|Applet Firewall|51
+6.1.1|Firewall Protection|51
+6.1.2|Contexts and Context Switching|51
+6.1.2.1|Active Contexts in the VM|52
+6.1.2.2|Context Switching in the VM|53
+6.1.3|Object Ownership|53
+6.1.4|Object Access|54
+6.1.5|Transient Objects and Contexts|55
+6.1.6|Static Fields and Methods|56
+6.1.6.1|Optional Static Access Checks|56
+6.2|Object Access Across Contexts|56
+6.2.1|Java Card RE Entry Point Objects|56
+6.2.2|Sharing Arrays|57
+6.2.2.1|Sharing using Global Arrays|58
+6.2.2.2|Sharing using Array Views|58
+6.2.3|Java Card RE Privileges|58
+6.2.4|Shareable Interfaces|59
+6.2.4.1|Server Applet A Builds a Shareable Interface Object|59
+6.2.4.2|Client Applet B Obtains the Shareable Interface Object|60
+6.2.4.3|Client Applet B Requests Services from Applet A|60
+6.2.5|Determining the Previous Context|61
+6.2.5.1|Java Card RE Context|61
+6.2.6|Shareable Interface Details|61
+6.2.6.1|Java Card API Shareable Interface|61
+6.2.7|Obtaining Shareable Interface Objects|62
+6.2.7.1|Applet.getShareableInterfaceObject(AID, byte) Method|62
+6.2.7.2|JCSystem.getAppletShareableInterfaceObject Method|62
+6.2.8|Class and Object Access Behavior|63
+6.2.8.1|Accessing Static Class Fields|63
+6.2.8.2|Accessing Array Objects|64
+6.2.8.3|Accessing Class Instance Object Fields|64
+6.2.8.4|Accessing Class Instance Object Methods|64
+6.2.8.5|Accessing Standard Interface Methods|65
+6.2.8.6|Accessing Shareable Interface Methods|65
+6.2.8.7|Throwing Exception Objects|65
+6.2.8.8|Accessing Classes|65
+6.2.8.9|Accessing Standard Interfaces|66
+6.2.8.10|Accessing Shareable Interfaces|66
+6.2.8.11|Accessing Array Object Methods|66
+7|Transactions and Atomicity|67
+7.1|Atomicity|67
+7.2|Transactions|67
+7.3|Transaction Duration|68
+7.4|Nested Transactions|68
+7.5|Tear or Reset Transaction Failure|68
+7.6|Aborting a Transaction|68
+7.6.1|Programmatic Abortion|69
+7.6.2|Abortion by the Java Card RE|69
+7.6.3|Cleanup Responsibilities of the Java Card RE|69
+7.7|Transient Objects and Global Arrays|69
+7.8|Commit Capacity|69
+7.9|Context Switching|70
+8|Remote Method Invocation|71
+8.1|Java Card Platform RMI|71
+8.1.1|Remote Objects|71
+8.1.1.1|Parameters and Return Values|71
+8.1.1.2|Exceptions|72
+8.1.1.3|Functional Limitations|72
+8.2|RMI Messages|72
+8.2.1|Applet Selection|73
+8.2.2|Method Invocation|73
+8.3|Data Formats|73
+8.3.1|Remote Object Identifier|74
+8.3.2|Remote Object Reference Descriptor|74
+8.3.3|Method Identifier|76
+8.3.4|Parameter Encoding|76
+8.3.4.1|Primitive Data Type Parameter Encoding|77
+8.3.4.2|Array Parameter Encoding|77
+8.3.5|Return Value Encoding|78
+8.3.5.1|Normal Response Encoding|78
+8.3.5.2|Exception Response Encoding|79
+8.3.5.3|Error Response Encoding|80
+8.4|APDU Command Formats|80
+8.4.1|SELECT FILE Command|80
+8.4.2|INVOKE Command|82
+8.5|RMIServiceClass|83
+8.5.1|setInvokeInstructionByte Method|83
+8.5.2|processCommand Method|84
+8.5.2.1|Allocation of Incoming Objects|85
+9|API Topics|87
+9.1|Resource Use Within the API|87
+9.2|Exceptions Thrown by API Classes|87
+9.3|Transactions Within the API|87
+9.4|APDU Class|87
+9.4.1|T=0 Specifics for Outgoing Data Transfers|87
+9.4.1.1|Constrained Transfers With No Chaining|88
+9.4.1.1.1|Notation|88
+9.4.1.1.2|ISO 7816-4 CASE 2|88
+9.4.1.1.3|ISO 7816-4 CASE 4|89
+9.4.1.2|Regular Output Transfers|89
+9.4.1.3|Additional T=0 Requirements|89
+9.4.2|T=1 Specifics for Outgoing Data Transfers|90
+9.4.2.1|Constrained Transfers With No Chaining|90
+9.4.2.1.1|Notation|90
+9.4.2.2|Regular Output Transfers|91
+9.4.2.2.1|Chain Abortion by the CAD|91
+9.4.3|T=1 Specifics for Incoming Data Transfers|91
+9.4.3.1|Incoming Transfers Using Chaining|91
+9.4.3.1.1|Chain Abortion by the CAD|91
+9.4.4|Extended Length APDU Specifics|92
+9.4.4.1|Extended Length API Semantics|92
+9.4.4.1.1|Applet.process(APDU) Method|92
+9.4.4.1.2|APDU.setIncomingAndReceive() Method|93
+9.4.4.1.3|APDU.receiveBytes(short) Method|93
+9.4.4.1.4|APDU.setOutgoing() Method|93
+9.4.4.1.5|APDU.setOutgoingLength(short) Method|93
+9.4.4.1.6|APDU.sendBytes(short, short), APDU.sendBytesLong(byte[],short, short) Methods|93
+9.4.5|Checking APDU consistency|94
+9.5|Security and Crypto Packages|95
+9.6|JCSystem Class|96
+9.7|SensitiveResult Class|96
+9.8|Optional Extension Packages|96
+10|Virtual Machine Topics|99
+10.1|Resource Failures|99
+10.2|Security Violations|99
+11|Applet Installation and Deletion|101
+11.1|The Installer|101
+11.1.1|Installer Implementation|102
+11.1.2|Installer AID|102
+11.1.3|Installer APDUs|102
+11.1.4|CAP File Versions|103
+11.1.5|Installer Behavior|103
+11.1.6|Installer Privileges|104
+11.2|The Newly Installed Applet|104
+11.2.1|Installation Parameters|105
+11.3|The Applet Deletion Manager|105
+11.3.1|Applet Deletion Manager Implementation|106
+11.3.2|Applet Deletion Manager AID|106
+11.3.3|Applet Deletion Manager APDUs|106
+11.3.4|Applet Deletion Manager Behavior|107
+11.3.4.1|Invocation of the Method javacard.framework.AppletEvent.uninstall|107
+11.3.4.2|Applet Instance Deletion|108
+11.3.4.2.1|Multiple Applet Instance Deletion|108
+11.3.4.3|Applet/Library CAP file Deletion|109
+11.3.4.4|Applet CAP file and Contained Instances Deletion|110
+11.3.5|Applet Deletion Manager Privileges|111
+Glossary|Glossary|113
+Annex A|Oracle Technology Network Developer License Terms|129

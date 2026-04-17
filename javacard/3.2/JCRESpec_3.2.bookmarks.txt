@@ -1,0 +1,501 @@
+Preface|Preface|14
+Preface.1|Who Should Use This Specification|14
+Preface.2|Before You Read This Specification|14
+Preface.3|Shell Prompts|14
+Preface.4|Typographic Conventions|15
+Preface.5|Related Documentation|15
+Preface.6|Third-Party Web Sites|15
+Preface.7|Documentation Accessibility|16
+Preface.8|Access to Oracle Support|16
+Preface.9|Oracle Welcomes Your Comments|16
+1|Introduction|17
+2|Lifetime of the Java Card Virtual Machine|19
+2.1|Initialization|19
+3|Java Card Applet Lifetime|21
+3.1|install Method|21
+3.2|select Method|22
+3.3|process Method|22
+3.4|deselect Method(s)|23
+3.5|uninstall Method|23
+3.6|Power Loss and Reset|23
+3.6.1|Concurrent Operations Over Multiple Interfaces|24
+4|Logical Channels and Applet Selection|27
+4.1|Logical Channels Overview|27
+4.2|Default Applets|30
+4.2.1|Card Reset Behavior|31
+4.2.2|Proximity Card (PICC) Activation Behavior|31
+4.2.3|Default Applet Selection Behavior on Opening a New Channel|32
+4.3|Multiselectable Applets|32
+4.4|Forwarding APDU Commands To a Logical Channel|34
+4.5|Opening and Closing Logical Channels|36
+4.5.1|MANAGE CHANNEL Command Processing|37
+4.6|Applet Selection|37
+4.6.1|Applet Selection with MANAGE CHANNEL OPEN|38
+4.6.2|Applet Selection with SELECT FILE|39
+4.7|Applet Deselection|42
+4.7.1|MANAGE CHANNEL CLOSE Command|42
+4.8|Other Command Processing|43
+5|Memory Model|47
+5.1|Transient Objects|48
+5.1.1|Transient Objects Characteristics|48
+5.1.2|Events That Clear Transient Objects|48
+5.2|Temporary Objects|49
+5.3|Array views|50
+5.3.1|Characteristics of an Array View|50
+5.3.2|Creating and Using an Array View|51
+6|Applet Isolation and Object Sharing|53
+6.1|Applet Firewall|53
+6.1.1|Firewall Protection|53
+6.1.2|Contexts and Context Switching|53
+6.1.2.1|Active Contexts in the VM|54
+6.1.2.2|Context Switching in the VM|55
+6.1.3|Object Ownership|55
+6.1.4|Object Access|56
+6.1.5|Transient Objects and Contexts|57
+6.1.6|Static Fields and Methods|58
+6.1.6.1|Optional Static Access Checks|58
+6.2|Object Access Across Contexts|58
+6.2.1|Java Card RE Entry Point Objects|58
+6.2.2|Sharing Arrays|59
+6.2.2.1|Sharing using Global Arrays|60
+6.2.2.2|Sharing using Array Views|60
+6.2.3|Java Card RE Privileges|60
+6.2.4|Shareable Interfaces|61
+6.2.4.1|Server Applet A Builds a Shareable Interface Object|61
+6.2.4.2|Client Applet B Obtains the Shareable Interface Object|62
+6.2.4.3|Client Applet B Requests Services from Applet A|62
+6.2.5|Determining the Previous Context|63
+6.2.5.1|Java Card RE Context|63
+6.2.6|Shareable Interface Details|63
+6.2.6.1|Java Card API Shareable Interface|63
+6.2.7|Obtaining Shareable Interface Objects|64
+6.2.7.1|Applet.getShareableInterfaceObject(AID, byte) Method|64
+6.2.7.2|JCSystem.getAppletShareableInterfaceObject Method|64
+6.2.8|Class and Object Access Behavior|65
+6.2.8.1|Accessing Static Class Fields|65
+6.2.8.2|Accessing Array Objects|66
+6.2.8.3|Accessing Class Instance Object Fields|66
+6.2.8.4|Accessing Class Instance Object Methods|66
+6.2.8.5|Accessing Standard Interface Methods|67
+6.2.8.6|Accessing Shareable Interface Methods|67
+6.2.8.7|Throwing Exception Objects|67
+6.2.8.8|Accessing Classes|67
+6.2.8.9|Accessing Standard Interfaces|68
+6.2.8.10|Accessing Shareable Interfaces|68
+6.2.8.11|Accessing Array Object Methods|68
+7|Transactions and Atomicity|69
+7.1|Atomicity|69
+7.2|Transactions|69
+7.3|Transaction Duration|70
+7.4|Nested Transactions|70
+7.5|Tear or Reset Transaction Failure|70
+7.6|Aborting a Transaction|70
+7.6.1|Programmatic Abortion|71
+7.6.2|Abortion by the Java Card RE|71
+7.6.3|Cleanup Responsibilities of the Java Card RE|71
+7.7|Transient Objects and Global Arrays|71
+7.8|Commit Capacity|71
+7.9|Context Switching|72
+8|Remote Method Invocation|73
+8.1|Java Card Platform RMI|73
+8.1.1|Remote Objects|73
+8.1.1.1|Parameters and Return Values|73
+8.1.1.2|Exceptions|74
+8.1.1.3|Functional Limitations|74
+8.2|RMI Messages|74
+8.2.1|Applet Selection|75
+8.2.2|Method Invocation|75
+8.3|Data Formats|75
+8.3.1|Remote Object Identifier|76
+8.3.2|Remote Object Reference Descriptor|76
+8.3.3|Method Identifier|78
+8.3.4|Parameter Encoding|78
+8.3.4.1|Primitive Data Type Parameter Encoding|79
+8.3.4.2|Array Parameter Encoding|79
+8.3.5|Return Value Encoding|80
+8.3.5.1|Normal Response Encoding|80
+8.3.5.2|Exception Response Encoding|81
+8.3.5.3|Error Response Encoding|82
+8.4|APDU Command Formats|82
+8.4.1|SELECT FILE Command|82
+8.4.2|INVOKE Command|84
+8.5|RMIServiceClass|85
+8.5.1|setInvokeInstructionByte Method|85
+8.5.2|processCommand Method|86
+8.5.2.1|Allocation of Incoming Objects|87
+9|API Topics|89
+9.1|Resource Use Within the API|89
+9.2|Exceptions Thrown by API Classes|89
+9.3|Transactions Within the API|89
+9.4|APDU Class|89
+9.4.1|T=0 Specifics for Outgoing Data Transfers|89
+9.4.1.1|Constrained Transfers With No Chaining|90
+9.4.1.1.1|Notation|90
+9.4.1.1.2|ISO 7816-4 CASE 2|90
+9.4.1.1.3|ISO 7816-4 CASE 4|91
+9.4.1.2|Regular Output Transfers|91
+9.4.1.3|Additional T=0 Requirements|91
+9.4.2|T=1 Specifics for Outgoing Data Transfers|92
+9.4.2.1|Constrained Transfers With No Chaining|92
+9.4.2.1.1|Notation|92
+9.4.2.2|Regular Output Transfers|93
+9.4.2.2.1|Chain Abortion by the CAD|93
+9.4.3|T=1 Specifics for Incoming Data Transfers|93
+9.4.3.1|Incoming Transfers Using Chaining|93
+9.4.3.1.1|Chain Abortion by the CAD|93
+9.4.4|Extended Length APDU Specifics|94
+9.4.4.1|Extended Length API Semantics|94
+9.4.4.1.1|Applet.process(APDU) Method|94
+9.4.4.1.2|APDU.setIncomingAndReceive() Method|95
+9.4.4.1.3|APDU.receiveBytes(short) Method|95
+9.4.4.1.4|APDU.setOutgoing() Method|95
+9.4.4.1.5|APDU.setOutgoingLength(short) Method|95
+9.4.4.1.6|APDU.sendBytes(short, short), APDU.sendBytesLong(byte[],short, short) Methods|95
+9.4.5|Checking APDU consistency|96
+9.5|Security and Crypto Packages|97
+9.6|JCSystem Class|98
+9.7|SensitiveResult Class|98
+9.8|Optional Extension Packages|98
+10|Virtual Machine Topics|101
+10.1|Resource Failures|101
+10.2|Security Violations|101
+11|Applet Installation and Deletion|103
+11.1|The Installer|103
+11.1.1|Installer Implementation|104
+11.1.2|Installer AID|104
+11.1.3|Installer APDUs|104
+11.1.4|CAP File Versions|105
+11.1.5|Installer Behavior|105
+11.1.6|Installer Privileges|106
+11.2|The Newly Installed Applet|106
+11.2.1|Installation Parameters|107
+11.3|The Applet Deletion Manager|107
+11.3.1|Applet Deletion Manager Implementation|108
+11.3.2|Applet Deletion Manager AID|108
+11.3.3|Applet Deletion Manager APDUs|108
+11.3.4|Applet Deletion Manager Behavior|109
+11.3.4.1|Invocation of the Method javacard.framework.AppletEvent.uninstall|109
+11.3.4.2|Applet Instance Deletion|110
+11.3.4.2.1|Multiple Applet Instance Deletion|110
+11.3.4.3|Applet/Library CAP file Deletion|111
+11.3.4.4|Applet CAP file and Contained Instances Deletion|112
+11.3.5|Applet Deletion Manager Privileges|113
+Glossary|Glossary|115
+Annex A|Oracle Technology Network Developer License Terms|131
+3.1.method|install(byte[],short,byte) Method - Applet Registration|21
+3.1.register|Applet.register Method Call During Install|21
+3.1.unsuccessful|Unsuccessful Installation Conditions|21
+3.2.method|select Method - Applet Selection Notification|22
+3.2.decline|Applet Declining Selection (return false or throw exception)|22
+3.2.selectingApplet|Applet.selectingApplet Returns True During select|22
+3.2.selectionFailure|SW_APPLET_SELECT_FAILED on Selection Failure|22
+3.3.method|process(APDU) Method - Command Dispatching|22
+3.3.statusWord|Automatic 0x9000 Status Word on Normal Return|23
+3.3.transactionAbort|Transaction Abort on Normal Return During Active Transaction|23
+3.3.ISOException|ISOException Thrown During process|23
+3.3.otherException|Other Exception During process Returns SW_UNKNOWN|23
+3.4.method|deselect Method - Cleanup on Applet Switch|23
+3.4.multiselectable|MultiSelectable.deselect for Concurrent Selection|23
+3.4.selectingApplet|Applet.selectingApplet Returns False During deselect|23
+3.4.exceptionCaught|Exceptions from deselect Caught by Java Card RE|23
+3.5.method|uninstall Method - AppletEvent Interface|23
+3.5.deletionNotification|Java Card RE Calls uninstall Before Deletion|23
+3.6.powerLossConditions|Power Loss Conditions (RF loss, DESELECT, SWP, mechanical)|23
+3.6.resetBehavior|Card Reset Behavior (warm or cold)|24
+3.6.transientReset|Transient Data Reset to Default on Card Reset|24
+3.6.transactionAbortOnReset|Transaction in Progress Aborted on Reset|24
+3.6.implicitDeselect|Applet Instances Implicitly Deselected on Reset|24
+3.6.defaultAppletOnReset|Default Applet Selected on Channel 0 After Reset|24
+3.6.1.contactlessReset|Contactless I/O Interface Reset Conditions|24
+3.6.1.contactlessResetBehavior|Contactless Reset Behavior (deselect, close channels, clear transient)|25
+3.6.1.contactedResetBehavior|Contacted I/O Interface Reset Behavior|25
+Figure 4-1|Logical Channels for Distinct Applets|29
+4.1.activeAppletInstance|Active Applet Instance Definition|29
+4.1.currentlySelected|Currently Selected Applet Instance Definition|29
+4.1.noAppletActive|Conditions When No Applet Is Active|30
+4.2.defaultCardApplet|Default Card Applet Instance Designation|30
+4.2.defaultPerChannel|Default Applet Per Logical Channel|30
+4.2.basicLogicalChannel|Basic Logical Channel (Channel 0) on Reset|30
+4.2.1.cardResetSteps|Card Reset Behavior Steps|31
+4.2.2.PICCActivationSteps|PICC Activation Behavior Steps|31
+4.2.3.defaultOnNewChannel|Default Applet Selection on New Channel Open|32
+4.3.multiselectable|Multiselectable Applets - MultiSelectable Interface|32
+4.3.contextActive|Applet Context Active Definition|32
+4.3.multiselectionAttempt|Multiselection Attempt Definition|32
+4.3.multiSelectableSelect|MultiSelectable.select During Multiselection|33
+4.3.multiSelectableDeselect|MultiSelectable.deselect During Deselection|33
+4.3.case1|Multiselection Case 1 - Two Instances Same Context|33
+4.3.case2|Multiselection Case 2 - Same Instance Multiple Channels|33
+Figure 4-2|Different Applet Instances in Same Context|33
+Figure 4-3|Same Applet Instance Selected on Multiple Logical Channels|34
+4.4.CLAbyteEncoding|CLA Byte Logical Channel Encoding|34
+Table 4-1|Notation for Following Tables|35
+Table 4-2|ISO 7816-4:2013 Interindustry CLA Semantics|35
+Table 4-3|Java Card Technology Proprietary CLA Semantics|36
+4.4.CLAparsingMethods|CLA Byte Parsing Methods (isISOInterindustryCLA, etc.)|36
+4.5.openChannelMethods|Two Ways to Open Logical Channels|36
+4.5.1.manageChannelOpen|MANAGE CHANNEL OPEN Command Processing|37
+4.5.1.manageChannelClose|MANAGE CHANNEL CLOSE Command Processing|37
+4.6.1.step1|MANAGE CHANNEL OPEN Step 1 - CLA and Variant Parsing|38
+4.6.1.step2|MANAGE CHANNEL OPEN Step 2 - Origin Channel Not Open Check|38
+4.6.1.step3|MANAGE CHANNEL OPEN Step 3 - Basic Channel Only Check|38
+4.6.1.step4|MANAGE CHANNEL OPEN Step 4 - P2=0 Variant Length and Resources|38
+4.6.1.step5|MANAGE CHANNEL OPEN Step 5 - P2!=0 Channel Availability|38
+4.6.1.step6|MANAGE CHANNEL OPEN Step 6 - Channel Now Open|38
+4.6.1.step7|MANAGE CHANNEL OPEN Step 7 - Determine Candidate Applet|38
+4.6.1.step8|MANAGE CHANNEL OPEN Step 8 - Non-Multiselectable Check|39
+4.6.1.step9|MANAGE CHANNEL OPEN Step 9 - Assign CLEAR_ON_DESELECT Segment|39
+4.6.1.step10|MANAGE CHANNEL OPEN Step 10 - Selection Accept Check|39
+4.6.1.step11|MANAGE CHANNEL OPEN Step 11 - Response 0x9000|39
+4.6.1.SW_SECURE_MESSAGING|SW_SECURE_MESSAGING_NOT_SUPPORTED (0x6882)|38
+4.6.1.SW_FUNC_NOT_SUPPORTED|SW_FUNC_NOT_SUPPORTED (0x6A81)|38
+4.6.1.SW_LOGICAL_CHANNEL_NOT_SUPPORTED|SW_LOGICAL_CHANNEL_NOT_SUPPORTED (0x6881)|38
+4.6.1.SW_CONDITIONS_NOT_SATISFIED|SW_CONDITIONS_NOT_SATISFIED (0x6985)|39
+4.6.1.SW_APPLET_SELECT_FAILED|SW_APPLET_SELECT_FAILED (0x6999)|39
+4.6.2.step1|SELECT FILE Step 1 - CLA Byte and DF Name|39
+4.6.2.step2|SELECT FILE Step 2 - Channel Resources Check|40
+4.6.2.step3|SELECT FILE Step 3 - Channel Not Open Opens It|40
+4.6.2.step4|SELECT FILE Step 4 - AID Match Search|40
+4.6.2.step5|SELECT FILE Step 5 - Non-Multiselectable Context Check|41
+4.6.2.step6|SELECT FILE Step 6 - Assign CLEAR_ON_DESELECT Segment|41
+4.6.2.step7|SELECT FILE Step 7 - Selection Accept Check|41
+4.6.2.step8|SELECT FILE Step 8 - Call Applet.process with SELECT FILE|41
+4.7.deselectionProcedure|Applet Deselection Procedure|42
+4.7.multiSelectableDeselect|MultiSelectable.deselect(appInstStillActive)|42
+4.7.appletDeselect|Applet.deselect and CLEAR_ON_DESELECT Clearing|42
+4.7.1.step1|MANAGE CHANNEL CLOSE Step 1 - CLA and Command Parsing|43
+4.7.1.step2|MANAGE CHANNEL CLOSE Step 2 - Origin Channel Not Open|43
+4.7.1.step3|MANAGE CHANNEL CLOSE Step 3 - Basic Channel Only Support|43
+4.7.1.step4|MANAGE CHANNEL CLOSE Step 4 - Cannot Close Basic Channel|43
+4.7.1.step5|MANAGE CHANNEL CLOSE Step 5 - Channel Open Deselect and Close|43
+4.7.1.step6|MANAGE CHANNEL CLOSE Step 6 - Already Closed Warning 0x6200|43
+4.8.otherCommandDispatching|Other Command APDU Dispatching by CLA Byte|43
+4.8.unsupportedChannel|SW_LOGICAL_CHANNEL_NOT_SUPPORTED for Unsupported/Unopened Channel|43
+4.8.noActiveApplet|SW_APPLET_SELECT_FAILED When No Active Applet|43
+4.8.contextSwitch|Context Switch to Applet on process Method Invocation|44
+5.1.transientObjectDefinition|Transient Object Definition and Field Behavior|48
+5.1.1.clearToDefault|Transient Fields Cleared to Default (zero, false, null)|48
+5.1.1.noPersistentStorage|Transient Fields Never in Persistent Memory|48
+5.1.1.noPerformancePenalty|No Write Performance Penalty for Transient Fields|48
+5.1.1.notAffectedByTransactions|Transient Fields Not Affected by abortTransaction|48
+5.1.2.CLEAR_ON_RESET|CLEAR_ON_RESET Event - Fields Cleared on Card Reset|49
+5.1.2.CLEAR_ON_DESELECT|CLEAR_ON_DESELECT Event - Fields Cleared on Applet Deselection|49
+5.2.temporaryObjects|Temporary Objects Definition|49
+5.2.APDUobject|APDU Object as Temporary Object|49
+5.2.globalArrays|Global Arrays as Temporary Objects|49
+5.2.arrayViews|Array Views as Temporary Objects|49
+Figure 5-1|Example of an Array View|50
+5.3.1.arrayViewCharacteristics|Array View Characteristics|50
+5.3.1.viewAccessRights|View Configurable Read/Write Access Rights|50
+5.3.1.viewIsTemporary|View Is a Temporary Object (no storage in fields)|50
+5.3.1.parentArrayProtection|Parent Array Cannot Be GC'd While View Exists|50
+5.3.2.creatingArrayView|Creating an Array View - Precondition Checks|51
+5.3.2.viewMethods|Methods to Query Array View (isArrayView, getAttributes, isTransient)|51
+Figure 6-1|Contexts Within the Java Card Platform's Object System|54
+6.1.2.1.activeContext|Active Context in the VM (Currently Active Context)|54
+6.1.2.1.SecurityException|SecurityException on Disallowed Access|54
+6.1.2.2.contextSwitchMechanism|Context Switch Mechanism (push/pop on VM stack)|55
+6.1.2.2.nestedContextSwitches|Nested Context Switches|55
+Figure 6-2|Context Switching and Object Access|56
+6.1.3.contextOwnership|Context and Object Ownership Rules|55
+6.1.3.rule1|Every Applet Instance Belongs to a Context (same CAP file = same context)|55
+6.1.3.rule2|Every Object Owned by an Applet Instance or Java Card RE|55
+6.1.4.objectAccessRule|Object Access - Only by Owning Context|56
+6.1.4.accessBytecodes|Access Bytecodes (getfield, putfield, invokevirtual, etc.)|56
+6.1.5.CLEAR_ON_RESET_access|CLEAR_ON_RESET Transient Objects - Owning Context Only|57
+6.1.5.CLEAR_ON_DESELECT_access|CLEAR_ON_DESELECT Transient Objects - Currently Selected Applet Context Only|57
+6.1.5.ILLEGAL_TRANSIENT|SystemException ILLEGAL_TRANSIENT for Wrong Context|57
+6.1.5.SecurityException_transient|SecurityException for CLEAR_ON_DESELECT Access from Wrong Context|57
+6.1.6.staticFieldAccess|Static Fields - No Runtime Context Check|58
+6.1.6.staticMethodAccess|Static Methods - No Context Switch, Execute in Caller's Context|58
+6.1.6.1.optionalStaticChecks|Optional Static Access Checks by Verifier|58
+6.2.1.entryPointObjectsDefinition|Java Card RE Entry Point Objects Definition|58
+6.2.1.temporaryEntryPoints|Temporary Java Card RE Entry Point Objects (APDU, exceptions)|59
+6.2.1.permanentEntryPoints|Permanent Java Card RE Entry Point Objects (AID instances)|59
+6.2.1.entryPointMethodsOnly|Only Methods Accessible Through Firewall (not fields)|59
+6.2.2.1.globalArrayDefinition|Global Array Definition and Access Rules|60
+6.2.2.1.globalArrayOwnership|Global Arrays Owned by Java Card RE, Accessible from Any Context|60
+6.2.2.1.noStorageOfGlobalRef|Cannot Store References to Global Arrays (SecurityException)|60
+6.2.2.1.APDUbuffer|APDU Buffer as Global Array|60
+6.2.2.2.sharingUsingViews|Sharing Using Array Views|60
+6.2.3.JCREPrivileges|Java Card RE Privileges - System Context Access|60
+6.2.3.JCREFieldAndMethodAccess|Java Card RE Can Access Fields and Methods of Any Object|61
+6.2.3.JCREMethodRestriction|Java Card RE Shall Only Invoke select, process, deselect, getShareableInterfaceObject|61
+6.2.4.shareableInterfaceDefinition|Shareable Interface Definition (SIO)|61
+6.2.4.SIOAccessRules|SIO Access Rules - Only Shareable Methods Visible|61
+6.2.4.1.step1|Server Applet Builds SIO Step 1 - Define Shareable Interface|61
+6.2.4.1.step2|Server Applet Builds SIO Step 2 - Implement Interface in Class|61
+6.2.4.1.step3|Server Applet Builds SIO Step 3 - Create Object Instance|61
+6.2.4.2.step1|Client Obtains SIO Step 1 - Create Object Reference|62
+6.2.4.2.step2|Client Obtains SIO Step 2 - Invoke getAppletShareableInterfaceObject|62
+6.2.4.2.step3|Client Obtains SIO Step 3 - Server Returns Reference|62
+6.2.4.2.step4|Client Obtains SIO Step 4 - Cast to Shareable Interface Type|62
+6.2.4.3.step1|Client Requests Service Step 1 - Invoke SI Method (context switch)|62
+6.2.4.3.step2|Client Requests Service Step 2 - SI Method Checks Client AID|62
+6.2.4.3.step3|Client Requests Service Step 3 - Firewall Allows Access in Server Context|62
+6.2.4.3.step4|Client Requests Service Step 4 - Access Parameters from Client|62
+6.2.4.3.step5|Client Requests Service Step 5 - Restoring Context Switch on Return|62
+6.2.5.getPreviousContextAID|Determining Previous Context (getPreviousContextAID)|63
+6.2.5.1.JCREContextNoAID|Java Card RE Context Has No AID (returns null)|63
+6.2.6.shareableInterfaceProperties|Shareable Interface Properties (context switch, restore, exception handling)|63
+6.2.6.1.shareableTaggingInterface|Shareable Tagging Interface (javacard.framework.Shareable)|63
+6.2.7.1.getShareableInterfaceObject|Applet.getShareableInterfaceObject(AID, byte) Method|64
+6.2.7.2.getAppletShareableInterfaceObject|JCSystem.getAppletShareableInterfaceObject Method Steps|64
+6.2.7.2.nullConditions|Conditions Causing Null Return from getAppletShareableInterfaceObject|65
+6.2.8.accessCheckRule|Access Check Rule - SecurityException on Denied Access|65
+6.2.8.1.rule|Accessing Static Class Fields (getstatic, putstatic)|65
+6.2.8.1.putstatic_temporary|putstatic Denied for Storing Temporary Object Reference|65
+6.2.8.2.rule|Accessing Array Objects (aload, astore, arraylength, checkcast, instanceof)|66
+6.2.8.2.aastore_temporary|aastore Denied for Storing Temporary Object Reference|66
+6.2.8.2.astore_view_write|astore Denied on Array View Without Write Access|66
+6.2.8.2.aload_view_read|aload Denied on Array View Without Read Access|66
+6.2.8.2.CLEAR_ON_DESELECT_array|CLEAR_ON_DESELECT Array Access Denied from Wrong Context|66
+6.2.8.2.globalArrayAccess|Global Array Access Allowed|66
+6.2.8.3.rule|Accessing Class Instance Object Fields (getfield, putfield)|66
+6.2.8.3.putfield_temporary|putfield Denied for Storing Temporary Object Reference|66
+6.2.8.4.rule|Accessing Class Instance Object Methods (invokevirtual)|66
+6.2.8.4.entryPointAccess|Entry Point Object Method Access (context switch to Java Card RE)|66
+6.2.8.4.JCREinvoke|Java Card RE Can Invoke Any Method (context switch to owner)|66
+6.2.8.5.rule|Accessing Standard Interface Methods (invokeinterface)|67
+6.2.8.5.entryPointAccess|Standard Interface Entry Point Access|67
+6.2.8.6.rule|Accessing Shareable Interface Methods (invokeinterface)|67
+6.2.8.6.nonMultiselectable|Non-Multiselectable SIO Access Denied from Another Channel|67
+6.2.8.6.shareableContextSwitch|Shareable Interface Context Switch to Owner|67
+6.2.8.7.rule|Throwing Exception Objects (athrow)|67
+6.2.8.7.entryPointException|Entry Point Exception Objects Allowed|67
+6.2.8.8.rule|Accessing Classes (checkcast, instanceof)|67
+6.2.8.9.rule|Accessing Standard Interfaces (checkcast, instanceof)|68
+6.2.8.10.rule|Accessing Shareable Interfaces (checkcast, instanceof)|68
+6.2.8.11.rule|Accessing Array Object Methods (invokevirtual)|68
+6.2.8.11.globalArrayMethods|Global Array Methods - Same as Entry Point Objects|68
+6.2.8.11.CLEAR_ON_DESELECT_method|CLEAR_ON_DESELECT Array Method Access Denied|68
+7.1.singleFieldAtomicity|Single Field/Component Atomicity Guarantee|69
+7.1.arrayComponentAtomicity|Single Array Component Atomicity|69
+7.1.blockAtomicity|Block Atomicity (Util.arrayCopy)|69
+7.1.arrayCopyNonAtomic|Util.arrayCopyNonAtomic - No Atomicity|69
+7.2.beginTransaction|JCSystem.beginTransaction - Start Atomic Set|69
+7.2.commitTransaction|JCSystem.commitTransaction - Commit All Updates|70
+7.2.abortTransaction|JCSystem.abortTransaction - Undo All Updates|70
+7.2.conditionalUpdate|Conditional Update Model (read yields latest value)|69
+7.3.transactionEnds|Transaction Ends on Return from select/deselect/process/install/uninstall|70
+7.3.transactionDuration|Transaction Duration Definition|70
+7.4.noNestedTransactions|Nested Transactions Not Supported|70
+7.4.TransactionException|TransactionException on Nested beginTransaction|70
+7.4.getTransactionDepth|JCSystem.getTransactionDepth Method|70
+7.5.tearOrResetRestore|Tear or Reset Restores All Conditional Updates|70
+7.5.arrayCopyNonAtomicUnpredictable|arrayCopyNonAtomic/arrayFillNonAtomic Unpredictable After Tear|70
+7.5.objectSpaceRecovery|Object Space from Failed Transaction May Be Recovered|70
+7.6.1.programmaticAbortion|Programmatic Abort (JCSystem.abortTransaction)|71
+7.6.2.abortionByJCRE|Abortion by Java Card RE on Uncaught Exception|71
+7.6.2.processAbortion|Transaction Abort During process Results in Uncaught Exception Processing|71
+7.6.3.cleanupDeletedObjects|Cleanup - Deleted Objects During Aborted Transaction|71
+7.6.3.nullReference|Reference to Object Created During Aborted Transaction = null|71
+7.7.transientNotInTransaction|Transient Objects and Global Arrays Not in Transaction|71
+7.8.commitCapacityLimit|Commit Capacity Limit|71
+7.8.TransactionExceptionCapacity|TransactionException on Commit Capacity Exceeded|72
+7.9.contextSwitchTransaction|Context Switches Do Not Alter Transaction State|72
+8.1.1.remoteObjectDefinition|Remote Object Definition (java.rmi.Remote)|73
+8.1.1.1.parameterTypes|Remote Method Parameter Types (primitives, arrays)|73
+8.1.1.1.returnTypes|Remote Method Return Types (primitives, arrays, remote interface, void)|74
+8.1.1.2.exceptionModel|RMI Exception Model (exact vs closest superclass)|74
+8.1.1.3.functionalLimitations|RMI Functional Limitations|74
+8.2.1.appletSelectionRMI|RMI Applet Selection (SELECT FILE with FCI)|75
+8.2.2.methodInvocation|RMI Method Invocation Protocol|75
+8.3.1.remoteObjectIdentifier|Remote Object Identifier (16-bit)|76
+8.3.2.remoteRefDescriptor|Remote Object Reference Descriptor Format|76
+8.3.2.remote_ref_with_class|remote_ref_with_class Format|76
+8.3.2.remote_ref_with_interfaces|remote_ref_with_interfaces Format|77
+8.3.3.methodIdentifier|Method Identifier (SHA-1 hashcode, 16-bit)|78
+8.3.4.parameterEncoding|Parameter Encoding Format|78
+8.3.4.1.primitiveEncoding|Primitive Data Type Parameter Encoding|79
+8.3.4.2.arrayEncoding|Array Parameter Encoding|79
+8.3.5.returnValueEncoding|Return Value Encoding Format|80
+8.3.5.1.normalResponse|Normal Response Encoding (tag 0x81)|80
+8.3.5.2.exceptionResponse|Exception Response Encoding (tag 0x82)|81
+8.3.5.2.exceptionTypes|Exception Type Values (0x00-0x80)|81
+8.3.5.2.exceptionSubclass|Exception Subclass Response (tag 0x83)|81
+8.3.5.3.errorResponse|Error Response Encoding (tag 0x99)|82
+8.3.5.3.errorCodes|Error Detail Codes (0x0001-0xFFFF)|82
+Table 8-1|Select File Command|83
+8.4.1.selectResponse|SELECT FILE Response Format (select_response)|83
+8.4.1.jc_rmi_data|jc_rmi_data TLV Structure|83
+Table 8-2|Invoke Command Format|84
+8.4.2.invokeData|INVOKE Command Data Structure (invoke_data)|85
+8.5.remoteRefLifetime|Remote Reference Lifetime Rules|85
+8.5.1.setInvokeInstructionByte|setInvokeInstructionByte Method|85
+8.5.2.processCommandMethod|processCommand Method|86
+8.5.2.selectFileProcessing|processCommand SELECT FILE Processing|86
+8.5.2.invokeProcessing|processCommand INVOKE Processing|86
+8.5.2.invokeErrors|INVOKE Pre-Invocation Error Conditions|86
+8.5.2.invokeReturnErrors|INVOKE Post-Return Error Conditions|86
+8.5.2.firewallRules|Object Access Firewall Rules for RMI|86
+8.5.2.1.incomingObjects|Allocation of Incoming Objects (Global Arrays)|87
+9.1.resourceUseAPI|Resource Use Within the API|89
+9.2.exceptionsAPI|Exceptions Thrown by API Classes (Temporary Entry Point Objects)|89
+9.3.transactionsAPI|Transactions Within the API|89
+9.4.APDUclass|APDU Class (ISO 7816-4 I/O)|89
+9.4.1.T0outgoing|T=0 Specifics for Outgoing Data Transfers|89
+9.4.1.1.constrainedNoChaining|T=0 Constrained Transfers With No Chaining|90
+9.4.1.1.1.notation|T=0 Notation (Ne, Nr, INS, SW1/SW2)|90
+9.4.1.1.2.case2|T=0 ISO 7816-4 CASE 2 (Ne==Nr, Nr<Ne, Nr>Ne)|90
+9.4.1.1.3.case4|T=0 ISO 7816-4 CASE 4|91
+9.4.1.2.regularOutput|T=0 Regular Output Transfers|91
+9.4.1.3.additionalT0|Additional T=0 Requirements|91
+9.4.1.3.NO_T0_GETRESPONSE|APDUException NO_T0_GETRESPONSE|92
+9.4.1.3.NO_T0_REISSUE|APDUException NO_T0_REISSUE|92
+9.4.2.T1outgoing|T=1 Specifics for Outgoing Data Transfers|92
+9.4.2.1.T1constrainedNoChaining|T=1 Constrained Transfers With No Chaining|92
+9.4.2.1.1.T1notation|T=1 Notation|92
+9.4.2.2.T1regularOutput|T=1 Regular Output Transfers|93
+9.4.2.2.1.T1chainAbortion|T=1 Chain Abortion by CAD (T1_IFD_ABORT)|93
+9.4.3.T1incoming|T=1 Specifics for Incoming Data Transfers|93
+9.4.3.1.T1incomingChaining|T=1 Incoming Transfers Using Chaining|93
+9.4.3.1.1.T1incomingAbortion|T=1 Incoming Chain Abortion by CAD (T1_IFD_ABORT)|93
+9.4.4.extendedLength|Extended Length APDU Specifics|94
+9.4.4.SW_WRONG_LENGTH|SW_WRONG_LENGTH for Unsupported Extended Length|94
+9.4.4.ExtendedLength|ExtendedLength Interface Requirement|94
+9.4.4.1.extLengthSemantics|Extended Length API Semantics|94
+Table 9-1|APDU Buffer Format for Extended Length|95
+9.4.4.1.1.processMethod|Applet.process(APDU) Method - Extended Length Header|94
+9.4.4.1.2.setIncomingAndReceive|APDU.setIncomingAndReceive() Method - Extended Length|95
+9.4.4.1.3.receiveBytes|APDU.receiveBytes(short) Method - Extended Length|95
+9.4.4.1.4.setOutgoing|APDU.setOutgoing() Method - Extended Length (Le up to 32767)|95
+9.4.4.1.5.setOutgoingLength|APDU.setOutgoingLength(short) Method - Extended Length|95
+9.4.4.1.6.sendBytes|APDU.sendBytes/sendBytesLong Methods - Extended Length|95
+9.4.5.checkingConsistency|Checking APDU Consistency|96
+9.4.5.codeSnippet|APDU Consistency Check Code Snippet|96
+9.5.securityCrypto|Security and Crypto Packages|97
+9.5.getInstance|getInstance Method Returns Implementation in Caller Context|97
+9.5.CryptoException|CryptoException NO_SUCH_ALGORITHM for Unsupported Algorithm|97
+9.5.KeyBuilder|KeyBuilder.buildKey Method|97
+9.5.KeyPair|KeyPair Constructor|97
+9.5.MessageDigest|MessageDigest Temporary Storage (not preserved across reset)|97
+9.5.SignatureCipher|Signature and Cipher Temporary Storage|97
+9.6.JCSystemClass|JCSystem Class - getVersion Returns 0x0302|98
+9.7.SensitiveResultClass|SensitiveResult Class|98
+9.7.unaffectedByContextSwitch|Sensitive Result Unaffected by Context Switches|98
+9.7.resetOnProcessReturn|Sensitive Result Reset on Applet.process Return or Power Loss|98
+9.8.optionalExtensionPackages|Optional Extension Packages List|98
+9.8.java_rmi|java.rmi Package (RMI base interface/exception)|98
+9.8.framework_service|javacard.framework.service Package (RMI service)|98
+9.8.javacardx_apdu|javacardx.apdu Package (extended length APDU)|99
+9.8.javacardx_biometry|javacardx.biometry Package (biometric server)|99
+9.8.javacardx_crypto|javacardx.crypto Package (security/crypto framework)|99
+9.8.javacardx_external|javacardx.external Package (external memory)|99
+9.8.javacardx_framework_event|javacardx.framework.event Package (event framework)|99
+9.8.javacardx_framework_math|javacardx.framework.math Package (BCD math)|99
+9.8.javacardx_framework_nio|javacardx.framework.nio Package (data buffers)|99
+9.8.javacardx_framework_string|javacardx.framework.string Package (UTF-8)|99
+9.8.javacardx_framework_time|javacardx.framework.time Package (system time)|99
+9.8.javacardx_framework_tlv|javacardx.framework.tlv Package (BER TLV)|99
+9.8.javacardx_framework_util|javacardx.framework.util Package (byte/short/int utils)|99
+9.8.javacardx_security|javacardx.security Package (security countermeasures)|99
+9.8.javacardx_security_cert|javacardx.security.cert Package (certificates)|99
+9.8.javacardx_security_derivation|javacardx.security.derivation Package (key derivation)|99
+9.8.javacardx_security_util|javacardx.security.util Package (security utility)|99
+10.1.SystemException_NO_RESOURCE|SystemException NO_RESOURCE on Heap Space Exhaustion|101
+10.1.SystemException_NO_TRANSIENT_SPACE|SystemException NO_TRANSIENT_SPACE on Transient Space Exhaustion|101
+10.1.nonRecoverableHalt|Non-Recoverable VM Errors Cause Halt (stack overflow)|101
+10.2.SecurityException_firewall|SecurityException on Illegal Cross-Firewall Access|101
+10.2.SecurityException_language|SecurityException on Language Restriction Violation|101
+10.2.muteCard|Card May Be Muted Instead of Throwing Exception|101
