@@ -1,5 +1,5 @@
 {
-  "plugins": ["prettier-plugin-gherkin"],
+  "plugins": ["./tools/node_modules/prettier-plugin-gherkin/dist/index.js"],
   "proseWrap": "always",
   "printWidth": 100,
   "tabWidth": 2

@@ -5,10 +5,10 @@
 node_modules/
 
 # Extracted spec/SDK archives (tracked as .tar.gz via LFS, extracted locally)
-javacard/java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/
-javacard/java_card_spec-3_1_0-u5-b_70-09_mar_2021/
-javacard/java_card_spec-3_2_0-b_185-18_jan_2023/
-reference-implementations/java_card_devkit_simulator-linux-bin-v25.1-b_627-26-OCT-2025/
-reference-implementations/java_card_devkit_simulator-win-bin-v25.1-b_627-26-OCT-2025/
-reference-implementations/java_card_devkit_tools-bin-v25.1-b_611-26-OCT-2025/
-reference-implementations/java_card_devkit_eclipse_plugin-bin-v25.1-b_598-26-OCT-2025/
+docs/javacard/java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/
+docs/javacard/java_card_spec-3_1_0-u5-b_70-09_mar_2021/
+docs/javacard/java_card_spec-3_2_0-b_185-18_jan_2023/
+docs/reference-implementations/java_card_devkit_simulator-linux-bin-v25.1-b_627-26-OCT-2025/
+docs/reference-implementations/java_card_devkit_simulator-win-bin-v25.1-b_627-26-OCT-2025/
+docs/reference-implementations/java_card_devkit_tools-bin-v25.1-b_611-26-OCT-2025/
+docs/reference-implementations/java_card_devkit_eclipse_plugin-bin-v25.1-b_598-26-OCT-2025/
