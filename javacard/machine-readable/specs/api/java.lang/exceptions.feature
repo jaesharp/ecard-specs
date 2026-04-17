@@ -20,9 +20,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # Exception (checked, extends Throwable)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, Exception](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/Exception.html)
-  # Source: [JavaCard 3.1 API, Exception](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/Exception.html)
-  # Source: [JavaCard 3.2 API, Exception](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/Exception.html)
+  # Source: [JavaCard 3.0.5 API, Exception](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/Exception.html)
+  # Source: [JavaCard 3.1 API, Exception](../../refs/javadoc-3.1/api_classic/java/lang/Exception.html)
+  # Source: [JavaCard 3.2 API, Exception](../../refs/javadoc-3.2/api_classic/java/lang/Exception.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Exception class hierarchy
     Given the class java.lang.Exception
@@ -31,9 +31,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And its direct known subclasses include java.io.IOException
     And its direct known subclasses include java.lang.RuntimeException
 
-  # Source: [JavaCard 3.0.5 API, Exception()](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/Exception.html#Exception())
-  # Source: [JavaCard 3.1 API, Exception()](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/Exception.html#%3Cinit%3E())
-  # Source: [JavaCard 3.2 API, Exception()](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/Exception.html#%3Cinit%3E())
+  # Source: [JavaCard 3.0.5 API, Exception()](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/Exception.html#Exception())
+  # Source: [JavaCard 3.1 API, Exception()](../../refs/javadoc-3.1/api_classic/java/lang/Exception.html#%3Cinit%3E())
+  # Source: [JavaCard 3.2 API, Exception()](../../refs/javadoc-3.2/api_classic/java/lang/Exception.html#%3Cinit%3E())
   @v3.0.5 @v3.1 @v3.2
   Scenario: Exception provides only a no-arg constructor
     Given the class java.lang.Exception
@@ -45,81 +45,81 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # RuntimeException (unchecked, extends Exception)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: RuntimeException extends Exception
     Given the class java.lang.RuntimeException
     Then its superclass is java.lang.Exception
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArithmeticException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.ArithmeticException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayStoreException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.ArrayStoreException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ClassCastException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.ClassCastException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IndexOutOfBoundsException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.IndexOutOfBoundsException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NegativeArraySizeException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.NegativeArraySizeException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NullPointerException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.NullPointerException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SecurityException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include java.lang.SecurityException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.1 API, RuntimeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html)
-  # Source: [JavaCard 3.2 API, RuntimeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.0.5 API, RuntimeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.1 API, RuntimeException](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html)
+  # Source: [JavaCard 3.2 API, RuntimeException](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: CardRuntimeException is a direct subclass of RuntimeException
     Given the class java.lang.RuntimeException
     Then its direct known subclasses include javacard.framework.CardRuntimeException
 
-  # Source: [JavaCard 3.0.5 API, RuntimeException()](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html#RuntimeException())
-  # Source: [JavaCard 3.1 API, RuntimeException()](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/RuntimeException.html#%3Cinit%3E())
-  # Source: [JavaCard 3.2 API, RuntimeException()](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/RuntimeException.html#%3Cinit%3E())
+  # Source: [JavaCard 3.0.5 API, RuntimeException()](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/RuntimeException.html#RuntimeException())
+  # Source: [JavaCard 3.1 API, RuntimeException()](../../refs/javadoc-3.1/api_classic/java/lang/RuntimeException.html#%3Cinit%3E())
+  # Source: [JavaCard 3.2 API, RuntimeException()](../../refs/javadoc-3.2/api_classic/java/lang/RuntimeException.html#%3Cinit%3E())
   @v3.0.5 @v3.1 @v3.2
   Scenario: RuntimeException provides only a no-arg constructor
     Given the class java.lang.RuntimeException
@@ -131,9 +131,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # ArithmeticException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, ArithmeticException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArithmeticException.html)
-  # Source: [JavaCard 3.1 API, ArithmeticException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArithmeticException.html)
-  # Source: [JavaCard 3.2 API, ArithmeticException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.0.5 API, ArithmeticException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.1 API, ArithmeticException](../../refs/javadoc-3.1/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.2 API, ArithmeticException](../../refs/javadoc-3.2/api_classic/java/lang/ArithmeticException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArithmeticException class definition
     Given the class java.lang.ArithmeticException
@@ -141,9 +141,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: ArithmeticException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, ArithmeticException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArithmeticException.html)
-  # Source: [JavaCard 3.1 API, ArithmeticException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArithmeticException.html)
-  # Source: [JavaCard 3.2 API, ArithmeticException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.0.5 API, ArithmeticException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.1 API, ArithmeticException](../../refs/javadoc-3.1/api_classic/java/lang/ArithmeticException.html)
+  # Source: [JavaCard 3.2 API, ArithmeticException](../../refs/javadoc-3.2/api_classic/java/lang/ArithmeticException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArithmeticException thrown on divide by zero
     Given a JCRE-owned instance of ArithmeticException
@@ -155,9 +155,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # ArrayStoreException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, ArrayStoreException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayStoreException.html)
-  # Source: [JavaCard 3.1 API, ArrayStoreException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayStoreException.html)
-  # Source: [JavaCard 3.2 API, ArrayStoreException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayStoreException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.1 API, ArrayStoreException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.2 API, ArrayStoreException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayStoreException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayStoreException class definition
     Given the class java.lang.ArrayStoreException
@@ -165,9 +165,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: ArrayStoreException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, ArrayStoreException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayStoreException.html)
-  # Source: [JavaCard 3.1 API, ArrayStoreException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayStoreException.html)
-  # Source: [JavaCard 3.2 API, ArrayStoreException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayStoreException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.1 API, ArrayStoreException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayStoreException.html)
+  # Source: [JavaCard 3.2 API, ArrayStoreException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayStoreException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayStoreException thrown on type-incompatible array store
     Given a JCRE-owned instance of ArrayStoreException
@@ -180,9 +180,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # ClassCastException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, ClassCastException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ClassCastException.html)
-  # Source: [JavaCard 3.1 API, ClassCastException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ClassCastException.html)
-  # Source: [JavaCard 3.2 API, ClassCastException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.0.5 API, ClassCastException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.1 API, ClassCastException](../../refs/javadoc-3.1/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.2 API, ClassCastException](../../refs/javadoc-3.2/api_classic/java/lang/ClassCastException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ClassCastException class definition
     Given the class java.lang.ClassCastException
@@ -190,9 +190,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: ClassCastException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, ClassCastException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ClassCastException.html)
-  # Source: [JavaCard 3.1 API, ClassCastException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ClassCastException.html)
-  # Source: [JavaCard 3.2 API, ClassCastException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.0.5 API, ClassCastException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.1 API, ClassCastException](../../refs/javadoc-3.1/api_classic/java/lang/ClassCastException.html)
+  # Source: [JavaCard 3.2 API, ClassCastException](../../refs/javadoc-3.2/api_classic/java/lang/ClassCastException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ClassCastException thrown on invalid cast
     Given a JCRE-owned instance of ClassCastException
@@ -205,9 +205,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # IndexOutOfBoundsException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, IndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/IndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, IndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/IndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, IndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, IndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, IndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, IndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/IndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IndexOutOfBoundsException class definition
     Given the class java.lang.IndexOutOfBoundsException
@@ -216,9 +216,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And there is no constructor accepting a String message
     And its direct known subclass is java.lang.ArrayIndexOutOfBoundsException
 
-  # Source: [JavaCard 3.0.5 API, IndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/IndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, IndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/IndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, IndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, IndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, IndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/IndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, IndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/IndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IndexOutOfBoundsException thrown on index out of range
     Given a JCRE-owned instance of IndexOutOfBoundsException
@@ -230,41 +230,41 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # ArrayIndexOutOfBoundsException (extends IndexOutOfBoundsException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayIndexOutOfBoundsException extends IndexOutOfBoundsException
     Given the class java.lang.ArrayIndexOutOfBoundsException
     Then its superclass is java.lang.IndexOutOfBoundsException
 
-  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayIndexOutOfBoundsException provides a no-arg constructor
     Given the class java.lang.ArrayIndexOutOfBoundsException
     Then it has a public no-arg constructor: ArrayIndexOutOfBoundsException()
 
-  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayIndexOutOfBoundsException does not accept a String message
     Given the class java.lang.ArrayIndexOutOfBoundsException
     Then there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayIndexOutOfBoundsException does not accept an int index
     Given the class java.lang.ArrayIndexOutOfBoundsException
     Then there is no constructor accepting an int index
 
-  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
-  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.0.5 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.1 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.1/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
+  # Source: [JavaCard 3.2 API, ArrayIndexOutOfBoundsException](../../refs/javadoc-3.2/api_classic/java/lang/ArrayIndexOutOfBoundsException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ArrayIndexOutOfBoundsException thrown on illegal array index
     Given a JCRE-owned instance of ArrayIndexOutOfBoundsException
@@ -277,9 +277,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # NegativeArraySizeException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, NegativeArraySizeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NegativeArraySizeException.html)
-  # Source: [JavaCard 3.1 API, NegativeArraySizeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/NegativeArraySizeException.html)
-  # Source: [JavaCard 3.2 API, NegativeArraySizeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.0.5 API, NegativeArraySizeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.1 API, NegativeArraySizeException](../../refs/javadoc-3.1/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.2 API, NegativeArraySizeException](../../refs/javadoc-3.2/api_classic/java/lang/NegativeArraySizeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NegativeArraySizeException class definition
     Given the class java.lang.NegativeArraySizeException
@@ -287,9 +287,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: NegativeArraySizeException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, NegativeArraySizeException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NegativeArraySizeException.html)
-  # Source: [JavaCard 3.1 API, NegativeArraySizeException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/NegativeArraySizeException.html)
-  # Source: [JavaCard 3.2 API, NegativeArraySizeException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.0.5 API, NegativeArraySizeException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.1 API, NegativeArraySizeException](../../refs/javadoc-3.1/api_classic/java/lang/NegativeArraySizeException.html)
+  # Source: [JavaCard 3.2 API, NegativeArraySizeException](../../refs/javadoc-3.2/api_classic/java/lang/NegativeArraySizeException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NegativeArraySizeException thrown on negative array creation
     Given a JCRE-owned instance of NegativeArraySizeException
@@ -301,9 +301,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # NullPointerException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, NullPointerException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NullPointerException.html)
-  # Source: [JavaCard 3.1 API, NullPointerException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/NullPointerException.html)
-  # Source: [JavaCard 3.2 API, NullPointerException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.0.5 API, NullPointerException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.1 API, NullPointerException](../../refs/javadoc-3.1/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.2 API, NullPointerException](../../refs/javadoc-3.2/api_classic/java/lang/NullPointerException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NullPointerException class definition
     Given the class java.lang.NullPointerException
@@ -311,9 +311,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: NullPointerException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, NullPointerException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NullPointerException.html)
-  # Source: [JavaCard 3.1 API, NullPointerException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/NullPointerException.html)
-  # Source: [JavaCard 3.2 API, NullPointerException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.0.5 API, NullPointerException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.1 API, NullPointerException](../../refs/javadoc-3.1/api_classic/java/lang/NullPointerException.html)
+  # Source: [JavaCard 3.2 API, NullPointerException](../../refs/javadoc-3.2/api_classic/java/lang/NullPointerException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: NullPointerException thrown on null dereference
     Given a JCRE-owned instance of NullPointerException
@@ -328,9 +328,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # SecurityException (extends RuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, SecurityException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.1 API, SecurityException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.2 API, SecurityException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.0.5 API, SecurityException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.1 API, SecurityException](../../refs/javadoc-3.1/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.2 API, SecurityException](../../refs/javadoc-3.2/api_classic/java/lang/SecurityException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SecurityException class definition
     Given the class java.lang.SecurityException
@@ -338,9 +338,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And it has a public no-arg constructor: SecurityException()
     And there is no constructor accepting a String message
 
-  # Source: [JavaCard 3.0.5 API, SecurityException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.1 API, SecurityException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.2 API, SecurityException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.0.5 API, SecurityException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.1 API, SecurityException](../../refs/javadoc-3.1/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.2 API, SecurityException](../../refs/javadoc-3.2/api_classic/java/lang/SecurityException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SecurityException thrown on security violation
     Given a JCRE-owned instance of SecurityException
@@ -350,9 +350,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     Then the JCVM throws the JCRE-owned SecurityException instance
     And the instance is a temporary JCRE Entry Point Object
 
-  # Source: [JavaCard 3.0.5 API, SecurityException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.1 API, SecurityException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/SecurityException.html)
-  # Source: [JavaCard 3.2 API, SecurityException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.0.5 API, SecurityException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.1 API, SecurityException](../../refs/javadoc-3.1/api_classic/java/lang/SecurityException.html)
+  # Source: [JavaCard 3.2 API, SecurityException](../../refs/javadoc-3.2/api_classic/java/lang/SecurityException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SecurityException may cause card mute instead
     Given a security violation on the Java Card platform
@@ -363,9 +363,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
   # Common restrictions for all java.lang exception classes
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, java.lang package](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/package-summary.html)
-  # Source: [JavaCard 3.1 API, java.lang package](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/package-summary.html)
-  # Source: [JavaCard 3.2 API, java.lang package](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.0.5 API, java.lang package](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.1 API, java.lang package](../../refs/javadoc-3.1/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.2 API, java.lang package](../../refs/javadoc-3.2/api_classic/java/lang/package-summary.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: All java.lang exceptions use only no-arg constructors
     Given all exception classes in the java.lang package on Java Card
@@ -374,9 +374,9 @@ Feature: Java SE Subset Exception Classes (java.lang)
     And none have constructors accepting a Throwable cause parameter
     And none define any new methods beyond what is inherited from Object
 
-  # Source: [JavaCard 3.0.5 API, java.lang package](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/package-summary.html)
-  # Source: [JavaCard 3.1 API, java.lang package](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/lang/package-summary.html)
-  # Source: [JavaCard 3.2 API, java.lang package](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.0.5 API, java.lang package](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.1 API, java.lang package](../../refs/javadoc-3.1/api_classic/java/lang/package-summary.html)
+  # Source: [JavaCard 3.2 API, java.lang package](../../refs/javadoc-3.2/api_classic/java/lang/package-summary.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: JCRE-owned exception instances are temporary Entry Point Objects
     Given all JCRE-owned runtime exception instances in java.lang

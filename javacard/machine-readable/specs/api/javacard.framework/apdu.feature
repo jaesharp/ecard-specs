@@ -12,9 +12,9 @@ Feature: APDU - Application Protocol Data Unit
   # -------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
   Scenario Outline: APDU state constants define the processing lifecycle
     When the constant APDU.<state_name> is accessed
     Then it represents the state "<description>"
@@ -29,57 +29,57 @@ Feature: APDU - Application Protocol Data Unit
       | STATE_PARTIAL_OUTGOING        | Some outbound data transferred but not all           |
       | STATE_FULL_OUTGOING           | All outbound data has been transferred               |
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_INITIAL precedes STATE_PARTIAL_INCOMING
     Given the APDU state constants
     Then STATE_INITIAL < STATE_PARTIAL_INCOMING
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_PARTIAL_INCOMING precedes STATE_FULL_INCOMING
     Given the APDU state constants
     Then STATE_PARTIAL_INCOMING < STATE_FULL_INCOMING
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_FULL_INCOMING precedes STATE_OUTGOING
     Given the APDU state constants
     Then STATE_FULL_INCOMING < STATE_OUTGOING
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_OUTGOING precedes STATE_OUTGOING_LENGTH_KNOWN
     Given the APDU state constants
     Then STATE_OUTGOING < STATE_OUTGOING_LENGTH_KNOWN
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_OUTGOING_LENGTH_KNOWN precedes STATE_PARTIAL_OUTGOING
     Given the APDU state constants
     Then STATE_OUTGOING_LENGTH_KNOWN < STATE_PARTIAL_OUTGOING
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: STATE_PARTIAL_OUTGOING precedes STATE_FULL_OUTGOING
     Given the APDU state constants
     Then STATE_PARTIAL_OUTGOING < STATE_FULL_OUTGOING
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: APDU error state constants have negative values
     When the constant APDU.<error_state> is accessed
@@ -96,9 +96,9 @@ Feature: APDU - Application Protocol Data Unit
   # Protocol Constants
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: Protocol type and media constants
     When the constant APDU.<constant_name> is accessed
@@ -120,9 +120,9 @@ Feature: APDU - Application Protocol Data Unit
   # Logical Channel Encoding Constants
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, APDU ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.1 API, APDU ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
-  # Source: [JavaCard 3.2 API, APDU ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, APDU ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.1 API, APDU ](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
+  # Source: [JavaCard 3.2 API, APDU ](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: Logical channel encoding constants
     When the constant APDU.<constant_name> is accessed
@@ -138,9 +138,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getBuffer()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getBuffer](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getBuffer)
-  # Source: [JavaCard 3.1 API, getBuffer](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getBuffer)
-  # Source: [JavaCard 3.2 API, getBuffer](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getBuffer)
+  # Source: [JavaCard 3.0.5 API, getBuffer](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getBuffer)
+  # Source: [JavaCard 3.1 API, getBuffer](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getBuffer)
+  # Source: [JavaCard 3.2 API, getBuffer](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getBuffer)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getBuffer returns the APDU buffer byte array
     Given an APDU object received during Applet.process()
@@ -153,9 +153,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getProtocol()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getProtocol](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getProtocol)
-  # Source: [JavaCard 3.1 API, getProtocol](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getProtocol)
-  # Source: [JavaCard 3.2 API, getProtocol](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getProtocol)
+  # Source: [JavaCard 3.0.5 API, getProtocol](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getProtocol)
+  # Source: [JavaCard 3.1 API, getProtocol](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getProtocol)
+  # Source: [JavaCard 3.2 API, getProtocol](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getProtocol)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getProtocol returns protocol type in low nibble and media in upper nibble
     Given an APDU received over a T=0 contact interface
@@ -167,18 +167,18 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getNAD()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getNAD](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getNAD)
-  # Source: [JavaCard 3.1 API, getNAD](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getNAD)
-  # Source: [JavaCard 3.2 API, getNAD](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.0.5 API, getNAD](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.1 API, getNAD](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.2 API, getNAD](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getNAD)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getNAD returns node address byte for T=1
     Given an APDU received over T=1 protocol
     When getNAD() is called
     Then the Node Address byte is returned
 
-  # Source: [JavaCard 3.0.5 API, getNAD](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getNAD)
-  # Source: [JavaCard 3.1 API, getNAD](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getNAD)
-  # Source: [JavaCard 3.2 API, getNAD](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.0.5 API, getNAD](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.1 API, getNAD](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getNAD)
+  # Source: [JavaCard 3.2 API, getNAD](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getNAD)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getNAD returns 0 for T=0 and contactless protocols
     Given an APDU received over T=0 or contactless protocol
@@ -189,9 +189,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: setIncomingAndReceive()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, setIncomingAndReceive](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
-  # Source: [JavaCard 3.1 API, setIncomingAndReceive](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
-  # Source: [JavaCard 3.2 API, setIncomingAndReceive](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.0.5 API, setIncomingAndReceive](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.1 API, setIncomingAndReceive](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.2 API, setIncomingAndReceive](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setIncomingAndReceive is the primary receive method
     Given an APDU in STATE_INITIAL with incoming data
@@ -200,9 +200,9 @@ Feature: APDU - Application Protocol Data Unit
     And the number of bytes read is returned
     And the APDU state advances to STATE_PARTIAL_INCOMING or STATE_FULL_INCOMING
 
-  # Source: [JavaCard 3.0.5 API, setIncomingAndReceive](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
-  # Source: [JavaCard 3.1 API, setIncomingAndReceive](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
-  # Source: [JavaCard 3.2 API, setIncomingAndReceive](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.0.5 API, setIncomingAndReceive](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.1 API, setIncomingAndReceive](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
+  # Source: [JavaCard 3.2 API, setIncomingAndReceive](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setIncomingAndReceive)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setIncomingAndReceive throws APDUException if called in wrong state
     Given an APDU that is not in STATE_INITIAL
@@ -213,9 +213,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: receiveBytes(short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, receiveBytes](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#receiveBytes(short)
-  # Source: [JavaCard 3.1 API, receiveBytes](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#receiveBytes(short)
-  # Source: [JavaCard 3.2 API, receiveBytes](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.0.5 API, receiveBytes](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.1 API, receiveBytes](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.2 API, receiveBytes](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#receiveBytes(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: receiveBytes reads additional incoming data
     Given an APDU in STATE_PARTIAL_INCOMING
@@ -223,9 +223,9 @@ Feature: APDU - Application Protocol Data Unit
     Then additional data bytes are read into buffer at bOff
     And the number of bytes read is returned
 
-  # Source: [JavaCard 3.0.5 API, receiveBytes](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#receiveBytes(short)
-  # Source: [JavaCard 3.1 API, receiveBytes](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#receiveBytes(short)
-  # Source: [JavaCard 3.2 API, receiveBytes](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.0.5 API, receiveBytes](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.1 API, receiveBytes](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#receiveBytes(short)
+  # Source: [JavaCard 3.2 API, receiveBytes](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#receiveBytes(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: receiveBytes throws APDUException for buffer bounds violation
     Given an APDU in STATE_PARTIAL_INCOMING
@@ -236,9 +236,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getIncomingLength()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getIncomingLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getIncomingLength)
-  # Source: [JavaCard 3.1 API, getIncomingLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getIncomingLength)
-  # Source: [JavaCard 3.2 API, getIncomingLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.0.5 API, getIncomingLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.1 API, getIncomingLength](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.2 API, getIncomingLength](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getIncomingLength)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getIncomingLength returns the Lc value
     Given an APDU with Lc field indicating 10 bytes of data
@@ -246,9 +246,9 @@ Feature: APDU - Application Protocol Data Unit
     When getIncomingLength() is called
     Then the return value is 10
 
-  # Source: [JavaCard 3.0.5 API, getIncomingLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getIncomingLength)
-  # Source: [JavaCard 3.1 API, getIncomingLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getIncomingLength)
-  # Source: [JavaCard 3.2 API, getIncomingLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.0.5 API, getIncomingLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.1 API, getIncomingLength](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getIncomingLength)
+  # Source: [JavaCard 3.2 API, getIncomingLength](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getIncomingLength)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getIncomingLength throws APDUException if called before setIncomingAndReceive
     Given an APDU in STATE_INITIAL
@@ -259,18 +259,18 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getOffsetCdata()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getOffsetCdata](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOffsetCdata)
-  # Source: [JavaCard 3.1 API, getOffsetCdata](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getOffsetCdata)
-  # Source: [JavaCard 3.2 API, getOffsetCdata](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.0.5 API, getOffsetCdata](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.1 API, getOffsetCdata](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.2 API, getOffsetCdata](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getOffsetCdata)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getOffsetCdata returns offset for incoming command data
     Given an APDU with standard length encoding
     When getOffsetCdata() is called
     Then the return value is ISO7816.OFFSET_CDATA (5)
 
-  # Source: [JavaCard 3.0.5 API, getOffsetCdata](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOffsetCdata)
-  # Source: [JavaCard 3.1 API, getOffsetCdata](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getOffsetCdata)
-  # Source: [JavaCard 3.2 API, getOffsetCdata](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.0.5 API, getOffsetCdata](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.1 API, getOffsetCdata](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getOffsetCdata)
+  # Source: [JavaCard 3.2 API, getOffsetCdata](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getOffsetCdata)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getOffsetCdata returns extended offset for extended length APDU
     Given an APDU with extended length encoding
@@ -281,9 +281,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: setOutgoing()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, setOutgoing](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoing)
-  # Source: [JavaCard 3.1 API, setOutgoing](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoing)
-  # Source: [JavaCard 3.2 API, setOutgoing](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.0.5 API, setOutgoing](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.1 API, setOutgoing](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.2 API, setOutgoing](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoing)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoing sets direction to outbound and returns expected Le
     Given an APDU that has completed incoming data processing
@@ -291,9 +291,9 @@ Feature: APDU - Application Protocol Data Unit
     Then the expected response length (Ne) is returned
     And the APDU transitions to STATE_OUTGOING
 
-  # Source: [JavaCard 3.0.5 API, setOutgoing](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoing)
-  # Source: [JavaCard 3.1 API, setOutgoing](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoing)
-  # Source: [JavaCard 3.2 API, setOutgoing](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.0.5 API, setOutgoing](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.1 API, setOutgoing](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoing)
+  # Source: [JavaCard 3.2 API, setOutgoing](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoing)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoing throws APDUException if already in outgoing state
     Given an APDU already in STATE_OUTGOING
@@ -304,27 +304,27 @@ Feature: APDU - Application Protocol Data Unit
   # Method: setOutgoingLength(short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.1 API, setOutgoingLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.2 API, setOutgoingLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.1 API, setOutgoingLength](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.2 API, setOutgoingLength](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoingLength sets the actual response data length
     Given an APDU in STATE_OUTGOING
     When setOutgoingLength(10) is called
     Then the APDU transitions to STATE_OUTGOING_LENGTH_KNOWN
 
-  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.1 API, setOutgoingLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.2 API, setOutgoingLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.1 API, setOutgoingLength](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.2 API, setOutgoingLength](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoingLength throws APDUException if not in outgoing state
     Given an APDU not in STATE_OUTGOING
     When setOutgoingLength(10) is called
     Then an APDUException is thrown with reason ILLEGAL_USE
 
-  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.1 API, setOutgoingLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
-  # Source: [JavaCard 3.2 API, setOutgoingLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.0.5 API, setOutgoingLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.1 API, setOutgoingLength](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
+  # Source: [JavaCard 3.2 API, setOutgoingLength](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoingLength(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoingLength throws APDUException for negative length
     Given an APDU in STATE_OUTGOING
@@ -335,9 +335,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: sendBytes(short, short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, sendBytes](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.1 API, sendBytes](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.2 API, sendBytes](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.0.5 API, sendBytes](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.1 API, sendBytes](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.2 API, sendBytes](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: sendBytes sends data from APDU buffer
     Given an APDU in STATE_OUTGOING_LENGTH_KNOWN
@@ -345,18 +345,18 @@ Feature: APDU - Application Protocol Data Unit
     When sendBytes(bOff, len) is called
     Then len bytes are sent from buffer starting at bOff
 
-  # Source: [JavaCard 3.0.5 API, sendBytes](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.1 API, sendBytes](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.2 API, sendBytes](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.0.5 API, sendBytes](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.1 API, sendBytes](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.2 API, sendBytes](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: sendBytes throws APDUException for buffer bounds violation
     Given an APDU in STATE_OUTGOING_LENGTH_KNOWN
     When sendBytes is called with bOff+len exceeding buffer length
     Then an APDUException is thrown with reason BUFFER_BOUNDS
 
-  # Source: [JavaCard 3.0.5 API, sendBytes](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.1 API, sendBytes](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
-  # Source: [JavaCard 3.2 API, sendBytes](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.0.5 API, sendBytes](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.1 API, sendBytes](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
+  # Source: [JavaCard 3.2 API, sendBytes](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#sendBytes(short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: sendBytes throws APDUException if not in correct state
     Given an APDU not in STATE_OUTGOING_LENGTH_KNOWN or STATE_PARTIAL_OUTGOING
@@ -367,9 +367,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: sendBytesLong(byte[], short, short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, sendBytesLong](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
-  # Source: [JavaCard 3.1 API, sendBytesLong](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
-  # Source: [JavaCard 3.2 API, sendBytesLong](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.0.5 API, sendBytesLong](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.1 API, sendBytesLong](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.2 API, sendBytesLong](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: sendBytesLong sends data from an external byte array
     Given an APDU in STATE_OUTGOING_LENGTH_KNOWN
@@ -377,9 +377,9 @@ Feature: APDU - Application Protocol Data Unit
     When sendBytesLong(outData, bOff, len) is called
     Then len bytes from outData starting at bOff are sent
 
-  # Source: [JavaCard 3.0.5 API, sendBytesLong](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
-  # Source: [JavaCard 3.1 API, sendBytesLong](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
-  # Source: [JavaCard 3.2 API, sendBytesLong](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.0.5 API, sendBytesLong](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.1 API, sendBytesLong](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
+  # Source: [JavaCard 3.2 API, sendBytesLong](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#sendBytesLong(byte%5B%5D,short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: sendBytesLong throws SecurityException for inaccessible array
     Given an APDU in STATE_OUTGOING_LENGTH_KNOWN
@@ -391,9 +391,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: setOutgoingAndSend(short, short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, setOutgoingAndSend](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
-  # Source: [JavaCard 3.1 API, setOutgoingAndSend](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
-  # Source: [JavaCard 3.2 API, setOutgoingAndSend](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
+  # Source: [JavaCard 3.0.5 API, setOutgoingAndSend](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
+  # Source: [JavaCard 3.1 API, setOutgoingAndSend](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
+  # Source: [JavaCard 3.2 API, setOutgoingAndSend](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoingAndSend(short,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoingAndSend is a convenience method for short responses
     Given an APDU with response data prepared in the buffer
@@ -405,9 +405,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: setOutgoingNoChaining()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, setOutgoingNoChaining](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
-  # Source: [JavaCard 3.1 API, setOutgoingNoChaining](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
-  # Source: [JavaCard 3.2 API, setOutgoingNoChaining](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
+  # Source: [JavaCard 3.0.5 API, setOutgoingNoChaining](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
+  # Source: [JavaCard 3.1 API, setOutgoingNoChaining](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
+  # Source: [JavaCard 3.2 API, setOutgoingNoChaining](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#setOutgoingNoChaining)
   @v3.0.5 @v3.1 @v3.2
   Scenario: setOutgoingNoChaining sets outbound without chaining
     Given an APDU that has completed incoming data processing
@@ -420,9 +420,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getCurrentState()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getCurrentState](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentState)
-  # Source: [JavaCard 3.1 API, getCurrentState](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getCurrentState)
-  # Source: [JavaCard 3.2 API, getCurrentState](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getCurrentState)
+  # Source: [JavaCard 3.0.5 API, getCurrentState](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentState)
+  # Source: [JavaCard 3.1 API, getCurrentState](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getCurrentState)
+  # Source: [JavaCard 3.2 API, getCurrentState](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getCurrentState)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getCurrentState returns the current processing state
     Given an APDU in STATE_INITIAL
@@ -433,18 +433,18 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getCurrentAPDU() / getCurrentAPDUBuffer()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getCurrentAPDU](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
-  # Source: [JavaCard 3.1 API, getCurrentAPDU](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
-  # Source: [JavaCard 3.2 API, getCurrentAPDU](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
+  # Source: [JavaCard 3.0.5 API, getCurrentAPDU](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
+  # Source: [JavaCard 3.1 API, getCurrentAPDU](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
+  # Source: [JavaCard 3.2 API, getCurrentAPDU](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getCurrentAPDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getCurrentAPDU returns reference to the current APDU during process()
     Given processing is active within Applet.process(APDU)
     When APDU.getCurrentAPDU() is called
     Then a reference to the current APDU object is returned
 
-  # Source: [JavaCard 3.0.5 API, getCurrentAPDUBuffer](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
-  # Source: [JavaCard 3.1 API, getCurrentAPDUBuffer](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
-  # Source: [JavaCard 3.2 API, getCurrentAPDUBuffer](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
+  # Source: [JavaCard 3.0.5 API, getCurrentAPDUBuffer](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
+  # Source: [JavaCard 3.1 API, getCurrentAPDUBuffer](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
+  # Source: [JavaCard 3.2 API, getCurrentAPDUBuffer](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getCurrentAPDUBuffer)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getCurrentAPDUBuffer returns the current APDU buffer
     Given processing is active within Applet.process(APDU)
@@ -455,9 +455,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getCLAChannel()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getCLAChannel](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCLAChannel)
-  # Source: [JavaCard 3.1 API, getCLAChannel](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getCLAChannel)
-  # Source: [JavaCard 3.2 API, getCLAChannel](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getCLAChannel)
+  # Source: [JavaCard 3.0.5 API, getCLAChannel](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getCLAChannel)
+  # Source: [JavaCard 3.1 API, getCLAChannel](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getCLAChannel)
+  # Source: [JavaCard 3.2 API, getCLAChannel](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getCLAChannel)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getCLAChannel returns logical channel from CLA byte
     Given an APDU with CLA byte indicating logical channel 2
@@ -468,9 +468,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getLogicalChannelEncoding()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getLogicalChannelEncoding](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
-  # Source: [JavaCard 3.1 API, getLogicalChannelEncoding](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
-  # Source: [JavaCard 3.2 API, getLogicalChannelEncoding](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
+  # Source: [JavaCard 3.0.5 API, getLogicalChannelEncoding](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
+  # Source: [JavaCard 3.1 API, getLogicalChannelEncoding](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
+  # Source: [JavaCard 3.2 API, getLogicalChannelEncoding](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getLogicalChannelEncoding)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getLogicalChannelEncoding returns the CLA encoding type
     Given an APDU with CLA byte conforming to Type 4 encoding
@@ -481,18 +481,18 @@ Feature: APDU - Application Protocol Data Unit
   # Method: isCommandChainingCLA()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isCommandChainingCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
-  # Source: [JavaCard 3.1 API, isCommandChainingCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
-  # Source: [JavaCard 3.2 API, isCommandChainingCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.0.5 API, isCommandChainingCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.1 API, isCommandChainingCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.2 API, isCommandChainingCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isCommandChainingCLA returns true for chained command
     Given an APDU with CLA byte indicating command chaining
     When isCommandChainingCLA() is called
     Then the result is true
 
-  # Source: [JavaCard 3.0.5 API, isCommandChainingCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
-  # Source: [JavaCard 3.1 API, isCommandChainingCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
-  # Source: [JavaCard 3.2 API, isCommandChainingCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.0.5 API, isCommandChainingCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.1 API, isCommandChainingCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
+  # Source: [JavaCard 3.2 API, isCommandChainingCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#isCommandChainingCLA)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isCommandChainingCLA returns false for non-chained command
     Given an APDU with CLA byte not indicating command chaining
@@ -503,9 +503,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: isISOInterindustryCLA()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isISOInterindustryCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
-  # Source: [JavaCard 3.1 API, isISOInterindustryCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
-  # Source: [JavaCard 3.2 API, isISOInterindustryCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
+  # Source: [JavaCard 3.0.5 API, isISOInterindustryCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
+  # Source: [JavaCard 3.1 API, isISOInterindustryCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
+  # Source: [JavaCard 3.2 API, isISOInterindustryCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#isISOInterindustryCLA)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isISOInterindustryCLA returns true for interindustry CLA
     Given an APDU with CLA byte 0x00 (ISO interindustry)
@@ -516,9 +516,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: isSecureMessagingCLA()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isSecureMessagingCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
-  # Source: [JavaCard 3.1 API, isSecureMessagingCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
-  # Source: [JavaCard 3.2 API, isSecureMessagingCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
+  # Source: [JavaCard 3.0.5 API, isSecureMessagingCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
+  # Source: [JavaCard 3.1 API, isSecureMessagingCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
+  # Source: [JavaCard 3.2 API, isSecureMessagingCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#isSecureMessagingCLA)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isSecureMessagingCLA indicates secure messaging in CLA
     Given an APDU with CLA byte indicating secure messaging
@@ -529,9 +529,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: isValidCLA()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isValidCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isValidCLA)
-  # Source: [JavaCard 3.1 API, isValidCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#isValidCLA)
-  # Source: [JavaCard 3.2 API, isValidCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#isValidCLA)
+  # Source: [JavaCard 3.0.5 API, isValidCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#isValidCLA)
+  # Source: [JavaCard 3.1 API, isValidCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#isValidCLA)
+  # Source: [JavaCard 3.2 API, isValidCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#isValidCLA)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isValidCLA returns true for a valid CLA byte
     Given an APDU with a valid CLA byte
@@ -542,17 +542,17 @@ Feature: APDU - Application Protocol Data Unit
   # Method: getInBlockSize() / getOutBlockSize()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getInBlockSize](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getInBlockSize)
-  # Source: [JavaCard 3.1 API, getInBlockSize](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getInBlockSize)
-  # Source: [JavaCard 3.2 API, getInBlockSize](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getInBlockSize)
+  # Source: [JavaCard 3.0.5 API, getInBlockSize](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getInBlockSize)
+  # Source: [JavaCard 3.1 API, getInBlockSize](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getInBlockSize)
+  # Source: [JavaCard 3.2 API, getInBlockSize](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getInBlockSize)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getInBlockSize returns the configured incoming block size
     When APDU.getInBlockSize() is called
     Then a positive short value is returned representing the incoming block size
 
-  # Source: [JavaCard 3.0.5 API, getOutBlockSize](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOutBlockSize)
-  # Source: [JavaCard 3.1 API, getOutBlockSize](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#getOutBlockSize)
-  # Source: [JavaCard 3.2 API, getOutBlockSize](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#getOutBlockSize)
+  # Source: [JavaCard 3.0.5 API, getOutBlockSize](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#getOutBlockSize)
+  # Source: [JavaCard 3.1 API, getOutBlockSize](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#getOutBlockSize)
+  # Source: [JavaCard 3.2 API, getOutBlockSize](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#getOutBlockSize)
   @v3.0.5 @v3.1 @v3.2
   Scenario: getOutBlockSize returns the configured outgoing block size
     When APDU.getOutBlockSize() is called
@@ -562,9 +562,9 @@ Feature: APDU - Application Protocol Data Unit
   # Method: waitExtension()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, waitExtension](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#waitExtension)
-  # Source: [JavaCard 3.1 API, waitExtension](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#waitExtension)
-  # Source: [JavaCard 3.2 API, waitExtension](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#waitExtension)
+  # Source: [JavaCard 3.0.5 API, waitExtension](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#waitExtension)
+  # Source: [JavaCard 3.1 API, waitExtension](../../refs/javadoc-3.1/api_classic/javacard/framework/APDU.html#waitExtension)
+  # Source: [JavaCard 3.2 API, waitExtension](../../refs/javadoc-3.2/api_classic/javacard/framework/APDU.html#waitExtension)
   @v3.0.5 @v3.1 @v3.2
   Scenario: waitExtension requests additional processing time from CAD
     Given an APDU being processed

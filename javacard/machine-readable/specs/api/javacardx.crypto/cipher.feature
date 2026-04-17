@@ -13,7 +13,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
   Even if a transaction is in progress, update of intermediate result state in the
   implementation instance shall not participate in the transaction.
 
-  # Source: [JavaCard 3.2 API, Cipher](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+  # Source: [JavaCard 3.2 API, Cipher](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Background:
     Given a JavaCard runtime environment
@@ -24,7 +24,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then class Cipher defines static byte constant "<constant>"
     And the constant represents cipher algorithm "<description>"
 
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
     Examples:
       | constant                      | description                                                                              |
       | ALG_DES_CBC_NOPAD             | DES in CBC mode or triple DES in outer CBC mode, no padding                              |
@@ -56,7 +56,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then class Cipher defines deprecated static byte constant "<constant>"
     And the constant should not be used because "<reason>"
 
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
     Examples:
       | constant                       | reason                                                                  |
       | ALG_RSA_ISO14888               | ISO 14888 algorithms are intended for signatures                        |
@@ -70,7 +70,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then class Cipher defines static byte constant "<constant>"
     And the constant is used for the cipherAlgorithm parameter of getInstance(byte, byte, boolean)
 
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
     Examples:
       | constant             | description                                                        |
       | CIPHER_AES_CBC       | AES with block size 128 in CBC mode                                |
@@ -91,7 +91,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then class Cipher defines static byte constant "<constant>"
     And the constant is used for the paddingAlgorithm parameter
 
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
     Examples:
       | constant                       | description                                                               |
       | PAD_NULL                       | No discrete padding algorithm                                             |
@@ -126,8 +126,8 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
   Scenario: Cipher defines mode constants
     Then class Cipher defines static byte constant "MODE_DECRYPT" for decryption mode
     And class Cipher defines static byte constant "MODE_ENCRYPT" for encryption mode
-    # Source: [JavaCard 3.2 API, MODE_DECRYPT](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
-    # Source: [JavaCard 3.2 API, MODE_ENCRYPT](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, MODE_DECRYPT](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, MODE_ENCRYPT](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   # ========== Factory Methods ==========
 
@@ -135,18 +135,18 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     When getInstance(byte algorithm, boolean externalAccess) is called
     Then a Cipher object instance of the selected algorithm is returned
     And if externalAccess is true, the instance is a Shareable interface object
-    # Source: [JavaCard 3.2 API, getInstance](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,boolean))
+    # Source: [JavaCard 3.2 API, getInstance](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,boolean))
 
   Scenario: Cipher.getInstance with raw cipher and padding algorithm
     When getInstance(byte cipherAlgorithm, byte paddingAlgorithm, boolean externalAccess) is called
     Then a Cipher object instance with the selected cipher and padding algorithms is returned
     And if externalAccess is true, the instance is a Shareable interface object
-    # Source: [JavaCard 3.2 API, getInstance](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,byte,boolean))
+    # Source: [JavaCard 3.2 API, getInstance](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,byte,boolean))
 
   Scenario: Cipher.getInstance throws CryptoException for unsupported algorithm
     When getInstance is called with an unsupported algorithm constant
     Then CryptoException is thrown with reason code NO_SUCH_ALGORITHM
-    # Source: [JavaCard 3.2 API, getInstance](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,boolean))
+    # Source: [JavaCard 3.2 API, getInstance](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getInstance(byte,boolean))
 
   # ========== Initialization ==========
 
@@ -155,31 +155,31 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     When init(Key theKey, byte theMode) is called
     Then the Cipher is initialized for the specified mode with default parameters
     And CBC/CFB/CTR/XTS modes use zeroed IV as default
-    # Source: [JavaCard 3.2 API, init](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
+    # Source: [JavaCard 3.2 API, init](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
 
   Scenario: Cipher.init with key, mode and algorithm-specific parameters
     Given a Cipher instance obtained via getInstance
     When init(Key theKey, byte theMode, byte[] bArray, short bOff, short bLen) is called
     Then the Cipher is initialized with the specified parameters (e.g. IV for CBC modes)
-    # Source: [JavaCard 3.2 API, init](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#init(Key,byte,byte%5B%5D,short,short))
+    # Source: [JavaCard 3.2 API, init](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#init(Key,byte,byte%5B%5D,short,short))
 
   Scenario: Cipher.init throws CryptoException for invalid mode
     Given a Cipher instance
     When init is called with an undefined mode value
     Then CryptoException is thrown with reason code ILLEGAL_VALUE
-    # Source: [JavaCard 3.2 API, init](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
+    # Source: [JavaCard 3.2 API, init](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
 
   Scenario: Cipher.init throws CryptoException for uninitialized key
     Given a Cipher instance
     When init is called with an uninitialized Key
     Then CryptoException is thrown with reason code UNINITIALIZED_KEY
-    # Source: [JavaCard 3.2 API, init](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
+    # Source: [JavaCard 3.2 API, init](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
 
   Scenario: Cipher.init throws CryptoException for inconsistent key type
     Given a Cipher instance
     When init is called with a Key inconsistent with the Cipher algorithm
     Then CryptoException is thrown with reason code ILLEGAL_VALUE
-    # Source: [JavaCard 3.2 API, init](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
+    # Source: [JavaCard 3.2 API, init](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#init(Key,byte))
 
   # ========== Encryption/Decryption Operations ==========
 
@@ -189,7 +189,7 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then intermediate encrypted/decrypted output is written to outBuff
     And the method returns the number of bytes output
     And partial blocks may be buffered internally
-    # Source: [JavaCard 3.2 API, update](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#update(byte%5B%5D,short,short,byte%5B%5D,short))
+    # Source: [JavaCard 3.2 API, update](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#update(byte%5B%5D,short,short,byte%5B%5D,short))
 
   Scenario: Cipher.doFinal completes the cipher operation
     Given an initialized Cipher instance with possible prior update calls
@@ -197,36 +197,36 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then all remaining input is processed and final encrypted/decrypted output is produced
     And the Cipher is reset for a new operation with the same key and mode
     And the method returns the number of bytes output
-    # Source: [JavaCard 3.2 API, doFinal](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
+    # Source: [JavaCard 3.2 API, doFinal](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
 
   Scenario: Cipher.doFinal throws CryptoException if not initialized
     Given a Cipher instance that has not been initialized
     When doFinal is called
     Then CryptoException is thrown with reason code INVALID_INIT
-    # Source: [JavaCard 3.2 API, doFinal](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
+    # Source: [JavaCard 3.2 API, doFinal](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
 
   Scenario: NOPAD cipher throws CryptoException for non-block-aligned data
     Given a Cipher initialized with a NOPAD algorithm (e.g. ALG_DES_CBC_NOPAD)
     When doFinal is called with data that is not block-aligned
     Then CryptoException is thrown with reason code ILLEGAL_USE
-    # Source: [JavaCard 3.2 API, ALG_DES_CBC_NOPAD](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, ALG_DES_CBC_NOPAD](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: RSA NOPAD cipher throws CryptoException for misaligned or oversized data
     Given a Cipher initialized with ALG_RSA_NOPAD
     When doFinal is called with data not block-aligned or >= modulus size
     Then CryptoException is thrown with reason code ILLEGAL_USE
-    # Source: [JavaCard 3.2 API, ALG_RSA_NOPAD](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, ALG_RSA_NOPAD](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: RSA PKCS1 cipher limits input length
     Given a Cipher initialized with ALG_RSA_PKCS1
     When encrypting, total input bytes must not exceed k-11 where k is modulus size in bytes
-    # Source: [JavaCard 3.2 API, ALG_RSA_PKCS1](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, ALG_RSA_PKCS1](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: SM2 cipher does not allow update operations
     Given a Cipher initialized with CIPHER_SM2
     When update is called
     Then CryptoException is thrown with reason code ILLEGAL_USE
-    # Source: [JavaCard 3.2 API, CIPHER_SM2](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, CIPHER_SM2](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   # ========== Query Methods ==========
 
@@ -234,19 +234,19 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Given a Cipher instance created with a legacy algorithm constant
     When getAlgorithm() is called
     Then the legacy algorithm byte constant is returned
-    # Source: [JavaCard 3.2 API, getAlgorithm](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getAlgorithm)
+    # Source: [JavaCard 3.2 API, getAlgorithm](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getAlgorithm)
 
   Scenario: Cipher.getCipherAlgorithm returns the raw cipher algorithm
     Given a Cipher instance created with getInstance(byte, byte, boolean)
     When getCipherAlgorithm() is called
     Then the raw cipher algorithm byte constant (e.g. CIPHER_AES_CBC) is returned
-    # Source: [JavaCard 3.2 API, getCipherAlgorithm](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getCipherAlgorithm)
+    # Source: [JavaCard 3.2 API, getCipherAlgorithm](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getCipherAlgorithm)
 
   Scenario: Cipher.getPaddingAlgorithm returns the padding algorithm
     Given a Cipher instance created with getInstance(byte, byte, boolean)
     When getPaddingAlgorithm() is called
     Then the padding algorithm byte constant (e.g. PAD_PKCS5) is returned
-    # Source: [JavaCard 3.2 API, getPaddingAlgorithm](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#getPaddingAlgorithm)
+    # Source: [JavaCard 3.2 API, getPaddingAlgorithm](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#getPaddingAlgorithm)
 
   # ========== Cipher.OneShot ==========
 
@@ -254,43 +254,43 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then Cipher.OneShot instances are JCRE-owned temporary Entry Point Objects
     And references to OneShot cannot be stored in class variables, instance variables, or array components
     And the platform must support at least one OneShot instance
-    # Source: [JavaCard 3.2 API, OneShot](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, OneShot](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: Cipher.OneShot.open creates a one-shot cipher instance
     When Cipher.OneShot.open(byte cipherAlgorithm, byte paddingAlgorithm) is called
     Then a OneShot Cipher instance is returned for one-shot ciphering operations
-    # Source: [JavaCard 3.2 API, open](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#open(byte,byte))
+    # Source: [JavaCard 3.2 API, open](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#open(byte,byte))
 
   Scenario: Cipher.OneShot.close releases the instance for reuse
     Given an open Cipher.OneShot instance
     When close() is called
     Then the instance is released back to the JCRE for reuse
     And any subsequent method calls throw CryptoException with ILLEGAL_USE
-    # Source: [JavaCard 3.2 API, close](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#close)
+    # Source: [JavaCard 3.2 API, close](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#close)
 
   Scenario: Cipher.OneShot is released on applet entry point return
     Given a Cipher.OneShot instance in use
     When control returns from any Applet entry point method to the JCRE
     Then the OneShot instance is automatically released
-    # Source: [JavaCard 3.2 API, OneShot](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, OneShot](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: Cipher.OneShot is released on tear or card reset
     Given a Cipher.OneShot instance in use
     When a tear or card reset event occurs
     Then the OneShot instance is automatically released
-    # Source: [JavaCard 3.2 API, OneShot](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, OneShot](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)
 
   Scenario: Cipher.OneShot.doFinal performs complete cipher operation
     Given an initialized Cipher.OneShot instance
     When doFinal(byte[] inBuff, short inOffset, short inLength, byte[] outBuff, short outOffset) is called
     Then the complete encrypted/decrypted output is produced in one call
-    # Source: [JavaCard 3.2 API, doFinal](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
+    # Source: [JavaCard 3.2 API, doFinal](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#doFinal(byte%5B%5D,short,short,byte%5B%5D,short))
 
   Scenario: Cipher.OneShot.update is not supported
     Given an initialized Cipher.OneShot instance
     When update is called
     Then CryptoException is thrown with reason code ILLEGAL_USE
-    # Source: [JavaCard 3.2 API, update](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html#update(byte%5B%5D,short,short,byte%5B%5D,short))
+    # Source: [JavaCard 3.2 API, update](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html#update(byte%5B%5D,short,short,byte%5B%5D,short))
 
   # ========== AES-XTS Key Format ==========
 
@@ -299,4 +299,4 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     Then the key is parsed as Key1 | Key2 of equal size
     And KeyBuilder.LENGTH_AES_256 provides 128-bit Key1 and 128-bit Key2
     And KeyBuilder.LENGTH_AES_512 provides 256-bit Key1 and 256-bit Key2
-    # Source: [JavaCard 3.2 API, CIPHER_AES_XTS](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/crypto/Cipher.html)
+    # Source: [JavaCard 3.2 API, CIPHER_AES_XTS](../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)

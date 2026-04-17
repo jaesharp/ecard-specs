@@ -5,17 +5,17 @@ Feature: CAP File Class Component
   associated with a particular class or interface without performing
   verification. The Class Component has tag value 6 (COMPONENT_Class).
 
-  # Source: [JCVM 3.0.5, s6.9 Class Component](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=95)
-  # Source: [JCVM 3.1, s6.9 Class Component](../../../3.1/JCVMSpec_3.1.pdf#page=100)
-  # Source: [JCVM 3.2, s6.9 Class Component](../../../3.2/JCVMSpec_3.2.pdf#page=100)
+  # Source: [JCVM 3.0.5, s6.9 Class Component](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=95)
+  # Source: [JCVM 3.1, s6.9 Class Component](../../refs/3.1/JCVMSpec_3.1.pdf#page=100)
+  # Source: [JCVM 3.2, s6.9 Class Component](../../refs/3.2/JCVMSpec_3.2.pdf#page=100)
 
   Background:
     Given a Java Card CAP file
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: Class component structure
-    # Source: [JCVM 3.0.5, s6.9](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=95)
-    # Source: [JCVM 3.2, s6.9](../../../3.2/JCVMSpec_3.2.pdf#page=101)
+    # Source: [JCVM 3.0.5, s6.9](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=95)
+    # Source: [JCVM 3.2, s6.9](../../refs/3.2/JCVMSpec_3.2.pdf#page=101)
     Then the class_component shall contain:
       | Field                  | Type               | Description                              |
       | tag                    | u1                 | COMPONENT_Class (6)                      |
@@ -27,8 +27,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: Interfaces ordered by hierarchy -- superinterfaces before subinterfaces
-    # Source: [JCVM 3.0.5, s6.9](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=96)
-    # Source: [JCVM 3.2, s6.9](../../../3.2/JCVMSpec_3.2.pdf#page=101)
+    # Source: [JCVM 3.0.5, s6.9](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=96)
+    # Source: [JCVM 3.2, s6.9](../../refs/3.2/JCVMSpec_3.2.pdf#page=101)
     Then interfaces shall be ordered such that a superinterface has a lower index than its subinterfaces
     And classes shall be ordered such that a superclass has a lower index than its subclasses
 
@@ -36,8 +36,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: Interface and class flags
-    # Source: [JCVM 3.0.5, s6.9.2.1 Table 6-11](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=99)
-    # Source: [JCVM 3.2, s6.9.2.1 Table 6-11](../../../3.2/JCVMSpec_3.2.pdf#page=106)
+    # Source: [JCVM 3.0.5, s6.9.2.1 Table 6-11](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=99)
+    # Source: [JCVM 3.2, s6.9.2.1 Table 6-11](../../refs/3.2/JCVMSpec_3.2.pdf#page=106)
     Then the flags field (4 bits) shall support:
       | Flag           | Value | Description                                      |
       | ACC_INTERFACE  | 0x8   | 1 = interface_info; 0 = class_info                |
@@ -48,8 +48,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: interface_info structure
-    # Source: [JCVM 3.0.5, s6.9.2 interface_info](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=99)
-    # Source: [JCVM 3.2, s6.9.2](../../../3.2/JCVMSpec_3.2.pdf#page=104)
+    # Source: [JCVM 3.0.5, s6.9.2 interface_info](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=99)
+    # Source: [JCVM 3.2, s6.9.2](../../refs/3.2/JCVMSpec_3.2.pdf#page=104)
     Then interface_info shall contain:
       | Field               | Type        | Description                                      |
       | bitfield            | u1          | flags (4 bits, ACC_INTERFACE must be 1) + interface_count (4 bits) |
@@ -60,8 +60,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: class_info_compact structure
-    # Source: [JCVM 3.0.5, s6.9.2](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=99)
-    # Source: [JCVM 3.2, s6.9.2](../../../3.2/JCVMSpec_3.2.pdf#page=104)
+    # Source: [JCVM 3.0.5, s6.9.2](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=99)
+    # Source: [JCVM 3.2, s6.9.2](../../refs/3.2/JCVMSpec_3.2.pdf#page=104)
     Then class_info_compact shall contain:
       | Field                        | Type     | Description                                |
       | bitfield                     | u1       | flags (4 bits) + interface_count (4 bits, 0-15)  |
@@ -81,8 +81,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: implemented_interface_info maps interface methods to virtual method tokens
-    # Source: [JCVM 3.0.5, s6.9.2.4 implemented_interface_info](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=105)
-    # Source: [JCVM 3.2, s6.9.2.5](../../../3.2/JCVMSpec_3.2.pdf#page=112)
+    # Source: [JCVM 3.0.5, s6.9.2.4 implemented_interface_info](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=105)
+    # Source: [JCVM 3.2, s6.9.2.5](../../refs/3.2/JCVMSpec_3.2.pdf#page=112)
     Then implemented_interface_info shall contain:
       | Field     | Type      | Description                                       |
       | interface | class_ref | Reference to the implemented interface             |
@@ -93,8 +93,8 @@ Feature: CAP File Class Component
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: type_descriptor uses nibble encoding for types
-    # Source: [JCVM 3.0.5, s6.9.1 type_descriptor](../../../3.0.5/JCVMSpec_3.0.5.pdf#page=96)
-    # Source: [JCVM 3.2, s6.9.1](../../../3.2/JCVMSpec_3.2.pdf#page=102)
+    # Source: [JCVM 3.0.5, s6.9.1 type_descriptor](../../refs/3.0.5/JCVMSpec_3.0.5.pdf#page=96)
+    # Source: [JCVM 3.2, s6.9.1](../../refs/3.2/JCVMSpec_3.2.pdf#page=102)
     Then type_descriptor shall encode types using nibbles (4-bit values):
       | Type             | Nibble Value |
       | Void             | 0x1          |

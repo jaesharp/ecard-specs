@@ -6,9 +6,9 @@ Feature: Applet Firewall and Object Sharing
   interface for access. The firewall is runtime-enforced protection separate from
   Java language protections.
 
-  # Source: [JCRE 3.0.5, s6 Applet Isolation and Object Sharing](../../../3.0.5/JCRESpec_3.0.5.pdf#page=43)
-  # Source: [JCRE 3.1, s6 Applet Isolation and Object Sharing](../../../3.1/JCRESpec_3.1.pdf#page=51)
-  # Source: [JCRE 3.2, s6 Applet Isolation and Object Sharing](../../../3.2/JCRESpec_3.2.pdf#page=53)
+  # Source: [JCRE 3.0.5, s6 Applet Isolation and Object Sharing](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=43)
+  # Source: [JCRE 3.1, s6 Applet Isolation and Object Sharing](../refs/3.1/JCRESpec_3.1.pdf#page=51)
+  # Source: [JCRE 3.2, s6 Applet Isolation and Object Sharing](../refs/3.2/JCRESpec_3.2.pdf#page=53)
 
   Background:
     Given a Java Card secure element with a compliant JCRE implementation
@@ -19,9 +19,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.2 Contexts and Context Switching](../../../3.0.5/JCRESpec_3.0.5.pdf#page=43)
-  # Source: [JCRE 3.1, s6.1.2 Contexts and Context Switching](../../../3.1/JCRESpec_3.1.pdf#page=51)
-  # Source: [JCRE 3.2, s6.1.2 Contexts and Context Switching](../../../3.2/JCRESpec_3.2.pdf#page=53)
+  # Source: [JCRE 3.0.5, s6.1.2 Contexts and Context Switching](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=43)
+  # Source: [JCRE 3.1, s6.1.2 Contexts and Context Switching](../refs/3.1/JCRESpec_3.1.pdf#page=51)
+  # Source: [JCRE 3.2, s6.1.2 Contexts and Context Switching](../refs/3.2/JCRESpec_3.2.pdf#page=53)
   Scenario: Context allocation per CAP file
     Given a Java Card CAP File containing applets is loaded
     Then the Java Card RE shall allocate and manage a context for each Java Card CAP File containing applets
@@ -31,9 +31,9 @@ Feature: Applet Firewall and Object Sharing
     And a library CAP File is not assigned a separate context; library objects belong to the context of the creating applet instance
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.2 Contexts and Context Switching](../../../3.0.5/JCRESpec_3.0.5.pdf#page=43)
-  # Source: [JCRE 3.1, s6.1.2 Contexts and Context Switching](../../../3.1/JCRESpec_3.1.pdf#page=51)
-  # Source: [JCRE 3.2, s6.1.2 Contexts and Context Switching](../../../3.2/JCRESpec_3.2.pdf#page=53)
+  # Source: [JCRE 3.0.5, s6.1.2 Contexts and Context Switching](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=43)
+  # Source: [JCRE 3.1, s6.1.2 Contexts and Context Switching](../refs/3.1/JCRESpec_3.1.pdf#page=51)
+  # Source: [JCRE 3.2, s6.1.2 Contexts and Context Switching](../refs/3.2/JCRESpec_3.2.pdf#page=53)
   Scenario: Java Card RE context
     Given the Java Card RE maintains its own Java Card RE context
     Then the Java Card RE context has special system privileges
@@ -45,9 +45,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.2.1 Active Contexts in the VM](../../../3.0.5/JCRESpec_3.0.5.pdf#page=44)
-  # Source: [JCRE 3.1, s6.1.2.1 Active Contexts in the VM](../../../3.1/JCRESpec_3.1.pdf#page=52)
-  # Source: [JCRE 3.2, s6.1.2.1 Active Contexts in the VM](../../../3.2/JCRESpec_3.2.pdf#page=54)
+  # Source: [JCRE 3.0.5, s6.1.2.1 Active Contexts in the VM](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=44)
+  # Source: [JCRE 3.1, s6.1.2.1 Active Contexts in the VM](../refs/3.1/JCRESpec_3.1.pdf#page=52)
+  # Source: [JCRE 3.2, s6.1.2.1 Active Contexts in the VM](../refs/3.2/JCRESpec_3.2.pdf#page=54)
   Scenario: Currently active context and access checking
     Given at any point in time there is only one active context within the VM (the currently active context)
     Then the currently active context can be either the Java Card RE context or an applet's context
@@ -59,9 +59,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.2.2 Context Switching in the VM](../../../3.0.5/JCRESpec_3.0.5.pdf#page=45)
-  # Source: [JCRE 3.1, s6.1.2.2 Context Switching in the VM](../../../3.1/JCRESpec_3.1.pdf#page=53)
-  # Source: [JCRE 3.2, s6.1.2.2 Context Switching in the VM](../../../3.2/JCRESpec_3.2.pdf#page=55)
+  # Source: [JCRE 3.0.5, s6.1.2.2 Context Switching in the VM](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=45)
+  # Source: [JCRE 3.1, s6.1.2.2 Context Switching in the VM](../refs/3.1/JCRESpec_3.1.pdf#page=53)
+  # Source: [JCRE 3.2, s6.1.2.2 Context Switching in the VM](../refs/3.2/JCRESpec_3.2.pdf#page=55)
   Scenario: Context switch mechanism - push/pop on VM stack
     Given a context switch occurs during execution of an invoke-type bytecode
     Then the previous context and object owner information is pushed on an internal VM stack
@@ -72,9 +72,9 @@ Feature: Applet Firewall and Object Sharing
     And context switches can be nested with depth limited by VM stack space
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.2.2 Context Switching in the VM](../../../3.0.5/JCRESpec_3.0.5.pdf#page=45)
-  # Source: [JCRE 3.1, s6.1.2.2 Context Switching in the VM](../../../3.1/JCRESpec_3.1.pdf#page=53)
-  # Source: [JCRE 3.2, s6.1.2.2 Context Switching in the VM](../../../3.2/JCRESpec_3.2.pdf#page=55)
+  # Source: [JCRE 3.0.5, s6.1.2.2 Context Switching in the VM](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=45)
+  # Source: [JCRE 3.1, s6.1.2.2 Context Switching in the VM](../refs/3.1/JCRESpec_3.1.pdf#page=53)
+  # Source: [JCRE 3.2, s6.1.2.2 Context Switching in the VM](../refs/3.2/JCRESpec_3.2.pdf#page=55)
   Scenario: Most method invocations do not cause context switch
     Given a method is invoked on an object that belongs to an applet instance in the same context
     Then no context switch occurs
@@ -86,9 +86,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.3 Object Ownership](../../../3.0.5/JCRESpec_3.0.5.pdf#page=45)
-  # Source: [JCRE 3.1, s6.1.3 Object Ownership](../../../3.1/JCRESpec_3.1.pdf#page=53)
-  # Source: [JCRE 3.2, s6.1.3 Object Ownership](../../../3.2/JCRESpec_3.2.pdf#page=55)
+  # Source: [JCRE 3.0.5, s6.1.3 Object Ownership](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=45)
+  # Source: [JCRE 3.1, s6.1.3 Object Ownership](../refs/3.1/JCRESpec_3.1.pdf#page=53)
+  # Source: [JCRE 3.2, s6.1.3 Object Ownership](../refs/3.2/JCRESpec_3.2.pdf#page=55)
   Scenario: Object ownership rules
     Given an object is created in the Java Card platform
     Then the object is associated with the currently active context
@@ -102,9 +102,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.4 Object Access](../../../3.0.5/JCRESpec_3.0.5.pdf#page=46)
-  # Source: [JCRE 3.1, s6.1.4 Object Access](../../../3.1/JCRESpec_3.1.pdf#page=54)
-  # Source: [JCRE 3.2, s6.1.4 Object Access](../../../3.2/JCRESpec_3.2.pdf#page=56)
+  # Source: [JCRE 3.0.5, s6.1.4 Object Access](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=46)
+  # Source: [JCRE 3.1, s6.1.4 Object Access](../refs/3.1/JCRESpec_3.1.pdf#page=54)
+  # Source: [JCRE 3.2, s6.1.4 Object Access](../refs/3.2/JCRESpec_3.2.pdf#page=56)
   Scenario: Object access restricted to owning context
     Given an object exists in the Java Card platform object space
     Then in general the object can only be accessed by its owning context (when the owning context is the currently active context)
@@ -128,17 +128,17 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../../../3.0.5/JCRESpec_3.0.5.pdf#page=47)
-  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../../../3.1/JCRESpec_3.1.pdf#page=55)
-  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../../../3.2/JCRESpec_3.2.pdf#page=57)
+  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=47)
+  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../refs/3.1/JCRESpec_3.1.pdf#page=55)
+  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../refs/3.2/JCRESpec_3.2.pdf#page=57)
   Scenario: CLEAR_ON_RESET transient objects - owning context only
     Given a transient object of CLEAR_ON_RESET type exists
     Then it behaves like persistent objects in that it can be accessed only when the currently active context is the object's owning context
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../../../3.0.5/JCRESpec_3.0.5.pdf#page=47)
-  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../../../3.1/JCRESpec_3.1.pdf#page=55)
-  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../../../3.2/JCRESpec_3.2.pdf#page=57)
+  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=47)
+  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../refs/3.1/JCRESpec_3.1.pdf#page=55)
+  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../refs/3.2/JCRESpec_3.2.pdf#page=57)
   Scenario: CLEAR_ON_DESELECT transient objects - currently selected applet context only
     Given a transient object of CLEAR_ON_DESELECT type exists
     Then it can only be created or accessed when the currently active context is the context of the currently selected applet
@@ -146,9 +146,9 @@ Feature: Applet Firewall and Object Sharing
     And if an attempt is made to access a CLEAR_ON_DESELECT object when the active context is not the currently selected applet's context, a SecurityException shall be thrown
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../../../3.0.5/JCRESpec_3.0.5.pdf#page=47)
-  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../../../3.1/JCRESpec_3.1.pdf#page=55)
-  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../../../3.2/JCRESpec_3.2.pdf#page=57)
+  # Source: [JCRE 3.0.5, s6.1.5 Transient Objects and Contexts](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=47)
+  # Source: [JCRE 3.1, s6.1.5 Transient Objects and Contexts](../refs/3.1/JCRESpec_3.1.pdf#page=55)
+  # Source: [JCRE 3.2, s6.1.5 Transient Objects and Contexts](../refs/3.2/JCRESpec_3.2.pdf#page=57)
   Scenario: CLEAR_ON_DESELECT transient objects shared within same CAP file
     Given applets are part of the same CAP file and share the same context
     Then every applet instance from a CAP file shares all its object instances with all other instances from the same CAP file
@@ -160,9 +160,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.1.6 Static Fields and Methods](../../../3.0.5/JCRESpec_3.0.5.pdf#page=47)
-  # Source: [JCRE 3.1, s6.1.6 Static Fields and Methods](../../../3.1/JCRESpec_3.1.pdf#page=56)
-  # Source: [JCRE 3.2, s6.1.6 Static Fields and Methods](../../../3.2/JCRESpec_3.2.pdf#page=58)
+  # Source: [JCRE 3.0.5, s6.1.6 Static Fields and Methods](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=47)
+  # Source: [JCRE 3.1, s6.1.6 Static Fields and Methods](../refs/3.1/JCRESpec_3.1.pdf#page=56)
+  # Source: [JCRE 3.2, s6.1.6 Static Fields and Methods](../refs/3.2/JCRESpec_3.2.pdf#page=58)
   Scenario: Static fields and methods - no context check or switch
     Given a class static field is accessed or a static method is invoked
     Then there is no runtime context check performed on static field access
@@ -176,9 +176,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../../../3.0.5/JCRESpec_3.0.5.pdf#page=48)
-  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../../../3.1/JCRESpec_3.1.pdf#page=56)
-  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../../../3.2/JCRESpec_3.2.pdf#page=58)
+  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=48)
+  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../refs/3.1/JCRESpec_3.1.pdf#page=56)
+  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../refs/3.2/JCRESpec_3.2.pdf#page=58)
   Scenario: Temporary Java Card RE Entry Point Objects
     Given certain Java Card RE owned objects are designated as temporary entry point objects
     Then their methods can be invoked from any context, causing a context switch to the Java Card RE context
@@ -187,9 +187,9 @@ Feature: Applet Firewall and Object Sharing
     And the APDU object and all Java Card RE owned exception objects are examples of temporary entry point objects
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../../../3.0.5/JCRESpec_3.0.5.pdf#page=48)
-  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../../../3.1/JCRESpec_3.1.pdf#page=56)
-  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../../../3.2/JCRESpec_3.2.pdf#page=58)
+  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=48)
+  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../refs/3.1/JCRESpec_3.1.pdf#page=56)
+  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../refs/3.2/JCRESpec_3.2.pdf#page=58)
   Scenario: Permanent Java Card RE Entry Point Objects
     Given certain Java Card RE owned objects are designated as permanent entry point objects
     Then their methods can be invoked from any context, causing a context switch to the Java Card RE context
@@ -197,9 +197,9 @@ Feature: Applet Firewall and Object Sharing
     And Java Card RE owned AID instances are examples of permanent entry point objects
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../../../3.0.5/JCRESpec_3.0.5.pdf#page=48)
-  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../../../3.1/JCRESpec_3.1.pdf#page=56)
-  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../../../3.2/JCRESpec_3.2.pdf#page=58)
+  # Source: [JCRE 3.0.5, s6.2.1 Java Card RE Entry Point Objects](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=48)
+  # Source: [JCRE 3.1, s6.2.1 Java Card RE Entry Point Objects](../refs/3.1/JCRESpec_3.1.pdf#page=56)
+  # Source: [JCRE 3.2, s6.2.1 Java Card RE Entry Point Objects](../refs/3.2/JCRESpec_3.2.pdf#page=58)
   Scenario: Entry point objects - only methods accessible through firewall
     Given any Java Card RE Entry Point Object (temporary or permanent) exists
     Then only the methods of these objects are accessible through the firewall
@@ -211,9 +211,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.2 Global Arrays](../../../3.0.5/JCRESpec_3.0.5.pdf#page=49)
-  # Source: [JCRE 3.1, s6.2.2.1 Sharing using Global Arrays](../../../3.1/JCRESpec_3.1.pdf#page=58)
-  # Source: [JCRE 3.2, s6.2.2.1 Sharing using Global Arrays](../../../3.2/JCRESpec_3.2.pdf#page=60)
+  # Source: [JCRE 3.0.5, s6.2.2 Global Arrays](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=49)
+  # Source: [JCRE 3.1, s6.2.2.1 Sharing using Global Arrays](../refs/3.1/JCRESpec_3.1.pdf#page=58)
+  # Source: [JCRE 3.2, s6.2.2.1 Sharing using Global Arrays](../refs/3.2/JCRESpec_3.2.pdf#page=60)
   Scenario: Global array access rules
     Given all global arrays are temporary global array objects owned by the Java Card RE context
     Then they can be accessed from any context
@@ -224,9 +224,9 @@ Feature: Applet Firewall and Object Sharing
     And the APDU buffer and the byte array parameter (bArray) to the applet's install method are global arrays
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.2 Global Arrays](../../../3.0.5/JCRESpec_3.0.5.pdf#page=49)
-  # Source: [JCRE 3.1, s6.2.2.1 Sharing using Global Arrays](../../../3.1/JCRESpec_3.1.pdf#page=58)
-  # Source: [JCRE 3.2, s6.2.2.1 Sharing using Global Arrays](../../../3.2/JCRESpec_3.2.pdf#page=60)
+  # Source: [JCRE 3.0.5, s6.2.2 Global Arrays](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=49)
+  # Source: [JCRE 3.1, s6.2.2.1 Sharing using Global Arrays](../refs/3.1/JCRESpec_3.1.pdf#page=58)
+  # Source: [JCRE 3.2, s6.2.2.1 Sharing using Global Arrays](../refs/3.2/JCRESpec_3.2.pdf#page=60)
   Scenario: APDU buffer content clearing on applet change
     Given the APDU buffer is a global array
     When another applet becomes the currently selected applet
@@ -238,9 +238,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.3 Java Card RE Privileges](../../../3.0.5/JCRESpec_3.0.5.pdf#page=50)
-  # Source: [JCRE 3.1, s6.2.3 Java Card RE Privileges](../../../3.1/JCRESpec_3.1.pdf#page=58)
-  # Source: [JCRE 3.2, s6.2.3 Java Card RE Privileges](../../../3.2/JCRESpec_3.2.pdf#page=60)
+  # Source: [JCRE 3.0.5, s6.2.3 Java Card RE Privileges](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=50)
+  # Source: [JCRE 3.1, s6.2.3 Java Card RE Privileges](../refs/3.1/JCRESpec_3.1.pdf#page=58)
+  # Source: [JCRE 3.2, s6.2.3 Java Card RE Privileges](../refs/3.2/JCRESpec_3.2.pdf#page=60)
   Scenario: Java Card RE system context privileges
     Given the Java Card RE context is the "system" context
     Then the Java Card RE can invoke a method of any object on the card
@@ -255,9 +255,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.4 Shareable Interfaces](../../../3.0.5/JCRESpec_3.0.5.pdf#page=50)
-  # Source: [JCRE 3.1, s6.2.4 Shareable Interfaces](../../../3.1/JCRESpec_3.1.pdf#page=59)
-  # Source: [JCRE 3.2, s6.2.4 Shareable Interfaces](../../../3.2/JCRESpec_3.2.pdf#page=61)
+  # Source: [JCRE 3.0.5, s6.2.4 Shareable Interfaces](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=50)
+  # Source: [JCRE 3.1, s6.2.4 Shareable Interfaces](../refs/3.1/JCRESpec_3.1.pdf#page=59)
+  # Source: [JCRE 3.2, s6.2.4 Shareable Interfaces](../refs/3.2/JCRESpec_3.2.pdf#page=61)
   Scenario: Shareable Interface Object definition and access
     Given an object instance of a class implementing a shareable interface exists (a Shareable Interface Object, SIO)
     Then to the owning context, the SIO is a normal object whose fields and methods can be accessed
@@ -266,9 +266,9 @@ Feature: Applet Firewall and Object Sharing
     And all other fields and methods of the SIO are protected by the firewall
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../../../3.0.5/JCRESpec_3.0.5.pdf#page=51)
-  # Source: [JCRE 3.1, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../../../3.1/JCRESpec_3.1.pdf#page=59)
-  # Source: [JCRE 3.2, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../../../3.2/JCRESpec_3.2.pdf#page=61)
+  # Source: [JCRE 3.0.5, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=51)
+  # Source: [JCRE 3.1, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../refs/3.1/JCRESpec_3.1.pdf#page=59)
+  # Source: [JCRE 3.2, s6.2.4.1 Server Applet A Builds a Shareable Interface Object](../refs/3.2/JCRESpec_3.2.pdf#page=61)
   Scenario: Server applet builds a Shareable Interface Object
     Given server applet A wants to share services with other applets
     Then step 1: applet A defines a shareable interface SI that extends javacard.framework.Shareable
@@ -277,9 +277,9 @@ Feature: Applet Firewall and Object Sharing
     And step 3: applet A creates an object instance O of class C; O belongs to applet A and the firewall allows A to access all fields and methods of O
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../../../3.0.5/JCRESpec_3.0.5.pdf#page=51)
-  # Source: [JCRE 3.1, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../../../3.1/JCRESpec_3.1.pdf#page=60)
-  # Source: [JCRE 3.2, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../../../3.2/JCRESpec_3.2.pdf#page=62)
+  # Source: [JCRE 3.0.5, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=51)
+  # Source: [JCRE 3.1, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../refs/3.1/JCRESpec_3.1.pdf#page=60)
+  # Source: [JCRE 3.2, s6.2.4.2 Client Applet B Obtains the Shareable Interface Object](../refs/3.2/JCRESpec_3.2.pdf#page=62)
   Scenario: Client applet obtains the Shareable Interface Object
     Given client applet B wants to access server applet A's shared object O
     Then step 1: applet B creates an object reference SIO of type SI
@@ -289,9 +289,9 @@ Feature: Applet Firewall and Object Sharing
     And step 5: applet B receives the reference, casts it to interface type SI, and stores it; only SI methods are visible, firewall prevents access to other fields and methods of O
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.4.3 Client Applet B Requests Services from Applet A](../../../3.0.5/JCRESpec_3.0.5.pdf#page=52)
-  # Source: [JCRE 3.1, s6.2.4.3 Client Applet B Requests Services from Applet A](../../../3.1/JCRESpec_3.1.pdf#page=60)
-  # Source: [JCRE 3.2, s6.2.4.3 Client Applet B Requests Services from Applet A](../../../3.2/JCRESpec_3.2.pdf#page=62)
+  # Source: [JCRE 3.0.5, s6.2.4.3 Client Applet B Requests Services from Applet A](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=52)
+  # Source: [JCRE 3.1, s6.2.4.3 Client Applet B Requests Services from Applet A](../refs/3.1/JCRESpec_3.1.pdf#page=60)
+  # Source: [JCRE 3.2, s6.2.4.3 Client Applet B Requests Services from Applet A](../refs/3.2/JCRESpec_3.2.pdf#page=62)
   Scenario: Client applet requests services via SIO
     Given client applet B has obtained a reference to server applet A's SIO
     When applet B invokes one of the shareable interface methods of SIO
@@ -307,9 +307,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.5 Determining the Previous Context](../../../3.0.5/JCRESpec_3.0.5.pdf#page=52)
-  # Source: [JCRE 3.1, s6.2.5 Determining the Previous Context](../../../3.1/JCRESpec_3.1.pdf#page=61)
-  # Source: [JCRE 3.2, s6.2.5 Determining the Previous Context](../../../3.2/JCRESpec_3.2.pdf#page=63)
+  # Source: [JCRE 3.0.5, s6.2.5 Determining the Previous Context](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=52)
+  # Source: [JCRE 3.1, s6.2.5 Determining the Previous Context](../refs/3.1/JCRESpec_3.1.pdf#page=61)
+  # Source: [JCRE 3.2, s6.2.5 Determining the Previous Context](../refs/3.2/JCRESpec_3.2.pdf#page=63)
   Scenario: getPreviousContextAID returns caller's AID
     Given an applet calls JCSystem.getPreviousContextAID
     Then the Java Card RE shall return the instance AID of the applet instance active at the time of the last context switch
@@ -321,9 +321,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../../../3.0.5/JCRESpec_3.0.5.pdf#page=53)
-  # Source: [JCRE 3.1, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../../../3.1/JCRESpec_3.1.pdf#page=62)
-  # Source: [JCRE 3.2, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../../../3.2/JCRESpec_3.2.pdf#page=64)
+  # Source: [JCRE 3.0.5, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=53)
+  # Source: [JCRE 3.1, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../refs/3.1/JCRESpec_3.1.pdf#page=62)
+  # Source: [JCRE 3.2, s6.2.7.1 Applet.getShareableInterfaceObject(AID, byte) Method](../refs/3.2/JCRESpec_3.2.pdf#page=64)
   Scenario: Applet.getShareableInterfaceObject method
     Given a server applet instance implements getShareableInterfaceObject(AID, byte)
     Then the default behavior shall return null (indicating no inter-applet communication)
@@ -332,9 +332,9 @@ Feature: Applet Firewall and Object Sharing
     And the server can support multiple types of shared interfaces using clientAID and parameter to determine which SIO to return
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../../../3.0.5/JCRESpec_3.0.5.pdf#page=54)
-  # Source: [JCRE 3.1, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../../../3.1/JCRESpec_3.1.pdf#page=62)
-  # Source: [JCRE 3.2, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../../../3.2/JCRESpec_3.2.pdf#page=64)
+  # Source: [JCRE 3.0.5, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=54)
+  # Source: [JCRE 3.1, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../refs/3.1/JCRESpec_3.1.pdf#page=62)
+  # Source: [JCRE 3.2, s6.2.7.2 JCSystem.getAppletShareableInterfaceObject Method](../refs/3.2/JCRESpec_3.2.pdf#page=64)
   Scenario: JCSystem.getAppletShareableInterfaceObject method
     Given a client applet invokes JCSystem.getAppletShareableInterfaceObject(serverAID, parameter)
     Then step 1: the Java Card RE searches the internal applet table for one with serverAID; if not found, null is returned
@@ -349,9 +349,9 @@ Feature: Applet Firewall and Object Sharing
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.1 Accessing Static Class Fields](../../../3.0.5/JCRESpec_3.0.5.pdf#page=55)
-  # Source: [JCRE 3.1, s6.2.8.1 Accessing Static Class Fields](../../../3.1/JCRESpec_3.1.pdf#page=63)
-  # Source: [JCRE 3.2, s6.2.8.1 Accessing Static Class Fields](../../../3.2/JCRESpec_3.2.pdf#page=65)
+  # Source: [JCRE 3.0.5, s6.2.8.1 Accessing Static Class Fields](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=55)
+  # Source: [JCRE 3.1, s6.2.8.1 Accessing Static Class Fields](../refs/3.1/JCRESpec_3.1.pdf#page=63)
+  # Source: [JCRE 3.2, s6.2.8.1 Accessing Static Class Fields](../refs/3.2/JCRESpec_3.2.pdf#page=65)
   Scenario: Rule 1 - Accessing Static Class Fields (getstatic, putstatic)
     Given a getstatic or putstatic bytecode is executed
     Then if the Java Card RE is the currently active context, access is allowed
@@ -359,9 +359,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is allowed
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.2 Accessing Array Objects](../../../3.0.5/JCRESpec_3.0.5.pdf#page=55)
-  # Source: [JCRE 3.1, s6.2.8.2 Accessing Array Objects](../../../3.1/JCRESpec_3.1.pdf#page=64)
-  # Source: [JCRE 3.2, s6.2.8.2 Accessing Array Objects](../../../3.2/JCRESpec_3.2.pdf#page=66)
+  # Source: [JCRE 3.0.5, s6.2.8.2 Accessing Array Objects](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=55)
+  # Source: [JCRE 3.1, s6.2.8.2 Accessing Array Objects](../refs/3.1/JCRESpec_3.1.pdf#page=64)
+  # Source: [JCRE 3.2, s6.2.8.2 Accessing Array Objects](../refs/3.2/JCRESpec_3.2.pdf#page=66)
   Scenario: Rule 2 - Accessing Array Objects (<T>aload, <T>astore, arraylength, checkcast, instanceof)
     Given a <T>aload, <T>astore, arraylength, checkcast, or instanceof bytecode is executed on an array object
     Then if the Java Card RE is the currently active context, access is allowed
@@ -374,9 +374,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.3 Accessing Class Instance Object Fields](../../../3.0.5/JCRESpec_3.0.5.pdf#page=55)
-  # Source: [JCRE 3.1, s6.2.8.3 Accessing Class Instance Object Fields](../../../3.1/JCRESpec_3.1.pdf#page=64)
-  # Source: [JCRE 3.2, s6.2.8.3 Accessing Class Instance Object Fields](../../../3.2/JCRESpec_3.2.pdf#page=66)
+  # Source: [JCRE 3.0.5, s6.2.8.3 Accessing Class Instance Object Fields](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=55)
+  # Source: [JCRE 3.1, s6.2.8.3 Accessing Class Instance Object Fields](../refs/3.1/JCRESpec_3.1.pdf#page=64)
+  # Source: [JCRE 3.2, s6.2.8.3 Accessing Class Instance Object Fields](../refs/3.2/JCRESpec_3.2.pdf#page=66)
   Scenario: Rule 3 - Accessing Class Instance Object Fields (getfield, putfield)
     Given a getfield or putfield bytecode is executed on a class instance object
     Then if the Java Card RE is the currently active context, access is allowed
@@ -385,9 +385,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.4 Accessing Class Instance Object Methods](../../../3.0.5/JCRESpec_3.0.5.pdf#page=55)
-  # Source: [JCRE 3.1, s6.2.8.4 Accessing Class Instance Object Methods](../../../3.1/JCRESpec_3.1.pdf#page=64)
-  # Source: [JCRE 3.2, s6.2.8.4 Accessing Class Instance Object Methods](../../../3.2/JCRESpec_3.2.pdf#page=66)
+  # Source: [JCRE 3.0.5, s6.2.8.4 Accessing Class Instance Object Methods](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=55)
+  # Source: [JCRE 3.1, s6.2.8.4 Accessing Class Instance Object Methods](../refs/3.1/JCRESpec_3.1.pdf#page=64)
+  # Source: [JCRE 3.2, s6.2.8.4 Accessing Class Instance Object Methods](../refs/3.2/JCRESpec_3.2.pdf#page=66)
   Scenario: Rule 4 - Accessing Class Instance Object Methods (invokevirtual)
     Given an invokevirtual bytecode is executed on a class instance object
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -396,9 +396,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.5 Accessing Standard Interface Methods](../../../3.0.5/JCRESpec_3.0.5.pdf#page=56)
-  # Source: [JCRE 3.1, s6.2.8.5 Accessing Standard Interface Methods](../../../3.1/JCRESpec_3.1.pdf#page=65)
-  # Source: [JCRE 3.2, s6.2.8.5 Accessing Standard Interface Methods](../../../3.2/JCRESpec_3.2.pdf#page=67)
+  # Source: [JCRE 3.0.5, s6.2.8.5 Accessing Standard Interface Methods](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=56)
+  # Source: [JCRE 3.1, s6.2.8.5 Accessing Standard Interface Methods](../refs/3.1/JCRESpec_3.1.pdf#page=65)
+  # Source: [JCRE 3.2, s6.2.8.5 Accessing Standard Interface Methods](../refs/3.2/JCRESpec_3.2.pdf#page=67)
   Scenario: Rule 5 - Accessing Standard Interface Methods (invokeinterface)
     Given an invokeinterface bytecode is executed for a standard (non-shareable) interface method
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -407,9 +407,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.6 Accessing Shareable Interface Methods](../../../3.0.5/JCRESpec_3.0.5.pdf#page=56)
-  # Source: [JCRE 3.1, s6.2.8.6 Accessing Shareable Interface Methods](../../../3.1/JCRESpec_3.1.pdf#page=65)
-  # Source: [JCRE 3.2, s6.2.8.6 Accessing Shareable Interface Methods](../../../3.2/JCRESpec_3.2.pdf#page=67)
+  # Source: [JCRE 3.0.5, s6.2.8.6 Accessing Shareable Interface Methods](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=56)
+  # Source: [JCRE 3.1, s6.2.8.6 Accessing Shareable Interface Methods](../refs/3.1/JCRESpec_3.1.pdf#page=65)
+  # Source: [JCRE 3.2, s6.2.8.6 Accessing Shareable Interface Methods](../refs/3.2/JCRESpec_3.2.pdf#page=67)
   Scenario: Rule 6 - Accessing Shareable Interface Methods (invokeinterface)
     Given an invokeinterface bytecode is executed for a shareable interface method
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -419,9 +419,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.7 Throwing Exception Objects](../../../3.0.5/JCRESpec_3.0.5.pdf#page=56)
-  # Source: [JCRE 3.1, s6.2.8.7 Throwing Exception Objects](../../../3.1/JCRESpec_3.1.pdf#page=65)
-  # Source: [JCRE 3.2, s6.2.8.7 Throwing Exception Objects](../../../3.2/JCRESpec_3.2.pdf#page=67)
+  # Source: [JCRE 3.0.5, s6.2.8.7 Throwing Exception Objects](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=56)
+  # Source: [JCRE 3.1, s6.2.8.7 Throwing Exception Objects](../refs/3.1/JCRESpec_3.1.pdf#page=65)
+  # Source: [JCRE 3.2, s6.2.8.7 Throwing Exception Objects](../refs/3.2/JCRESpec_3.2.pdf#page=67)
   Scenario: Rule 7 - Throwing Exception Objects (athrow)
     Given an athrow bytecode is executed
     Then if the exception object is owned by an applet in the currently active context, access is allowed
@@ -430,9 +430,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.8 Accessing Classes](../../../3.0.5/JCRESpec_3.0.5.pdf#page=57)
-  # Source: [JCRE 3.1, s6.2.8.8 Accessing Classes](../../../3.1/JCRESpec_3.1.pdf#page=65)
-  # Source: [JCRE 3.2, s6.2.8.8 Accessing Classes](../../../3.2/JCRESpec_3.2.pdf#page=67)
+  # Source: [JCRE 3.0.5, s6.2.8.8 Accessing Classes](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=57)
+  # Source: [JCRE 3.1, s6.2.8.8 Accessing Classes](../refs/3.1/JCRESpec_3.1.pdf#page=65)
+  # Source: [JCRE 3.2, s6.2.8.8 Accessing Classes](../refs/3.2/JCRESpec_3.2.pdf#page=67)
   Scenario: Rule 8 - Accessing Classes (checkcast, instanceof on class type)
     Given a checkcast or instanceof bytecode is executed with a class type operand
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -441,9 +441,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.9 Accessing Standard Interfaces](../../../3.0.5/JCRESpec_3.0.5.pdf#page=57)
-  # Source: [JCRE 3.1, s6.2.8.9 Accessing Standard Interfaces](../../../3.1/JCRESpec_3.1.pdf#page=66)
-  # Source: [JCRE 3.2, s6.2.8.9 Accessing Standard Interfaces](../../../3.2/JCRESpec_3.2.pdf#page=68)
+  # Source: [JCRE 3.0.5, s6.2.8.9 Accessing Standard Interfaces](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=57)
+  # Source: [JCRE 3.1, s6.2.8.9 Accessing Standard Interfaces](../refs/3.1/JCRESpec_3.1.pdf#page=66)
+  # Source: [JCRE 3.2, s6.2.8.9 Accessing Standard Interfaces](../refs/3.2/JCRESpec_3.2.pdf#page=68)
   Scenario: Rule 9 - Accessing Standard Interfaces (checkcast, instanceof on standard interface)
     Given a checkcast or instanceof bytecode is executed with a standard interface type operand
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -452,9 +452,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.10 Accessing Shareable Interfaces](../../../3.0.5/JCRESpec_3.0.5.pdf#page=57)
-  # Source: [JCRE 3.1, s6.2.8.10 Accessing Shareable Interfaces](../../../3.1/JCRESpec_3.1.pdf#page=66)
-  # Source: [JCRE 3.2, s6.2.8.10 Accessing Shareable Interfaces](../../../3.2/JCRESpec_3.2.pdf#page=68)
+  # Source: [JCRE 3.0.5, s6.2.8.10 Accessing Shareable Interfaces](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=57)
+  # Source: [JCRE 3.1, s6.2.8.10 Accessing Shareable Interfaces](../refs/3.1/JCRESpec_3.1.pdf#page=66)
+  # Source: [JCRE 3.2, s6.2.8.10 Accessing Shareable Interfaces](../refs/3.2/JCRESpec_3.2.pdf#page=68)
   Scenario: Rule 10 - Accessing Shareable Interfaces (checkcast, instanceof on shareable interface)
     Given a checkcast or instanceof bytecode is executed with a shareable interface type operand
     Then if the object is owned by an applet in the currently active context, access is allowed
@@ -463,9 +463,9 @@ Feature: Applet Firewall and Object Sharing
     And otherwise, access is denied
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JCRE 3.0.5, s6.2.8.11 Accessing Array Object Methods](../../../3.0.5/JCRESpec_3.0.5.pdf#page=57)
-  # Source: [JCRE 3.1, s6.2.8.11 Accessing Array Object Methods](../../../3.1/JCRESpec_3.1.pdf#page=66)
-  # Source: [JCRE 3.2, s6.2.8.11 Accessing Array Object Methods](../../../3.2/JCRESpec_3.2.pdf#page=68)
+  # Source: [JCRE 3.0.5, s6.2.8.11 Accessing Array Object Methods](../refs/3.0.5/JCRESpec_3.0.5.pdf#page=57)
+  # Source: [JCRE 3.1, s6.2.8.11 Accessing Array Object Methods](../refs/3.1/JCRESpec_3.1.pdf#page=66)
+  # Source: [JCRE 3.2, s6.2.8.11 Accessing Array Object Methods](../refs/3.2/JCRESpec_3.2.pdf#page=68)
   Scenario: Rule 11 - Accessing Array Object Methods (invokevirtual on array)
     Given an invokevirtual bytecode is executed on an array object
     Then if the array is a CLEAR_ON_DESELECT transient array owned by an applet not in the currently selected applet's context, access is denied

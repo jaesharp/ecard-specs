@@ -10,13 +10,13 @@ Feature: CryptoException -- Cryptography-related exception
     And it extends javacard.framework.CardRuntimeException
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, CryptoException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html)
-  # Source: [JavaCard 3.1 API, CryptoException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/CryptoException.html)
-  # Source: [JavaCard 3.2 API, CryptoException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/CryptoException.html)
+  # Source: [JavaCard 3.0.5 API, CryptoException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html)
+  # Source: [JavaCard 3.1 API, CryptoException](../../refs/javadoc-3.1/api_classic/javacard/security/CryptoException.html)
+  # Source: [JavaCard 3.2 API, CryptoException](../../refs/javadoc-3.2/api_classic/javacard/security/CryptoException.html)
   Scenario Outline: CryptoException reason codes have specified constant values
-    # Source: [JavaCard 3.0.5 API, <reason_code>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html)
-    # Source: [JavaCard 3.1 API, <reason_code>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/CryptoException.html)
-    # Source: [JavaCard 3.2 API, <reason_code>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/CryptoException.html)
+    # Source: [JavaCard 3.0.5 API, <reason_code>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html)
+    # Source: [JavaCard 3.1 API, <reason_code>](../../refs/javadoc-3.1/api_classic/javacard/security/CryptoException.html)
+    # Source: [JavaCard 3.2 API, <reason_code>](../../refs/javadoc-3.2/api_classic/javacard/security/CryptoException.html)
     Then the static field "<reason_code>" of type short has value <value>
     And it indicates "<description>"
 
@@ -30,17 +30,17 @@ Feature: CryptoException -- Cryptography-related exception
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: CryptoException constructor accepts a reason code
-    # Source: [JavaCard 3.0.5 API, CryptoException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html#CryptoException(short)
-    # Source: [JavaCard 3.1 API, CryptoException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/CryptoException.html#CryptoException(short)
-    # Source: [JavaCard 3.2 API, CryptoException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/CryptoException.html#CryptoException(short)
+    # Source: [JavaCard 3.0.5 API, CryptoException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html#CryptoException(short)
+    # Source: [JavaCard 3.1 API, CryptoException](../../refs/javadoc-3.1/api_classic/javacard/security/CryptoException.html#CryptoException(short)
+    # Source: [JavaCard 3.2 API, CryptoException](../../refs/javadoc-3.2/api_classic/javacard/security/CryptoException.html#CryptoException(short)
     When a new CryptoException is constructed with a short reason code
     Then the exception stores the specified reason
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: CryptoException.throwIt throws the JCRE-owned instance
-    # Source: [JavaCard 3.0.5 API, throwIt](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html#throwIt(short)
-    # Source: [JavaCard 3.1 API, throwIt](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/CryptoException.html#throwIt(short)
-    # Source: [JavaCard 3.2 API, throwIt](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/CryptoException.html#throwIt(short)
+    # Source: [JavaCard 3.0.5 API, throwIt](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/CryptoException.html#throwIt(short)
+    # Source: [JavaCard 3.1 API, throwIt](../../refs/javadoc-3.1/api_classic/javacard/security/CryptoException.html#throwIt(short)
+    # Source: [JavaCard 3.2 API, throwIt](../../refs/javadoc-3.2/api_classic/javacard/security/CryptoException.html#throwIt(short)
     Given the static method "throwIt(short reason)" exists
     When throwIt is called with a reason code
     Then the JCRE-owned instance of CryptoException is thrown with that reason

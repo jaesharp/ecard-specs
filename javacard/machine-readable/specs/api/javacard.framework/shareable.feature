@@ -11,17 +11,17 @@ Feature: Shareable, SensitiveArrays, and Resources
   # ===================================================================
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, Shareable](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.1 API, Shareable](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.2 API, Shareable](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.0.5 API, Shareable](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.1 API, Shareable](../../refs/javadoc-3.1/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.2 API, Shareable](../../refs/javadoc-3.2/api_classic/javacard/framework/Shareable.html)
   Scenario: Shareable is a tagging interface with no methods
     Given the Shareable interface definition
     Then it declares no methods
     And it serves as a marker for objects shareable across applet contexts
 
-  # Source: [JavaCard 3.0.5 API, Shareable](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.1 API, Shareable](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.2 API, Shareable](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.0.5 API, Shareable](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.1 API, Shareable](../../refs/javadoc-3.1/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.2 API, Shareable](../../refs/javadoc-3.2/api_classic/javacard/framework/Shareable.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: A shared interface must extend Shareable
     Given an applet wishes to expose a service interface to other applets
@@ -29,9 +29,9 @@ Feature: Shareable, SensitiveArrays, and Resources
     Then the interface can be returned from Applet.getShareableInterfaceObject()
     And a client applet can obtain it via JCSystem.getAppletShareableInterfaceObject()
 
-  # Source: [JavaCard 3.0.5 API, Shareable](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.1 API, Shareable](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Shareable.html)
-  # Source: [JavaCard 3.2 API, Shareable](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.0.5 API, Shareable](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.1 API, Shareable](../../refs/javadoc-3.1/api_classic/javacard/framework/Shareable.html)
+  # Source: [JavaCard 3.2 API, Shareable](../../refs/javadoc-3.2/api_classic/javacard/framework/Shareable.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Only Shareable interface methods are accessible across contexts
     Given an object implementing a Shareable sub-interface
@@ -47,9 +47,9 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: isIntegritySensitiveArraysSupported()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isIntegritySensitiveArraysSupported](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
-  # Source: [JavaCard 3.1 API, isIntegritySensitiveArraysSupported](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
-  # Source: [JavaCard 3.2 API, isIntegritySensitiveArraysSupported](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
+  # Source: [JavaCard 3.0.5 API, isIntegritySensitiveArraysSupported](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
+  # Source: [JavaCard 3.1 API, isIntegritySensitiveArraysSupported](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
+  # Source: [JavaCard 3.2 API, isIntegritySensitiveArraysSupported](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitiveArraysSupported)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isIntegritySensitiveArraysSupported indicates platform capability
     When SensitiveArrays.isIntegritySensitiveArraysSupported() is called
@@ -59,9 +59,9 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: makeIntegritySensitiveArray(byte, byte, short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, makeIntegritySensitiveArray](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
-  # Source: [JavaCard 3.1 API, makeIntegritySensitiveArray](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
-  # Source: [JavaCard 3.2 API, makeIntegritySensitiveArray](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
+  # Source: [JavaCard 3.0.5 API, makeIntegritySensitiveArray](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
+  # Source: [JavaCard 3.1 API, makeIntegritySensitiveArray](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
+  # Source: [JavaCard 3.2 API, makeIntegritySensitiveArray](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#makeIntegritySensitiveArray(byte,byte,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: makeIntegritySensitiveArray creates an integrity-sensitive array
     Given integrity-sensitive arrays are supported
@@ -72,18 +72,18 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: isIntegritySensitive(Object)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, isIntegritySensitive](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
-  # Source: [JavaCard 3.1 API, isIntegritySensitive](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
-  # Source: [JavaCard 3.2 API, isIntegritySensitive](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.0.5 API, isIntegritySensitive](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.1 API, isIntegritySensitive](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.2 API, isIntegritySensitive](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isIntegritySensitive returns true for integrity-sensitive arrays
     Given an array created with makeIntegritySensitiveArray
     When SensitiveArrays.isIntegritySensitive(obj) is called
     Then the result is true
 
-  # Source: [JavaCard 3.0.5 API, isIntegritySensitive](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
-  # Source: [JavaCard 3.1 API, isIntegritySensitive](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
-  # Source: [JavaCard 3.2 API, isIntegritySensitive](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.0.5 API, isIntegritySensitive](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.1 API, isIntegritySensitive](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
+  # Source: [JavaCard 3.2 API, isIntegritySensitive](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#isIntegritySensitive(Object)
   @v3.0.5 @v3.1 @v3.2
   Scenario: isIntegritySensitive returns false for regular arrays
     Given a standard byte array
@@ -94,18 +94,18 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: assertIntegrity(Object)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, assertIntegrity](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
-  # Source: [JavaCard 3.1 API, assertIntegrity](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
-  # Source: [JavaCard 3.2 API, assertIntegrity](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.0.5 API, assertIntegrity](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.1 API, assertIntegrity](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.2 API, assertIntegrity](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
   @v3.0.5 @v3.1 @v3.2
   Scenario: assertIntegrity verifies array integrity
     Given an integrity-sensitive array with valid integrity
     When SensitiveArrays.assertIntegrity(obj) is called
     Then no exception is thrown
 
-  # Source: [JavaCard 3.0.5 API, assertIntegrity](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
-  # Source: [JavaCard 3.1 API, assertIntegrity](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
-  # Source: [JavaCard 3.2 API, assertIntegrity](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.0.5 API, assertIntegrity](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.1 API, assertIntegrity](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
+  # Source: [JavaCard 3.2 API, assertIntegrity](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#assertIntegrity(Object)
   @v3.0.5 @v3.1 @v3.2
   Scenario: assertIntegrity throws SystemException for corrupted array
     Given an integrity-sensitive array with compromised integrity
@@ -116,9 +116,9 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: clearArray(Object)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, clearArray](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
-  # Source: [JavaCard 3.1 API, clearArray](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
-  # Source: [JavaCard 3.2 API, clearArray](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
+  # Source: [JavaCard 3.0.5 API, clearArray](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
+  # Source: [JavaCard 3.1 API, clearArray](../../refs/javadoc-3.1/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
+  # Source: [JavaCard 3.2 API, clearArray](../../refs/javadoc-3.2/api_classic/javacard/framework/SensitiveArrays.html#clearArray(Object)
   @v3.0.5 @v3.1 @v3.2
   Scenario: clearArray zeros an integrity-sensitive array
     Given an integrity-sensitive byte array
@@ -133,9 +133,9 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: getResources()
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getResources](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Resources.html#getResources)
-  # Source: [JavaCard 3.1 API, getResources](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Resources.html#getResources)
-  # Source: [JavaCard 3.2 API, getResources](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Resources.html#getResources)
+  # Source: [JavaCard 3.0.5 API, getResources](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/Resources.html#getResources)
+  # Source: [JavaCard 3.1 API, getResources](../../refs/javadoc-3.1/api_classic/javacard/framework/Resources.html#getResources)
+  # Source: [JavaCard 3.2 API, getResources](../../refs/javadoc-3.2/api_classic/javacard/framework/Resources.html#getResources)
   @v3.1 @v3.2
   Scenario: getResources returns the Resources instance for the current applet
     Given an applet with associated resource data
@@ -146,8 +146,8 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: getSize(short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.1 API, getSize](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Resources.html#getSize(short)
-  # Source: [JavaCard 3.2 API, getSize](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Resources.html#getSize(short)
+  # Source: [JavaCard 3.1 API, getSize](../../refs/javadoc-3.1/api_classic/javacard/framework/Resources.html#getSize(short)
+  # Source: [JavaCard 3.2 API, getSize](../../refs/javadoc-3.2/api_classic/javacard/framework/Resources.html#getSize(short)
   @v3.1 @v3.2
   Scenario: getSize returns the size of a resource
     Given a Resources instance with a resource at resourceId 0
@@ -158,8 +158,8 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: getView(short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.1 API, getView](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Resources.html#getView(short)
-  # Source: [JavaCard 3.2 API, getView](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Resources.html#getView(short)
+  # Source: [JavaCard 3.1 API, getView](../../refs/javadoc-3.1/api_classic/javacard/framework/Resources.html#getView(short)
+  # Source: [JavaCard 3.2 API, getView](../../refs/javadoc-3.2/api_classic/javacard/framework/Resources.html#getView(short)
   @v3.1 @v3.2
   Scenario: getView returns a read-only byte array view of a resource
     Given a Resources instance with a resource at resourceId 0
@@ -170,8 +170,8 @@ Feature: Shareable, SensitiveArrays, and Resources
   # Method: getView(short, short, short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.1 API, getView](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/Resources.html#getView(short,short,short)
-  # Source: [JavaCard 3.2 API, getView](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/Resources.html#getView(short,short,short)
+  # Source: [JavaCard 3.1 API, getView](../../refs/javadoc-3.1/api_classic/javacard/framework/Resources.html#getView(short,short,short)
+  # Source: [JavaCard 3.2 API, getView](../../refs/javadoc-3.2/api_classic/javacard/framework/Resources.html#getView(short,short,short)
   @v3.1 @v3.2
   Scenario: getView with offset and length returns a partial view
     Given a Resources instance with a resource at resourceId 0

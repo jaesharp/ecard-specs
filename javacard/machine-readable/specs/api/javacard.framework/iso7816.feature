@@ -10,9 +10,9 @@ Feature: ISO7816 - ISO 7816 Constants Interface
   # -------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.1 API, ISO7816 ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.2 API, ISO7816 ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.1 API, ISO7816 ](../../refs/javadoc-3.1/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.2 API, ISO7816 ](../../refs/javadoc-3.2/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
   Scenario Outline: APDU header offset constants have correct values
     When the constant ISO7816.<offset_name> is accessed
     Then its byte value is <value>
@@ -32,9 +32,9 @@ Feature: ISO7816 - ISO 7816 Constants Interface
   # Command CLA/INS Constants
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.1 API, ISO7816 ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.2 API, ISO7816 ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.1 API, ISO7816 ](../../refs/javadoc-3.1/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.2 API, ISO7816 ](../../refs/javadoc-3.2/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: Command class and instruction constants have correct values
     When the constant ISO7816.<constant_name> is accessed
@@ -50,9 +50,9 @@ Feature: ISO7816 - ISO 7816 Constants Interface
   # Response Status Word Constants
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.1 API, ISO7816 ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
-  # Source: [JavaCard 3.2 API, ISO7816 ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.1 API, ISO7816 ](../../refs/javadoc-3.1/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
+  # Source: [JavaCard 3.2 API, ISO7816 ](../../refs/javadoc-3.2/api_classic/javacard/framework/ISO7816.html#ISO7816(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: Status word constants have correct values
     When the constant ISO7816.<sw_name> is accessed
@@ -88,9 +88,9 @@ Feature: ISO7816 - ISO 7816 Constants Interface
       | SW_CLA_NOT_SUPPORTED              | 0x6E00    | CLA value not supported                                   |
       | SW_UNKNOWN                        | 0x6F00    | No precise diagnosis                                      |
 
-  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
-  # Source: [JavaCard 3.1 API, ISO7816 ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
-  # Source: [JavaCard 3.2 API, ISO7816 ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.1 API, ISO7816 ](../../refs/javadoc-3.1/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.2 API, ISO7816 ](../../refs/javadoc-3.2/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Status words with _00 suffix require low byte customization
     Given the constant SW_CORRECT_LENGTH_00 with value 0x6C00
@@ -98,9 +98,9 @@ Feature: ISO7816 - ISO 7816 Constants Interface
     Then it computes the status word as (SW_CORRECT_LENGTH_00 + (0x0025 & 0xFF))
     And the resulting status word is 0x6C25
 
-  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
-  # Source: [JavaCard 3.1 API, ISO7816 ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
-  # Source: [JavaCard 3.2 API, ISO7816 ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.0.5 API, ISO7816 ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.1 API, ISO7816 ](../../refs/javadoc-3.1/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
+  # Source: [JavaCard 3.2 API, ISO7816 ](../../refs/javadoc-3.2/api_classic/javacard/framework/ISO7816.html#ISO7816(classdescription)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SW_BYTES_REMAINING_00 requires low byte customization
     Given the constant SW_BYTES_REMAINING_00 with value 0x6100

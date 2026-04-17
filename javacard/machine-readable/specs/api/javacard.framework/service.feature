@@ -13,18 +13,18 @@ Feature: Service Framework (javacard.framework.service)
   # ===================================================================
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, processDataIn](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
-  # Source: [JavaCard 3.1 API, processDataIn](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
-  # Source: [JavaCard 3.2 API, processDataIn](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
+  # Source: [JavaCard 3.0.5 API, processDataIn](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
+  # Source: [JavaCard 3.1 API, processDataIn](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
+  # Source: [JavaCard 3.2 API, processDataIn](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Service.html#processDataIn(APDU)
   Scenario: Service.processDataIn preprocesses incoming APDU data
     Given a Service implementation
     When processDataIn(apdu) is called
     Then the service processes incoming command data
     And returns true if the APDU has been processed, false otherwise
 
-  # Source: [JavaCard 3.0.5 API, processCommand](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
-  # Source: [JavaCard 3.1 API, processCommand](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
-  # Source: [JavaCard 3.2 API, processCommand](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
+  # Source: [JavaCard 3.0.5 API, processCommand](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
+  # Source: [JavaCard 3.1 API, processCommand](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
+  # Source: [JavaCard 3.2 API, processCommand](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Service.html#processCommand(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Service.processCommand handles the APDU command
     Given a Service implementation
@@ -32,9 +32,9 @@ Feature: Service Framework (javacard.framework.service)
     Then the service performs the command processing
     And returns true if the command has been processed, false otherwise
 
-  # Source: [JavaCard 3.0.5 API, processDataOut](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
-  # Source: [JavaCard 3.1 API, processDataOut](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
-  # Source: [JavaCard 3.2 API, processDataOut](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
+  # Source: [JavaCard 3.0.5 API, processDataOut](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
+  # Source: [JavaCard 3.1 API, processDataOut](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
+  # Source: [JavaCard 3.2 API, processDataOut](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Service.html#processDataOut(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Service.processDataOut postprocesses outgoing APDU data
     Given a Service implementation
@@ -50,9 +50,9 @@ Feature: Service Framework (javacard.framework.service)
   # Constructor
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, BasicService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html)
-  # Source: [JavaCard 3.1 API, BasicService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html)
-  # Source: [JavaCard 3.2 API, BasicService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html)
+  # Source: [JavaCard 3.0.5 API, BasicService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html)
+  # Source: [JavaCard 3.1 API, BasicService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html)
+  # Source: [JavaCard 3.2 API, BasicService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService default constructor
     When a BasicService is constructed
@@ -62,36 +62,36 @@ Feature: Service Framework (javacard.framework.service)
   # APDU Header Access Methods
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, getCLA](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
-  # Source: [JavaCard 3.1 API, getCLA](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
-  # Source: [JavaCard 3.2 API, getCLA](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
+  # Source: [JavaCard 3.0.5 API, getCLA](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
+  # Source: [JavaCard 3.1 API, getCLA](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
+  # Source: [JavaCard 3.2 API, getCLA](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getCLA(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getCLA returns the CLA byte
     Given an APDU with CLA byte 0x00
     When getCLA(apdu) is called
     Then the return value is 0x00
 
-  # Source: [JavaCard 3.0.5 API, getINS](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
-  # Source: [JavaCard 3.1 API, getINS](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
-  # Source: [JavaCard 3.2 API, getINS](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
+  # Source: [JavaCard 3.0.5 API, getINS](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
+  # Source: [JavaCard 3.1 API, getINS](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
+  # Source: [JavaCard 3.2 API, getINS](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getINS(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getINS returns the INS byte
     Given an APDU with INS byte 0xA4
     When getINS(apdu) is called
     Then the return value is 0xA4
 
-  # Source: [JavaCard 3.0.5 API, getP1](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
-  # Source: [JavaCard 3.1 API, getP1](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
-  # Source: [JavaCard 3.2 API, getP1](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
+  # Source: [JavaCard 3.0.5 API, getP1](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
+  # Source: [JavaCard 3.1 API, getP1](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
+  # Source: [JavaCard 3.2 API, getP1](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getP1(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getP1 returns the P1 byte
     Given an APDU with P1 byte 0x04
     When getP1(apdu) is called
     Then the return value is 0x04
 
-  # Source: [JavaCard 3.0.5 API, getP2](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
-  # Source: [JavaCard 3.1 API, getP2](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
-  # Source: [JavaCard 3.2 API, getP2](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
+  # Source: [JavaCard 3.0.5 API, getP2](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
+  # Source: [JavaCard 3.1 API, getP2](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
+  # Source: [JavaCard 3.2 API, getP2](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getP2(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getP2 returns the P2 byte
     Given an APDU with P2 byte 0x00
@@ -102,63 +102,63 @@ Feature: Service Framework (javacard.framework.service)
   # Status and Processing State Methods
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, selectingApplet](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
-  # Source: [JavaCard 3.1 API, selectingApplet](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
-  # Source: [JavaCard 3.2 API, selectingApplet](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
+  # Source: [JavaCard 3.0.5 API, selectingApplet](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
+  # Source: [JavaCard 3.1 API, selectingApplet](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
+  # Source: [JavaCard 3.2 API, selectingApplet](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#selectingApplet)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.selectingApplet checks if applet is being selected
     Given a SELECT APDU that is selecting the current applet
     When selectingApplet() is called
     Then the result is true
 
-  # Source: [JavaCard 3.0.5 API, isProcessed](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
-  # Source: [JavaCard 3.1 API, isProcessed](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
-  # Source: [JavaCard 3.2 API, isProcessed](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
+  # Source: [JavaCard 3.0.5 API, isProcessed](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
+  # Source: [JavaCard 3.1 API, isProcessed](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
+  # Source: [JavaCard 3.2 API, isProcessed](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#isProcessed(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.isProcessed checks if APDU has been processed
     Given an APDU that has not been marked as processed
     When isProcessed(apdu) is called
     Then the result is false
 
-  # Source: [JavaCard 3.0.5 API, setProcessed](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
-  # Source: [JavaCard 3.1 API, setProcessed](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
-  # Source: [JavaCard 3.2 API, setProcessed](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
+  # Source: [JavaCard 3.0.5 API, setProcessed](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
+  # Source: [JavaCard 3.1 API, setProcessed](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
+  # Source: [JavaCard 3.2 API, setProcessed](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#setProcessed(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.setProcessed marks APDU as processed
     Given an APDU
     When setProcessed(apdu) is called
     Then isProcessed(apdu) returns true
 
-  # Source: [JavaCard 3.0.5 API, getStatusWord](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
-  # Source: [JavaCard 3.1 API, getStatusWord](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
-  # Source: [JavaCard 3.2 API, getStatusWord](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
+  # Source: [JavaCard 3.0.5 API, getStatusWord](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
+  # Source: [JavaCard 3.1 API, getStatusWord](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
+  # Source: [JavaCard 3.2 API, getStatusWord](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getStatusWord(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getStatusWord returns the current status word
     Given an APDU with status word set to 0x9000
     When getStatusWord(apdu) is called
     Then the return value is 0x9000
 
-  # Source: [JavaCard 3.0.5 API, setStatusWord](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
-  # Source: [JavaCard 3.1 API, setStatusWord](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
-  # Source: [JavaCard 3.2 API, setStatusWord](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
+  # Source: [JavaCard 3.0.5 API, setStatusWord](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
+  # Source: [JavaCard 3.1 API, setStatusWord](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
+  # Source: [JavaCard 3.2 API, setStatusWord](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#setStatusWord(APDU,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.setStatusWord sets the status word
     Given an APDU
     When setStatusWord(apdu, 0x6A82) is called
     Then getStatusWord(apdu) returns 0x6A82
 
-  # Source: [JavaCard 3.0.5 API, getOutputLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
-  # Source: [JavaCard 3.1 API, getOutputLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
-  # Source: [JavaCard 3.2 API, getOutputLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
+  # Source: [JavaCard 3.0.5 API, getOutputLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
+  # Source: [JavaCard 3.1 API, getOutputLength](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
+  # Source: [JavaCard 3.2 API, getOutputLength](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#getOutputLength(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.getOutputLength returns the output data length
     Given an APDU with output length set to 10
     When getOutputLength(apdu) is called
     Then the return value is 10
 
-  # Source: [JavaCard 3.0.5 API, setOutputLength](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
-  # Source: [JavaCard 3.1 API, setOutputLength](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
-  # Source: [JavaCard 3.2 API, setOutputLength](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
+  # Source: [JavaCard 3.0.5 API, setOutputLength](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
+  # Source: [JavaCard 3.1 API, setOutputLength](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
+  # Source: [JavaCard 3.2 API, setOutputLength](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#setOutputLength(APDU,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.setOutputLength sets the output data length
     Given an APDU
@@ -169,9 +169,9 @@ Feature: Service Framework (javacard.framework.service)
   # Convenience Methods
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, succeed](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
-  # Source: [JavaCard 3.1 API, succeed](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
-  # Source: [JavaCard 3.2 API, succeed](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
+  # Source: [JavaCard 3.0.5 API, succeed](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
+  # Source: [JavaCard 3.1 API, succeed](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
+  # Source: [JavaCard 3.2 API, succeed](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#succeed(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.succeed marks APDU as successfully processed
     Given an APDU
@@ -179,9 +179,9 @@ Feature: Service Framework (javacard.framework.service)
     Then the APDU is marked as processed
     And the status word is set to SW_NO_ERROR (0x9000)
 
-  # Source: [JavaCard 3.0.5 API, succeedWithStatusWord](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
-  # Source: [JavaCard 3.1 API, succeedWithStatusWord](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
-  # Source: [JavaCard 3.2 API, succeedWithStatusWord](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
+  # Source: [JavaCard 3.0.5 API, succeedWithStatusWord](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
+  # Source: [JavaCard 3.1 API, succeedWithStatusWord](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
+  # Source: [JavaCard 3.2 API, succeedWithStatusWord](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#succeedWithStatusWord(APDU,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.succeedWithStatusWord marks processed with custom SW
     Given an APDU
@@ -189,9 +189,9 @@ Feature: Service Framework (javacard.framework.service)
     Then the APDU is marked as processed
     And the status word is set to 0x6100
 
-  # Source: [JavaCard 3.0.5 API, fail](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
-  # Source: [JavaCard 3.1 API, fail](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
-  # Source: [JavaCard 3.2 API, fail](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
+  # Source: [JavaCard 3.0.5 API, fail](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
+  # Source: [JavaCard 3.1 API, fail](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
+  # Source: [JavaCard 3.2 API, fail](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#fail(APDU,short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.fail marks APDU as failed with status word
     Given an APDU
@@ -199,9 +199,9 @@ Feature: Service Framework (javacard.framework.service)
     Then the APDU is marked as processed
     And the status word is set to 0x6A80
 
-  # Source: [JavaCard 3.0.5 API, receiveInData](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
-  # Source: [JavaCard 3.1 API, receiveInData](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
-  # Source: [JavaCard 3.2 API, receiveInData](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
+  # Source: [JavaCard 3.0.5 API, receiveInData](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
+  # Source: [JavaCard 3.1 API, receiveInData](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
+  # Source: [JavaCard 3.2 API, receiveInData](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#receiveInData(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.receiveInData receives incoming data
     Given an APDU with incoming data
@@ -213,27 +213,27 @@ Feature: Service Framework (javacard.framework.service)
   # Default Service Method Implementations
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, processCommand](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
-  # Source: [JavaCard 3.1 API, processCommand](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
-  # Source: [JavaCard 3.2 API, processCommand](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
+  # Source: [JavaCard 3.0.5 API, processCommand](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
+  # Source: [JavaCard 3.1 API, processCommand](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
+  # Source: [JavaCard 3.2 API, processCommand](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#processCommand(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.processCommand default returns false
     Given the base BasicService.processCommand implementation
     When processCommand(apdu) is called
     Then the result is false
 
-  # Source: [JavaCard 3.0.5 API, processDataIn](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
-  # Source: [JavaCard 3.1 API, processDataIn](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
-  # Source: [JavaCard 3.2 API, processDataIn](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
+  # Source: [JavaCard 3.0.5 API, processDataIn](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
+  # Source: [JavaCard 3.1 API, processDataIn](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
+  # Source: [JavaCard 3.2 API, processDataIn](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#processDataIn(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.processDataIn default returns false
     Given the base BasicService.processDataIn implementation
     When processDataIn(apdu) is called
     Then the result is false
 
-  # Source: [JavaCard 3.0.5 API, processDataOut](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
-  # Source: [JavaCard 3.1 API, processDataOut](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
-  # Source: [JavaCard 3.2 API, processDataOut](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
+  # Source: [JavaCard 3.0.5 API, processDataOut](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
+  # Source: [JavaCard 3.1 API, processDataOut](../../refs/javadoc-3.1/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
+  # Source: [JavaCard 3.2 API, processDataOut](../../refs/javadoc-3.2/api_classic/javacard/framework/service/BasicService.html#processDataOut(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: BasicService.processDataOut default returns false
     Given the base BasicService.processDataOut implementation
@@ -248,9 +248,9 @@ Feature: Service Framework (javacard.framework.service)
   # Phase Constants
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, Dispatcher ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
-  # Source: [JavaCard 3.1 API, Dispatcher ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
-  # Source: [JavaCard 3.2 API, Dispatcher ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, Dispatcher ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
+  # Source: [JavaCard 3.1 API, Dispatcher ](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
+  # Source: [JavaCard 3.2 API, Dispatcher ](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: Dispatcher phase constants
     When the constant Dispatcher.<constant_name> is accessed
@@ -267,9 +267,9 @@ Feature: Service Framework (javacard.framework.service)
   # Constructor: Dispatcher(short)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, Dispatcher](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
-  # Source: [JavaCard 3.1 API, Dispatcher](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
-  # Source: [JavaCard 3.2 API, Dispatcher](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
+  # Source: [JavaCard 3.0.5 API, Dispatcher](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
+  # Source: [JavaCard 3.1 API, Dispatcher](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
+  # Source: [JavaCard 3.2 API, Dispatcher](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#Dispatcher(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: Dispatcher construction with maximum service count
     When a Dispatcher is constructed with maxServices 5
@@ -279,18 +279,18 @@ Feature: Service Framework (javacard.framework.service)
   # Method: addService(Service, byte)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, addService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
-  # Source: [JavaCard 3.1 API, addService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
-  # Source: [JavaCard 3.2 API, addService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.0.5 API, addService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.1 API, addService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.2 API, addService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
   @v3.0.5 @v3.1 @v3.2
   Scenario: addService registers a service for a processing phase
     Given a Dispatcher and a Service implementation
     When addService(service, PROCESS_COMMAND) is called
     Then the service is registered for the command processing phase
 
-  # Source: [JavaCard 3.0.5 API, addService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
-  # Source: [JavaCard 3.1 API, addService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
-  # Source: [JavaCard 3.2 API, addService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.0.5 API, addService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.1 API, addService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
+  # Source: [JavaCard 3.2 API, addService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#addService(Service,byte)
   @v3.0.5 @v3.1 @v3.2
   Scenario: addService throws ServiceException when dispatch table is full
     Given a Dispatcher with all service slots occupied
@@ -301,9 +301,9 @@ Feature: Service Framework (javacard.framework.service)
   # Method: removeService(Service, byte)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, removeService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
-  # Source: [JavaCard 3.1 API, removeService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
-  # Source: [JavaCard 3.2 API, removeService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
+  # Source: [JavaCard 3.0.5 API, removeService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
+  # Source: [JavaCard 3.1 API, removeService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
+  # Source: [JavaCard 3.2 API, removeService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#removeService(Service,byte)
   @v3.0.5 @v3.1 @v3.2
   Scenario: removeService unregisters a service from a phase
     Given a service registered for PROCESS_COMMAND
@@ -314,9 +314,9 @@ Feature: Service Framework (javacard.framework.service)
   # Method: dispatch(APDU, byte)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, dispatch](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
-  # Source: [JavaCard 3.1 API, dispatch](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
-  # Source: [JavaCard 3.2 API, dispatch](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
+  # Source: [JavaCard 3.0.5 API, dispatch](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
+  # Source: [JavaCard 3.1 API, dispatch](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
+  # Source: [JavaCard 3.2 API, dispatch](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#dispatch(APDU,byte)
   @v3.0.5 @v3.1 @v3.2
   Scenario: dispatch routes APDU through registered services for a phase
     Given services registered for PROCESS_INPUT_DATA and PROCESS_COMMAND
@@ -327,9 +327,9 @@ Feature: Service Framework (javacard.framework.service)
   # Method: process(APDU)
   # -------------------------------------------------------------------
 
-  # Source: [JavaCard 3.0.5 API, process](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
-  # Source: [JavaCard 3.1 API, process](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
-  # Source: [JavaCard 3.2 API, process](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
+  # Source: [JavaCard 3.0.5 API, process](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
+  # Source: [JavaCard 3.1 API, process](../../refs/javadoc-3.1/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
+  # Source: [JavaCard 3.2 API, process](../../refs/javadoc-3.2/api_classic/javacard/framework/service/Dispatcher.html#process(APDU)
   @v3.0.5 @v3.1 @v3.2
   Scenario: process dispatches APDU through all three phases
     Given services registered for all processing phases
@@ -340,9 +340,9 @@ Feature: Service Framework (javacard.framework.service)
   # ServiceException (extends CardRuntimeException)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, ServiceException ](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
-  # Source: [JavaCard 3.1 API, ServiceException ](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
-  # Source: [JavaCard 3.2 API, ServiceException ](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
+  # Source: [JavaCard 3.0.5 API, ServiceException ](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
+  # Source: [JavaCard 3.1 API, ServiceException ](../../refs/javadoc-3.1/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
+  # Source: [JavaCard 3.2 API, ServiceException ](../../refs/javadoc-3.2/api_classic/javacard/framework/service/ServiceException.html#ServiceException(fieldsummary)
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: ServiceException reason code constants
     When the constant ServiceException.<reason_name> is accessed
@@ -358,17 +358,17 @@ Feature: Service Framework (javacard.framework.service)
       | CANNOT_ACCESS_OUT_COMMAND  | Cannot access APDU data during output processing    |
       | REMOTE_OBJECT_NOT_EXPORTED | Remote object is not exported                       |
 
-  # Source: [JavaCard 3.0.5 API, ServiceException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
-  # Source: [JavaCard 3.1 API, ServiceException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
-  # Source: [JavaCard 3.2 API, ServiceException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
+  # Source: [JavaCard 3.0.5 API, ServiceException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
+  # Source: [JavaCard 3.1 API, ServiceException](../../refs/javadoc-3.1/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
+  # Source: [JavaCard 3.2 API, ServiceException](../../refs/javadoc-3.2/api_classic/javacard/framework/service/ServiceException.html#ServiceException(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ServiceException construction with reason code
     When a ServiceException is constructed with reason ILLEGAL_PARAM
     Then the exception is created with that reason code
 
-  # Source: [JavaCard 3.0.5 API, throwIt](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
-  # Source: [JavaCard 3.1 API, throwIt](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
-  # Source: [JavaCard 3.2 API, throwIt](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
+  # Source: [JavaCard 3.0.5 API, throwIt](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
+  # Source: [JavaCard 3.1 API, throwIt](../../refs/javadoc-3.1/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
+  # Source: [JavaCard 3.2 API, throwIt](../../refs/javadoc-3.2/api_classic/javacard/framework/service/ServiceException.html#throwIt(short)
   @v3.0.5 @v3.1 @v3.2
   Scenario: ServiceException.throwIt throws JCRE-owned instance
     When ServiceException.throwIt(ServiceException.DISPATCH_TABLE_FULL) is called
@@ -378,9 +378,9 @@ Feature: Service Framework (javacard.framework.service)
   # SecurityService Interface
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, SecurityService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/SecurityService.html)
-  # Source: [JavaCard 3.1 API, SecurityService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/SecurityService.html)
-  # Source: [JavaCard 3.2 API, SecurityService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/SecurityService.html)
+  # Source: [JavaCard 3.0.5 API, SecurityService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/SecurityService.html)
+  # Source: [JavaCard 3.1 API, SecurityService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/SecurityService.html)
+  # Source: [JavaCard 3.2 API, SecurityService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/SecurityService.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: SecurityService extends Service for security assessment
     Given the SecurityService interface
@@ -391,9 +391,9 @@ Feature: Service Framework (javacard.framework.service)
   # RemoteService Interface
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, RemoteService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/RemoteService.html)
-  # Source: [JavaCard 3.1 API, RemoteService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/RemoteService.html)
-  # Source: [JavaCard 3.2 API, RemoteService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/RemoteService.html)
+  # Source: [JavaCard 3.0.5 API, RemoteService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/RemoteService.html)
+  # Source: [JavaCard 3.1 API, RemoteService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/RemoteService.html)
+  # Source: [JavaCard 3.2 API, RemoteService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/RemoteService.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: RemoteService extends Service for remote method invocation
     Given the RemoteService interface
@@ -404,9 +404,9 @@ Feature: Service Framework (javacard.framework.service)
   # RMIService Class
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, RMIService](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/RMIService.html)
-  # Source: [JavaCard 3.1 API, RMIService](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/RMIService.html)
-  # Source: [JavaCard 3.2 API, RMIService](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/RMIService.html)
+  # Source: [JavaCard 3.0.5 API, RMIService](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/RMIService.html)
+  # Source: [JavaCard 3.1 API, RMIService](../../refs/javadoc-3.1/api_classic/javacard/framework/service/RMIService.html)
+  # Source: [JavaCard 3.2 API, RMIService](../../refs/javadoc-3.2/api_classic/javacard/framework/service/RMIService.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: RMIService implements RemoteService for Java Card RMI
     Given the RMIService class
@@ -417,9 +417,9 @@ Feature: Service Framework (javacard.framework.service)
   # CardRemoteObject Class
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, CardRemoteObject](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/CardRemoteObject.html)
-  # Source: [JavaCard 3.1 API, CardRemoteObject](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/service/CardRemoteObject.html)
-  # Source: [JavaCard 3.2 API, CardRemoteObject](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/service/CardRemoteObject.html)
+  # Source: [JavaCard 3.0.5 API, CardRemoteObject](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/service/CardRemoteObject.html)
+  # Source: [JavaCard 3.1 API, CardRemoteObject](../../refs/javadoc-3.1/api_classic/javacard/framework/service/CardRemoteObject.html)
+  # Source: [JavaCard 3.2 API, CardRemoteObject](../../refs/javadoc-3.2/api_classic/javacard/framework/service/CardRemoteObject.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: CardRemoteObject enables remote access to card-side objects
     Given an object extending CardRemoteObject

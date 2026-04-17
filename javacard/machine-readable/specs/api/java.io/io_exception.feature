@@ -13,9 +13,9 @@ Feature: IOException (java.io)
   # IOException (checked, extends java.lang.Exception)
   # ===================================================================
 
-  # Source: [JavaCard 3.0.5 API, IOException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.1 API, IOException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.2 API, IOException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.0.5 API, IOException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.1 API, IOException](../../refs/javadoc-3.1/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.2 API, IOException](../../refs/javadoc-3.2/api_classic/java/io/IOException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IOException class hierarchy
     Given the class java.io.IOException
@@ -23,9 +23,9 @@ Feature: IOException (java.io)
     And its direct known subclass is java.rmi.RemoteException
     And the full hierarchy is: Object -> Throwable -> Exception -> IOException
 
-  # Source: [JavaCard 3.0.5 API, IOException()](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html#IOException())
-  # Source: [JavaCard 3.1 API, IOException()](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html#%3Cinit%3E())
-  # Source: [JavaCard 3.2 API, IOException()](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html#%3Cinit%3E())
+  # Source: [JavaCard 3.0.5 API, IOException()](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html#IOException())
+  # Source: [JavaCard 3.1 API, IOException()](../../refs/javadoc-3.1/api_classic/java/io/IOException.html#%3Cinit%3E())
+  # Source: [JavaCard 3.2 API, IOException()](../../refs/javadoc-3.2/api_classic/java/io/IOException.html#%3Cinit%3E())
   @v3.0.5 @v3.1 @v3.2
   Scenario: IOException provides only a no-arg constructor
     Given the class java.io.IOException
@@ -33,18 +33,18 @@ Feature: IOException (java.io)
     And there is no constructor accepting a String message
     And there is no constructor accepting a Throwable cause
 
-  # Source: [JavaCard 3.0.5 API, IOException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.1 API, IOException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.2 API, IOException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.0.5 API, IOException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.1 API, IOException](../../refs/javadoc-3.1/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.2 API, IOException](../../refs/javadoc-3.2/api_classic/java/io/IOException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IOException signals I/O failures
     Given a JCRE-owned instance of IOException
     Then it signals that an I/O exception of some sort has occurred
     And it is the general class of exceptions produced by failed or interrupted I/O operations
 
-  # Source: [JavaCard 3.0.5 API, IOException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.1 API, IOException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.2 API, IOException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.0.5 API, IOException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.1 API, IOException](../../refs/javadoc-3.1/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.2 API, IOException](../../refs/javadoc-3.2/api_classic/java/io/IOException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IOException defines no methods of its own
     Given the class java.io.IOException on the Java Card platform
@@ -52,9 +52,9 @@ Feature: IOException (java.io)
     And it defines no additional methods
     And it defines no fields
 
-  # Source: [JavaCard 3.0.5 API, IOException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.1 API, IOException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.2 API, IOException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.0.5 API, IOException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.1 API, IOException](../../refs/javadoc-3.1/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.2 API, IOException](../../refs/javadoc-3.2/api_classic/java/io/IOException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: IOException is a checked exception
     Given the class java.io.IOException
@@ -62,9 +62,9 @@ Feature: IOException (java.io)
     And methods that may throw IOException must declare it in their throws clause
     And it is the checked exception base used by the Java Card RMI subsystem
 
-  # Source: [JavaCard 3.0.5 API, IOException](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.1 API, IOException](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/java/io/IOException.html)
-  # Source: [JavaCard 3.2 API, IOException](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.0.5 API, IOException](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.1 API, IOException](../../refs/javadoc-3.1/api_classic/java/io/IOException.html)
+  # Source: [JavaCard 3.2 API, IOException](../../refs/javadoc-3.2/api_classic/java/io/IOException.html)
   @v3.0.5 @v3.1 @v3.2
   Scenario: JCRE-owned IOException instance is a temporary Entry Point Object
     Given a JCRE-owned instance of IOException

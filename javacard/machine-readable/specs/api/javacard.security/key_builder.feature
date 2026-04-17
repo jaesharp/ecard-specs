@@ -12,13 +12,13 @@ Feature: KeyBuilder -- Key object factory
   # ---------------------------------------------------------------------------
 
   @v3.0.5 @v3.1 @v3.2
-  # Source: [JavaCard 3.0.5 API, KeyBuilder](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-  # Source: [JavaCard 3.1 API, KeyBuilder](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-  # Source: [JavaCard 3.2 API, KeyBuilder](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+  # Source: [JavaCard 3.0.5 API, KeyBuilder](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+  # Source: [JavaCard 3.1 API, KeyBuilder](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+  # Source: [JavaCard 3.2 API, KeyBuilder](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
   Scenario Outline: KeyBuilder DES key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -30,9 +30,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder RSA key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -48,9 +48,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder DSA key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -63,9 +63,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder EC F2M key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -78,9 +78,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder EC FP key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -93,9 +93,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder AES key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -107,9 +107,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder Korean SEED key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -121,9 +121,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder HMAC key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -135,9 +135,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder DH key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -156,8 +156,8 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario Outline: KeyBuilder TYPE_ constants added in version 3.1
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it designates "<description>"
 
@@ -177,9 +177,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder ALG_TYPE_ algorithmic key type constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
     And it is used as the algorithmicKeyType parameter of buildKey(byte, byte, short, boolean)
 
@@ -207,8 +207,8 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario Outline: KeyBuilder ALG_TYPE_ constants added in version 3.1
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type byte has value <value>
 
     Examples: Algorithmic key types since 3.1
@@ -222,8 +222,8 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario Outline: KeyBuilder XEC key attribute constants
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And it designates "<description>"
 
@@ -238,9 +238,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder DES key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -252,9 +252,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder RSA key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -274,9 +274,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder DSA key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -288,9 +288,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder EC FP key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -307,9 +307,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder EC F2M key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -322,9 +322,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder AES key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -336,23 +336,23 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario: KeyBuilder LENGTH_AES_512 constant added in version 3.1
-    # Source: [JavaCard 3.1 API, LENGTH_AES_512](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, LENGTH_AES_512](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, LENGTH_AES_512](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, LENGTH_AES_512](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "LENGTH_AES_512" of type short has value 512
     And it represents a key made of two AES-256 keys
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder LENGTH_KOREAN_SEED_128 constant
-    # Source: [JavaCard 3.0.5 API, LENGTH_KOREAN_SEED_128](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, LENGTH_KOREAN_SEED_128](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, LENGTH_KOREAN_SEED_128](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, LENGTH_KOREAN_SEED_128](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, LENGTH_KOREAN_SEED_128](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, LENGTH_KOREAN_SEED_128](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "LENGTH_KOREAN_SEED_128" of type short has value 128
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder HMAC key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value is expressed in bytes (block size of the underlying hash)
 
@@ -365,9 +365,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario Outline: KeyBuilder DH key length constants
-    # Source: [JavaCard 3.0.5 API, <constant>](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.1 API, <constant>](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, <constant>](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.0.5 API, <constant>](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, <constant>](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, <constant>](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "<constant>" of type short has value <value>
     And the value represents the key size in bits
 
@@ -378,8 +378,8 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario: KeyBuilder LENGTH_SM4 constant added in version 3.1
-    # Source: [JavaCard 3.1 API, LENGTH_SM4](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html)
-    # Source: [JavaCard 3.2 API, LENGTH_SM4](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.1 API, LENGTH_SM4](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html)
+    # Source: [JavaCard 3.2 API, LENGTH_SM4](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html)
     Then the static field "LENGTH_SM4" of type short has value 128
     And it represents the SM4 key size in bits
 
@@ -389,9 +389,9 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder.buildKey(byte, short, boolean) creates a legacy key object
-    # Source: [JavaCard 3.0.5 API, buildKey](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
-    # Source: [JavaCard 3.1 API, buildKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
-    # Source: [JavaCard 3.2 API, buildKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.0.5 API, buildKey](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.1 API, buildKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.2 API, buildKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
     Given a valid TYPE_ constant and key length
     When KeyBuilder.buildKey(keyType, keyLength, keyEncryption) is called
     Then a Key object of the specified type and length is returned
@@ -399,18 +399,18 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder.buildKey(byte, short, boolean) throws for unsupported type/length
-    # Source: [JavaCard 3.0.5 API, buildKey](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
-    # Source: [JavaCard 3.1 API, buildKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
-    # Source: [JavaCard 3.2 API, buildKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.0.5 API, buildKey](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.1 API, buildKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
+    # Source: [JavaCard 3.2 API, buildKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,short,boolean)
     Given an unsupported key type or key length
     When KeyBuilder.buildKey(keyType, keyLength, keyEncryption) is called
     Then CryptoException is thrown with reason NO_SUCH_ALGORITHM
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder.buildKey(byte, byte, short, boolean) creates a key with memory type
-    # Source: [JavaCard 3.0.5 API, buildKey](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
-    # Source: [JavaCard 3.1 API, buildKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
-    # Source: [JavaCard 3.2 API, buildKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.0.5 API, buildKey](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.1 API, buildKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.2 API, buildKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
     Given a valid ALG_TYPE_ constant and memory type
     When KeyBuilder.buildKey(algorithmicKeyType, keyMemoryType, keyLength, keyEncryption) is called
     Then a Key object of the specified algorithmic type with the specified memory type is returned
@@ -418,17 +418,17 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder.buildKey(byte, byte, short, boolean) throws for unsupported combination
-    # Source: [JavaCard 3.0.5 API, buildKey](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
-    # Source: [JavaCard 3.1 API, buildKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
-    # Source: [JavaCard 3.2 API, buildKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.0.5 API, buildKey](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.1 API, buildKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
+    # Source: [JavaCard 3.2 API, buildKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildKey(byte,byte,short,boolean)
     Given an unsupported algorithmic key type, memory type, or key length combination
     When KeyBuilder.buildKey(algorithmicKeyType, keyMemoryType, keyLength, keyEncryption) is called
     Then CryptoException is thrown with reason NO_SUCH_ALGORITHM
 
   @v3.1 @v3.2
   Scenario: KeyBuilder.buildXECKey creates an XEC key object
-    # Source: [JavaCard 3.1 API, buildXECKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
-    # Source: [JavaCard 3.2 API, buildXECKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
+    # Source: [JavaCard 3.1 API, buildXECKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
+    # Source: [JavaCard 3.2 API, buildXECKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
     Given a valid NamedParameterSpec for an XEC curve (e.g., X25519, Ed25519)
     And attributes set to ATTR_PUBLIC or ATTR_PRIVATE combined with a memory type
     When KeyBuilder.buildXECKey(params, attributes, keyEncryption) is called
@@ -436,25 +436,25 @@ Feature: KeyBuilder -- Key object factory
 
   @v3.1 @v3.2
   Scenario: KeyBuilder.buildXECKey throws for unsupported curve
-    # Source: [JavaCard 3.1 API, buildXECKey](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
-    # Source: [JavaCard 3.2 API, buildXECKey](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
+    # Source: [JavaCard 3.1 API, buildXECKey](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
+    # Source: [JavaCard 3.2 API, buildXECKey](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildXECKey(NamedParameterSpec,short,boolean)
     Given an unsupported NamedParameterSpec
     When KeyBuilder.buildXECKey(params, attributes, keyEncryption) is called
     Then CryptoException is thrown with reason NO_SUCH_ALGORITHM
 
   @v3.1 @v3.2
   Scenario: KeyBuilder.buildKeyWithSharedDomain creates a key sharing domain parameters
-    # Source: [JavaCard 3.1 API, buildKeyWithSharedDomain](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#buildKeyWithSharedDomain(byte,byte,Key,boolean)
-    # Source: [JavaCard 3.2 API, buildKeyWithSharedDomain](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#buildKeyWithSharedDomain(byte,byte,Key,boolean)
+    # Source: [JavaCard 3.1 API, buildKeyWithSharedDomain](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#buildKeyWithSharedDomain(byte,byte,Key,boolean)
+    # Source: [JavaCard 3.2 API, buildKeyWithSharedDomain](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#buildKeyWithSharedDomain(byte,byte,Key,boolean)
     Given a valid ALG_TYPE_ constant and a domain parameter key
     When KeyBuilder.buildKeyWithSharedDomain(algorithmicKeyType, keyMemoryType, domainParameters, keyEncryption) is called
     Then a Key object is returned that shares domain parameters with the provided key
 
   @v3.0.5 @v3.1 @v3.2
   Scenario: KeyBuilder.getMemoryType returns the memory type of a key
-    # Source: [JavaCard 3.0.5 API, getMemoryType](../../../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
-    # Source: [JavaCard 3.1 API, getMemoryType](../../../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
-    # Source: [JavaCard 3.2 API, getMemoryType](../../../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
+    # Source: [JavaCard 3.0.5 API, getMemoryType](../../refs/javadoc-3.0.5/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
+    # Source: [JavaCard 3.1 API, getMemoryType](../../refs/javadoc-3.1/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
+    # Source: [JavaCard 3.2 API, getMemoryType](../../refs/javadoc-3.2/api_classic/javacard/security/KeyBuilder.html#getMemoryType(Key)
     Given a Key object
     When KeyBuilder.getMemoryType(key) is called
     Then the memory type byte is returned indicating persistent, CLEAR_ON_RESET, or CLEAR_ON_DESELECT
