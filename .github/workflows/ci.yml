@@ -6,7 +6,8 @@ on:
   pull_request:
 
 jobs:
-  prettier:
+  format:
+    name: Validate Code Format Compliance
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
