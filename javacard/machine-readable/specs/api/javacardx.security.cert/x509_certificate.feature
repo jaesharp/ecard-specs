@@ -63,4 +63,5 @@ Feature: X509Certificate -- X.509 Certificate Field Access
   Scenario: X509Certificate.ExtensionHandler receives extension data during parsing
     Then X509Certificate.ExtensionHandler is an interface for receiving extension data
 
+
 # Source: [JavaCard 3.2 API, ExtensionHandler](../../../refs/javadoc-3.2/api_classic/javacardx/security/cert/X509Certificate.html)

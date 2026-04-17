@@ -17,4 +17,5 @@ Feature: ParityBit -- Parity Bit Setting Utility
     And if isEven is true, even parity is set (even number of 1-bits per byte)
     And if isEven is false, odd parity is set (odd number of 1-bits per byte)
 
+
 # Source: [JavaCard 3.2 API, set](../../../refs/javadoc-3.2/api_classic/javacardx/framework/math/ParityBit.html#set(byte%5B%5D,short,short,boolean))

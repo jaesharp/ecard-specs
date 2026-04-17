@@ -44,4 +44,5 @@ Feature: Event Framework -- EventListener, EventRegistry, EventSource
     When unregister(EventSource source, EventListener listener) is called
     Then the listener is no longer notified of events from the specified source
 
+
 # Source: [JavaCard 3.2 API, unregister](../../../refs/javadoc-3.2/api_classic/javacardx/framework/event/EventRegistry.html#unregister(EventSource,EventListener))

@@ -59,4 +59,5 @@ Feature: External Memory Access -- Memory, MemoryAccess, ExternalException
     When ExternalException.throwIt(short reason) is called
     Then an ExternalException is thrown with the specified reason code
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/external/ExternalException.html#throwIt(short))

@@ -33,4 +33,5 @@ Feature: BCDUtil -- Binary Coded Decimal Utility
     Then returns true if all bytes in the range contain valid BCD digits (0x00-0x99)
     And returns false if any byte contains an invalid BCD nibble
 
+
 # Source: [JavaCard 3.2 API, isBCDFormat](../../../refs/javadoc-3.2/api_classic/javacardx/framework/math/BCDUtil.html#isBCDFormat(byte%5B%5D,short,short))

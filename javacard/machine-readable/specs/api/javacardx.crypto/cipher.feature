@@ -296,4 +296,5 @@ Feature: Cipher and Cipher.OneShot -- Symmetric and Asymmetric Cipher Operations
     And KeyBuilder.LENGTH_AES_256 provides 128-bit Key1 and 128-bit Key2
     And KeyBuilder.LENGTH_AES_512 provides 256-bit Key1 and 256-bit Key2
 
+
 # Source: [JavaCard 3.2 API, CIPHER_AES_XTS](../../../refs/javadoc-3.2/api_classic/javacardx/crypto/Cipher.html)

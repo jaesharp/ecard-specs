@@ -1,4 +1,5 @@
-@jcre @logical-channels
+@jcre
+@logical-channels
 Feature: Logical Channels
   Logical channels enable multiple applet instances to be concurrently selected
   on a single card. The Java Card RE uses SELECT FILE and MANAGE CHANNEL OPEN
@@ -9,7 +10,6 @@ Feature: Logical Channels
   # Source: [JCRE 3.0.5, s4 Logical Channels and Applet Selection](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4 Logical Channels and Applet Selection](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4 Logical Channels and Applet Selection](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
-
   Background:
     Given a Java Card secure element with a compliant JCRE implementation
     And the Java Card RE is initialized
@@ -17,52 +17,61 @@ Feature: Logical Channels
   # ---------------------------------------------------------------------------
   # 4.1 Logical Channels Overview
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.1 Logical Channels Overview](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4.1 Logical Channels Overview](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4.1 Logical Channels Overview](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Active applet instance definition
     Given an applet instance is currently selected on at least one logical channel
     Then it is considered an active applet instance
     And an active applet instance can be active on up to forty logical channels (20 per interface, 2 interfaces)
     And each active applet instance from a distinct context executes with a distinct CLEAR_ON_DESELECT transient memory segment
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.1 Logical Channels Overview](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4.1 Logical Channels Overview](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4.1 Logical Channels Overview](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Currently selected applet instance definition
     Given an applet instance is processing the current command
     Then it is the currently selected applet instance
     And there can only be one currently selected applet instance at a given time
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.1 Logical Channels Overview](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4.1 Logical Channels Overview](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4.1 Logical Channels Overview](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Basic logical channel after card reset
     When a card reset occurs on the contacted I/O interface
     Then only logical channel number 0 (the basic logical channel) becomes active
     And the basic logical channel is permanent and can never be closed as long as the I/O interface remains activated
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.1 Logical Channels Overview](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4.1 Logical Channels Overview](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4.1 Logical Channels Overview](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Conditions when no applet is active on a channel
     Then no applet is active on a logical channel when one of the following occurs:
-      | condition                                                                                  |
+      | condition                                                                                    |
       | Card reset and no default applet for basic channel, or default applet rejects selection      |
       | PICC activation and no default applet for basic channel, or default applet rejects selection |
       | MANAGE CHANNEL OPEN on basic channel opens new channel with no designated default applet     |
-      | MANAGE CHANNEL OPEN issued on non-basic channel where no applet is active                   |
-      | SELECT FILE command fails when attempting to select an applet instance                      |
+      | MANAGE CHANNEL OPEN issued on non-basic channel where no applet is active                    |
+      | SELECT FILE command fails when attempting to select an applet instance                       |
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.1 Logical Channels Overview](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=24)
   # Source: [JCRE 3.1, s4.1 Logical Channels Overview](../../refs/3.1/JCRESpec_3.1.pdf#page=27)
   # Source: [JCRE 3.2, s4.1 Logical Channels Overview](../../refs/3.2/JCRESpec_3.2.pdf#page=27)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Non-multiselectable applet protection
     Given an applet is not designed to be aware of multiple sessions
     And the applet is written for a single logical channel environment
@@ -73,79 +82,94 @@ Feature: Logical Channels
   # ---------------------------------------------------------------------------
   # 4.3 Multiselectable Applets
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Multiselectable applet interface requirement
     Given an applet has the capability of being selected on multiple logical channels at the same time
-    Or the applet accepts other applets belonging to the same context being selected simultaneously
+    And the applet accepts other applets belonging to the same context being selected simultaneously
     Then the applet is referred to as a multiselectable applet
     And it shall implement the javacard.framework.MultiSelectable interface
     And all applets within a CAP file shall be multiselectable or none shall be
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Context active definition and multiselection attempt
     Given an applet's context is active when either the applet itself or another applet from the same context is active
     When an attempt is made to select an applet instance when its context is already active
     Then this is referred to as a multiselection attempt
     And if successful, the applet instance becomes multiselected
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: First selection in context uses Applet.select
     Given an applet instance is not currently active and is the first one selected in its context
     When the applet is selected
     Then Applet.select method is called
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Subsequent multiselection uses MultiSelectable.select
     Given another applet instance from the same context is already active
     When a multiselection attempt occurs on this applet or another applet in the same context
     Then MultiSelectable.select method shall be called
     And the applet instance may accept or reject the multiselection attempt
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Non-multiselectable applet rejects multiselection
     Given an applet does not implement the MultiSelectable interface
     When a multiselection attempt is made on the applet
     Then the selection shall be rejected by the Java Card RE
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Multiselection case 1 - two instances same context share transient segment
     Given two distinct applet instances from within the same context are multiselected
     Then each applet instance shares the same CLEAR_ON_DESELECT memory transient segment
     And the applet instances share objects within the context firewall as well as their transient data
     And the Java Card RE shall not reset this CLEAR_ON_DESELECT transient segment until all applet instances within the context are deselected
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Multiselection case 2 - same instance on multiple channels
     Given the same applet instance is multiselected on two different logical channels simultaneously
     Then it shares the CLEAR_ON_DESELECT memory segment space across logical channels
     And the Java Card RE shall not reset the CLEAR_ON_DESELECT transient objects until all applet instances within the context are deselected
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.3 Multiselectable Applets](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=29)
   # Source: [JCRE 3.1, s4.3 Multiselectable Applets](../../refs/3.1/JCRESpec_3.1.pdf#page=32)
   # Source: [JCRE 3.2, s4.3 Multiselectable Applets](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: MultiSelectable.deselect called when still active elsewhere
     Given a multiselected applet instance is deselected from one logical channel
     And the applet instance is the last active applet instance in its context on that channel but remains active on other channels
@@ -155,25 +179,27 @@ Feature: Logical Channels
   # ---------------------------------------------------------------------------
   # 4.5 Opening and Closing Logical Channels
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.5 Opening and Closing Logical Channels](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=32)
   # Source: [JCRE 3.1, s4.5 Opening and Closing Logical Channels](../../refs/3.1/JCRESpec_3.1.pdf#page=36)
   # Source: [JCRE 3.2, s4.5 Opening and Closing Logical Channels](../../refs/3.2/JCRESpec_3.2.pdf#page=36)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Two ways to open a logical channel
     Then there are two ways to open a logical channel:
-      | method                                                                                           |
-      | SELECT FILE APDU with logical channel number in CLA byte; opens channel if currently closed       |
-      | MANAGE CHANNEL OPEN APDU command; opens a channel from another already-open logical channel       |
+      | method                                                                                      |
+      | SELECT FILE APDU with logical channel number in CLA byte; opens channel if currently closed |
+      | MANAGE CHANNEL OPEN APDU command; opens a channel from another already-open logical channel |
 
   # ---------------------------------------------------------------------------
   # 4.5.1 MANAGE CHANNEL OPEN
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.6.1 Applet Selection with MANAGE CHANNEL OPEN](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=34)
   # Source: [JCRE 3.1, s4.6.1 Applet Selection with MANAGE CHANNEL OPEN](../../refs/3.1/JCRESpec_3.1.pdf#page=37)
   # Source: [JCRE 3.2, s4.6.1 Applet Selection with MANAGE CHANNEL OPEN](../../refs/3.2/JCRESpec_3.2.pdf#page=38)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: MANAGE CHANNEL OPEN step-by-step processing
     Given the Java Card RE receives a MANAGE CHANNEL OPEN command on an I/O interface
     # Step 1: CLA and variant parsing
@@ -212,11 +238,12 @@ Feature: Logical Channels
   # ---------------------------------------------------------------------------
   # 4.7.1 MANAGE CHANNEL CLOSE
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.7.1 MANAGE CHANNEL CLOSE Command](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=38)
   # Source: [JCRE 3.1, s4.7.1 MANAGE CHANNEL CLOSE Command](../../refs/3.1/JCRESpec_3.1.pdf#page=42)
   # Source: [JCRE 3.2, s4.7.1 MANAGE CHANNEL CLOSE Command](../../refs/3.2/JCRESpec_3.2.pdf#page=42)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: MANAGE CHANNEL CLOSE step-by-step processing
     Given the Java Card RE receives a MANAGE CHANNEL CLOSE command on an I/O interface
     # Step 1: CLA and command parsing
@@ -236,11 +263,12 @@ Feature: Logical Channels
   # ---------------------------------------------------------------------------
   # 4.2 Default Applets
   # ---------------------------------------------------------------------------
-
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.2.1 Card Reset Behavior](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=27)
   # Source: [JCRE 3.1, s4.2.1 Card Reset Behavior](../../refs/3.1/JCRESpec_3.1.pdf#page=30)
   # Source: [JCRE 3.2, s4.2.1 Card Reset Behavior](../../refs/3.2/JCRESpec_3.2.pdf#page=31)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Card reset behavior for default applet
     Given a card reset (or power on) occurs on the contacted I/O interface
     Then the Java Card RE performs its initialization
@@ -250,10 +278,12 @@ Feature: Logical Channels
     And when a default applet becomes active upon card reset it shall not require its process method to be called (no SELECT FILE APDU)
     And the Java Card RE ensures the ATR was sent and the card is ready to accept APDU commands
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.2.2 Proximity Card (PICC) Activation Behavior](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=28)
   # Source: [JCRE 3.1, s4.2.2 Proximity Card (PICC) Activation Behavior](../../refs/3.1/JCRESpec_3.1.pdf#page=31)
   # Source: [JCRE 3.2, s4.2.2 Proximity Card (PICC) Activation Behavior](../../refs/3.2/JCRESpec_3.2.pdf#page=31)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: PICC activation behavior for default applet
     Given the PICC activation sequence completes successfully on the contactless interface
     Then the Java Card RE performs initialization if the contacted interface is not already active
@@ -264,10 +294,12 @@ Feature: Logical Channels
     And if select throws an exception or returns false or returns true during an active transaction, no applet is active
     And the default applet shall not require its process method to be called
 
-  @v3.0.5 @v3.1 @v3.2
   # Source: [JCRE 3.0.5, s4.2.3 Default Applet Selection on Opening New Channel](../../refs/3.0.5/JCRESpec_3.0.5.pdf#page=28)
   # Source: [JCRE 3.1, s4.2.3 Default Applet Selection Behavior on Opening a New Channel](../../refs/3.1/JCRESpec_3.1.pdf#page=31)
   # Source: [JCRE 3.2, s4.2.3 Default Applet Selection Behavior on Opening a New Channel](../../refs/3.2/JCRESpec_3.2.pdf#page=32)
+  @v3.0.5
+  @v3.1
+  @v3.2
   Scenario: Default applet on opening a new channel
     Given a MANAGE CHANNEL command is issued on the basic logical channel and a new channel is opened
     When there is a designated default applet instance for the newly opened channel

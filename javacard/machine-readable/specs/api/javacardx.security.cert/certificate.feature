@@ -83,4 +83,5 @@ Feature: Certificate and CertificateParser -- Digital Certificate Framework
     When CertificateException.throwIt(short reason) is called
     Then a CertificateException is thrown with the specified reason code
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/security/cert/CertificateException.html#throwIt(short))

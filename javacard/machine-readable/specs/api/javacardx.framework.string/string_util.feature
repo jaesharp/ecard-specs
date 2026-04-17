@@ -148,4 +148,5 @@ Feature: StringUtil and StringException -- String Processing Utilities
     When StringException.throwIt(short reason) is called
     Then a StringException is thrown with the specified reason code
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/framework/string/StringException.html#throwIt(short))

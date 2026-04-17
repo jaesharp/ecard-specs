@@ -25,4 +25,5 @@ Feature: Annotations -- StringDef and StringPool
     And it indicates the class contains @StringDef annotated fields for pooling
     And the annotation has retention policy for compile/build time processing
 
+
 # Source: [JavaCard 3.2 API, StringPool](../../../refs/javadoc-3.2/api_classic/javacardx/annotations/StringPool.html)

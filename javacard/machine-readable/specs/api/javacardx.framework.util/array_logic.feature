@@ -45,4 +45,5 @@ Feature: ArrayLogic -- Generic Array Operations Utility
     When ArrayLogic.arrayFindGeneric(Object theArray, short off, Object valArray, short valOff) is called
     Then returns the index of the first matching element, or -1 if not found
 
+
 # Source: [JavaCard 3.2 API, ArrayLogic.arrayFindGeneric](../../../refs/javadoc-3.2/api_classic/javacardx/framework/util/ArrayLogic.html#arrayFindGeneric(Object,short,Object,short))

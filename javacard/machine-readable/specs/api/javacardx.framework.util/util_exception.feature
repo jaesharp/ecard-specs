@@ -24,4 +24,5 @@ Feature: UtilException -- Utility Package Exception
     Then a UtilException is thrown with the specified reason code
     And the JCRE may reuse a single UtilException instance
 
+
 # Source: [JavaCard 3.2 API, UtilException.throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/framework/util/UtilException.html#throwIt(short))

@@ -35,4 +35,5 @@ Feature: KeyEncryption -- Encrypted Key Data Access Interface
     When getKeyCipher() is called
     Then null is returned indicating no decryption is performed
 
+
 # Source: [JavaCard 3.2 API, getKeyCipher](../../../refs/javadoc-3.2/api_classic/javacardx/crypto/KeyEncryption.html#getKeyCipher)

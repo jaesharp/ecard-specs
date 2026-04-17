@@ -244,4 +244,5 @@ Feature: BER-TLV -- Tag-Length-Value Framework (BERTag, BERTLV, Constructed/Prim
     When TLVException.throwIt(short reason) is called
     Then a TLVException is thrown with the specified reason code
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/framework/tlv/TLVException.html#throwIt(short))

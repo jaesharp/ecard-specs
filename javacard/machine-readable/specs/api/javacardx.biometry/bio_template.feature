@@ -174,4 +174,5 @@ Feature: Biometry 1:1 -- BioTemplate, OwnerBioTemplate, SharedBioTemplate, BioBu
     Then a BioException is thrown with the specified reason code
     And the JCRE may reuse a single BioException instance
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/biometry/BioException.html#throwIt(short))

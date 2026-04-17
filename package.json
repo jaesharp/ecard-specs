@@ -4,7 +4,8 @@
   "description": "GlobalPlatform, JavaCard, EMV, and JCOP specification collection. Run `./download.sh` to fetch or update all freely available documents.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx prettier --check './**/*.md' './**/*.feature'",
+    "format": "npx prettier --write './**/*.md' './**/*.feature'"
   },
   "repository": {
     "type": "git",

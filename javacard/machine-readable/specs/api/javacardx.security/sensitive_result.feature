@@ -63,4 +63,5 @@ Feature: SensitiveResult -- Secure Result Assertion
     When SensitiveResult.reset() is called
     Then the internal sensitive result state is cleared
 
+
 # Source: [JavaCard 3.2 API, reset](../../../refs/javadoc-3.2/api_classic/javacardx/security/SensitiveResult.html#reset)

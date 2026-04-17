@@ -70,4 +70,5 @@ Feature: MonotonicCounter -- Persistent Monotonically Increasing Counter
     When equalsMax() is called
     Then returns true if the counter has reached its maximum representable value
 
+
 # Source: [JavaCard 3.2 API, equalsMax](../../../refs/javadoc-3.2/api_classic/javacardx/security/util/MonotonicCounter.html#equalsMax)

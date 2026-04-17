@@ -197,4 +197,5 @@ Feature: Biometry 1:N -- BioMatcher, BioTemplateData, and Supporting Classes
     When Bio1toNException.throwIt(short reason) is called
     Then a Bio1toNException is thrown with the specified reason code
 
+
 # Source: [JavaCard 3.2 API, throwIt](../../../refs/javadoc-3.2/api_classic/javacardx/biometry1toN/Bio1toNException.html#throwIt(short))

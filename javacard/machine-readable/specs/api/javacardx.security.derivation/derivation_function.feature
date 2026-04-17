@@ -127,4 +127,5 @@ Feature: DerivationFunction and KDF Specifications -- Key Derivation Framework
     And TLSKDFExpandLabelSpec defines static byte constant "LABEL_PREFIX_TLS13" for TLS 1.3 label prefix
     And TLSKDFExpandLabelSpec defines static byte constant "LABEL_PREFIX_DTLS13" for DTLS 1.3 label prefix
 
+
 # Source: [JavaCard 3.2 API, TLSKDFExpandLabelSpec](../../../refs/javadoc-3.2/api_classic/javacardx/security/derivation/TLSKDFExpandLabelSpec.html)

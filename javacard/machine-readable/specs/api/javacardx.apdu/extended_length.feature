@@ -26,4 +26,5 @@ Feature: ExtendedLength -- Extended Length APDU Support Marker Interface
     When an extended length APDU command is received
     Then the JCRE does not deliver the extended APDU to the applet
 
+
 # Source: [JavaCard 3.2 API, ExtendedLength](../../../refs/javadoc-3.2/api_classic/javacardx/apdu/ExtendedLength.html)

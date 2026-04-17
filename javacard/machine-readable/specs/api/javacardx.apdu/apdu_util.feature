@@ -41,4 +41,5 @@ Feature: APDUUtil -- APDU CLA Byte Analysis Utility
     Then returns true if the CLA byte is a valid command class byte per ISO 7816-4
     And returns false for invalid CLA values (e.g. 0xFF)
 
+
 # Source: [JavaCard 3.2 API, isValidCLA](../../../refs/javadoc-3.2/api_classic/javacardx/apdu/util/APDUUtil.html#isValidCLA(byte%5B%5D,short))

@@ -149,4 +149,5 @@ Feature: AEADCipher -- Authenticated Encryption with Associated Data
     When verifyTag is called with an unsupported tag length
     Then CryptoException is thrown with reason code ILLEGAL_VALUE
 
+
 # Source: [JavaCard 3.2 API, verifyTag](../../../refs/javadoc-3.2/api_classic/javacardx/crypto/AEADCipher.html#verifyTag(byte%5B%5D,short,short,short))

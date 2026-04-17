@@ -44,4 +44,5 @@ Feature: JCint -- 32-bit Integer Support Utility
     Then returns an int array that is a view over the specified byte array region
     And changes to the int array are reflected in the underlying byte array and vice versa
 
+
 # Source: [JavaCard 3.2 API, JCint.makeIntArrayView](../../../../refs/javadoc-3.2/api_classic/javacardx/framework/util/intx/JCint.html#makeIntArrayView(byte%5B%5D,short,short))
