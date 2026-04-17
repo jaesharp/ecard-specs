@@ -185,15 +185,39 @@ Feature: BER-TLV -- Tag-Length-Value Framework (BERTag, BERTLV, Constructed/Prim
 
   # ========== ConstructedBERTLV ==========
 
-  Scenario: ConstructedBERTLV manages constructed TLV with child TLVs
+  Scenario: ConstructedBERTLV.init initializes with child TLVs
     Given a ConstructedBERTLV instance
     Then init(ConstructedBERTag tag, BERTLV[] childTLVs, short childOff, short childLen) initializes with children
-    And init(byte[] bArray, short bOff, short bLen) parses from encoded bytes
-    And init(ConstructedBERTag tag, byte[] vArray, short vOff, short vLen) initializes from encoded value
-    And append(BERTLV aTLV) appends a child TLV
-    And delete(BERTag aTag, short occurrence) removes a child TLV by tag
-    And find(BERTag aTag) finds a child TLV by tag
-    And findNext(BERTag aTag, BERTLV aTLV, short occurrence) finds subsequent children
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.init parses from encoded bytes
+    Given a ConstructedBERTLV instance
+    Then init(byte[] bArray, short bOff, short bLen) parses from encoded bytes
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.init initializes from encoded value bytes
+    Given a ConstructedBERTLV instance
+    Then init(ConstructedBERTag tag, byte[] vArray, short vOff, short vLen) initializes from encoded value
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.append appends a child TLV
+    Given a ConstructedBERTLV instance
+    Then append(BERTLV aTLV) appends a child TLV
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.delete removes a child TLV by tag
+    Given a ConstructedBERTLV instance
+    Then delete(BERTag aTag, short occurrence) removes a child TLV by tag
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.find finds a child TLV by tag
+    Given a ConstructedBERTLV instance
+    Then find(BERTag aTag) finds a child TLV by tag
+    # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
+
+  Scenario: ConstructedBERTLV.findNext finds subsequent children by tag
+    Given a ConstructedBERTLV instance
+    Then findNext(BERTag aTag, BERTLV aTLV, short occurrence) finds subsequent children
     # Source: [JavaCard 3.2 API, ConstructedBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/ConstructedBERTLV.html)
 
   Scenario: ConstructedBERTLV static methods operate on encoded TLVs
