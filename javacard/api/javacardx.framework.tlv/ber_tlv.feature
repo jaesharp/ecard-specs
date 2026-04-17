@@ -33,26 +33,65 @@ Feature: BER-TLV -- Tag-Length-Value Framework (BERTag, BERTLV, Constructed/Prim
     Then a BERTag instance (Primitive or Constructed) is created from the encoded tag bytes
     # Source: [JavaCard 3.2 API, getInstance](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html#getInstance(byte%5B%5D,short))
 
-  Scenario: BERTag static methods operate on encoded tag data
+  Scenario: BERTag.size returns the number of encoded tag bytes
     Then BERTag.size(byte[] bArray, short bOff) returns the number of bytes of the encoded tag
-    And BERTag.tagNumber(byte[] bArray, short bOff) returns the tag number
-    And BERTag.isConstructed(byte[] bArray, short bOff) returns true if the tag is constructed
-    And BERTag.tagClass(byte[] bArray, short bOff) returns the tag class mask constant
-    And BERTag.toBytes(short tagNum, byte tagClass, boolean isConstructed, byte[] outArray, short bOff) encodes a tag
-    And BERTag.verifyFormat(byte[] bArray, short bOff) validates tag encoding
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.tagNumber returns the tag number
+    Then BERTag.tagNumber(byte[] bArray, short bOff) returns the tag number
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.isConstructed checks whether a tag is constructed
+    Then BERTag.isConstructed(byte[] bArray, short bOff) returns true if the tag is constructed
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.tagClass returns the tag class mask constant
+    Then BERTag.tagClass(byte[] bArray, short bOff) returns the tag class mask constant
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.toBytes encodes a tag into a byte array
+    Then BERTag.toBytes(short tagNum, byte tagClass, boolean isConstructed, byte[] outArray, short bOff) encodes a tag
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.verifyFormat validates tag encoding
+    Then BERTag.verifyFormat(byte[] bArray, short bOff) validates tag encoding
     # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
 
   # ========== BERTag Instance Methods ==========
 
-  Scenario: BERTag instance methods query tag properties
+  Scenario: BERTag.init initializes a tag from encoded bytes
     Given a BERTag instance
     Then init(byte[] bArray, short bOff) initializes the tag from encoded bytes
-    And size() returns the number of encoded tag bytes
-    And tagNumber() returns the tag number
-    And isConstructed() returns true if the tag is constructed
-    And tagClass() returns the tag class
-    And toBytes(byte[] dest, short bOff) serializes the tag
-    And equals(BERTag otherTag) compares tags for equality
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.size returns the number of encoded tag bytes for an instance
+    Given a BERTag instance
+    Then size() returns the number of encoded tag bytes
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.tagNumber returns the tag number for an instance
+    Given a BERTag instance
+    Then tagNumber() returns the tag number
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.isConstructed checks whether an instance tag is constructed
+    Given a BERTag instance
+    Then isConstructed() returns true if the tag is constructed
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.tagClass returns the tag class for an instance
+    Given a BERTag instance
+    Then tagClass() returns the tag class
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.toBytes serializes the tag to a byte array
+    Given a BERTag instance
+    Then toBytes(byte[] dest, short bOff) serializes the tag
+    # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
+
+  Scenario: BERTag.equals compares tags for equality
+    Given a BERTag instance
+    Then equals(BERTag otherTag) compares tags for equality
     # Source: [JavaCard 3.2 API, BERTag](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/BERTag.html)
 
   # ========== PrimitiveBERTag ==========
@@ -109,14 +148,34 @@ Feature: BER-TLV -- Tag-Length-Value Framework (BERTag, BERTLV, Constructed/Prim
 
   # ========== PrimitiveBERTLV ==========
 
-  Scenario: PrimitiveBERTLV manages primitive TLV values
+  Scenario: PrimitiveBERTLV.init initializes with tag and value
     Given a PrimitiveBERTLV instance
     Then init(PrimitiveBERTag tag, byte[] vArray, short vOff, short vLen) initializes with tag and value
-    And init(byte[] bArray, short bOff, short bLen) parses from encoded bytes
-    And getValue(byte[] dest, short dOff) copies the value to dest
-    And getValueOffset(byte[] bArray, short bOff) returns the offset of the value in encoded bytes
-    And appendValue(PrimitiveBERTag tag, byte[] vArray, short vOff, short vLen) appends to the value
-    And replaceValue(byte[] vArray, short vOff, short vLen) replaces the current value
+    # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
+
+  Scenario: PrimitiveBERTLV.init parses from encoded bytes
+    Given a PrimitiveBERTLV instance
+    Then init(byte[] bArray, short bOff, short bLen) parses from encoded bytes
+    # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
+
+  Scenario: PrimitiveBERTLV.getValue copies the value to a destination array
+    Given a PrimitiveBERTLV instance
+    Then getValue(byte[] dest, short dOff) copies the value to dest
+    # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
+
+  Scenario: PrimitiveBERTLV.getValueOffset returns the offset of the value in encoded bytes
+    Given a PrimitiveBERTLV instance
+    Then getValueOffset(byte[] bArray, short bOff) returns the offset of the value in encoded bytes
+    # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
+
+  Scenario: PrimitiveBERTLV.appendValue appends to the value
+    Given a PrimitiveBERTLV instance
+    Then appendValue(PrimitiveBERTag tag, byte[] vArray, short vOff, short vLen) appends to the value
+    # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
+
+  Scenario: PrimitiveBERTLV.replaceValue replaces the current value
+    Given a PrimitiveBERTLV instance
+    Then replaceValue(byte[] vArray, short vOff, short vLen) replaces the current value
     # Source: [JavaCard 3.2 API, PrimitiveBERTLV](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacardx/framework/tlv/PrimitiveBERTLV.html)
 
   Scenario: PrimitiveBERTLV static appendValue creates from tag and value

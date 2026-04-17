@@ -33,14 +33,49 @@ Feature: APDU - Application Protocol Data Unit
   # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
   @v3.0.5 @v3.1 @v3.2
-  Scenario: State constants are ordered
+  Scenario: STATE_INITIAL precedes STATE_PARTIAL_INCOMING
     Given the APDU state constants
     Then STATE_INITIAL < STATE_PARTIAL_INCOMING
-    And STATE_PARTIAL_INCOMING < STATE_FULL_INCOMING
-    And STATE_FULL_INCOMING < STATE_OUTGOING
-    And STATE_OUTGOING < STATE_OUTGOING_LENGTH_KNOWN
-    And STATE_OUTGOING_LENGTH_KNOWN < STATE_PARTIAL_OUTGOING
-    And STATE_PARTIAL_OUTGOING < STATE_FULL_OUTGOING
+
+  # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  @v3.0.5 @v3.1 @v3.2
+  Scenario: STATE_PARTIAL_INCOMING precedes STATE_FULL_INCOMING
+    Given the APDU state constants
+    Then STATE_PARTIAL_INCOMING < STATE_FULL_INCOMING
+
+  # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  @v3.0.5 @v3.1 @v3.2
+  Scenario: STATE_FULL_INCOMING precedes STATE_OUTGOING
+    Given the APDU state constants
+    Then STATE_FULL_INCOMING < STATE_OUTGOING
+
+  # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  @v3.0.5 @v3.1 @v3.2
+  Scenario: STATE_OUTGOING precedes STATE_OUTGOING_LENGTH_KNOWN
+    Given the APDU state constants
+    Then STATE_OUTGOING < STATE_OUTGOING_LENGTH_KNOWN
+
+  # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  @v3.0.5 @v3.1 @v3.2
+  Scenario: STATE_OUTGOING_LENGTH_KNOWN precedes STATE_PARTIAL_OUTGOING
+    Given the APDU state constants
+    Then STATE_OUTGOING_LENGTH_KNOWN < STATE_PARTIAL_OUTGOING
+
+  # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  # Source: [JavaCard 3.2 API, APDU ](../../java_card_spec-3_2_0-b_185-18_jan_2023/api_classic/javacard/framework/APDU.html#APDU(classdescription)
+  @v3.0.5 @v3.1 @v3.2
+  Scenario: STATE_PARTIAL_OUTGOING precedes STATE_FULL_OUTGOING
+    Given the APDU state constants
+    Then STATE_PARTIAL_OUTGOING < STATE_FULL_OUTGOING
 
   # Source: [JavaCard 3.0.5 API, APDU ](../../java_card_kit-classic-3_0_5-ga-spec-doc-b33-03_jun_2015/javacard_specifications-3_0_5-RR/classic/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
   # Source: [JavaCard 3.1 API, APDU ](../../java_card_spec-3_1_0-u5-b_70-09_mar_2021/api_classic/javacard/framework/APDU.html#APDU(fieldsummary)
