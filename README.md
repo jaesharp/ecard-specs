@@ -1,100 +1,107 @@
 # Electronic Embedded Card Reference/Standards Library
 
-GlobalPlatform, JavaCard, EMV, and JCOP specification collection. Run `./download.sh` to fetch or
-update all freely available documents.
+Curated collection of smart card specifications (GlobalPlatform, Java Card, EMV, JCOP, ISO
+14443/7816) with machine-readable conformance requirements transcribed into Gherkin feature files.
 
-## GlobalPlatform Card Specifications
+## Repository Layout
 
-| Document                          | Version | Ref         | Notes                                   |
-| --------------------------------- | ------- | ----------- | --------------------------------------- |
-| Card Specification                | v2.1.1  | GPC_SPE_006 | Primary spec for JCOP10-31bio           |
-| Card Specification                | v2.2    | --          | Intermediate, SCP02 enhancements        |
-| Card Specification                | v2.2.1  | --          | Intermediate, clarifications            |
-| Card Specification                | v2.3.1  | GPC_SPE_034 | Current CC-certified, normative clarity |
-| Amendment A: Confidential CCM     | v1.0.1  | GPC_SPE_007 | DAP verification, delegated management  |
-| Amendment A: Confidential CCM     | v1.2    | GPC_SPE_007 | Latest freely available public release  |
-| Amendment B: RAM over HTTP        | v1.1.3  | GPC_SPE_011 | SCP81, OTA card management              |
-| Amendment C: Contactless Services | v1.2    | GPC_SPE_025 | ISO 14443 applet configuration          |
-| Amendment D: SCP03                | v1.1.2  | GPC_SPE_014 | AES-based secure channel                |
-| Amendment E: Security Upgrade     | v1.1    | GPC_SPE_042 | ECC/RSA (re-integrated into GPCS)       |
-| UICC Contactless Extension        | v1.0    | --          | Bridges GP + UICC worlds                |
-| SE Access Control                 | v1.1    | GPD_SPE_013 | Android HCE integration                 |
-| Mapping Guidelines 2.1.1          | v1.0.1  | --          | OP 2.0.1 -> GP 2.1.1 migration          |
+```
+specs/                          Machine-readable specifications
+  javacard/                     Java Card platform (3.0.5, 3.1, 3.2)
+    application-programming-interface/
+    virtual-machine/
+    runtime-environment/
 
-## JavaCard Platform Specifications
+docs/                           Source documents (PDFs, Javadoc archives)
+  javacard/                     Java Card specs, API Javadoc, bookmark indices
+  globalplatform/               GP Card Spec v2.1.1--v2.3.1, Amendments A--E
+  emv/                          EMV v4.3 Books 1--4, Contactless Books A--D
+  ibm-jcop/                     JCOP product family briefs
+  iso/                          ISO 14443 reference (NXP AN10834)
+  research/                     Academic papers, ecosystem catalogs
+  reference-implementations/    Oracle JCDK v25.1 (simulator, tools, plugin)
 
-| Document                   | Version | Notes                                              |
-| -------------------------- | ------- | -------------------------------------------------- |
-| JCVM Specification         | 2.1.1   | Bytecode set, verification, CAP format             |
-| JCRE Specification         | 2.1.1   | Runtime, applet lifecycle, firewall                |
-| JavaCard API               | 2.1.1   | Framework classes, crypto API                      |
-| JC 2.1.1 Release Notes     | 2.1.1   | Overview and errata                                |
-| JCVM Specification         | 2.2.2   | Many OSS applets target this version               |
-| JCRE Specification         | 2.2.2   | Runtime for 2.2.2 applet targets                   |
-| JavaCard API               | 2.2.2   | API for 2.2.2 applet targets                       |
-| JCVM Specification         | 3.0.5   | Current classic edition (from GitHub mirror)       |
-| JCRE Specification         | 3.0.5   | Runtime for classic edition                        |
-| Spec + API Javadoc archive | 3.0.5   | Oracle spec bundle with API documentation          |
-| JCVM Specification         | 3.1     | Latest normative clarity for ambiguous 2.1.1 areas |
-| JCRE Specification         | 3.1     | Latest runtime semantics                           |
-| Spec + API Javadoc archive | 3.1.0   | Oracle spec bundle with API documentation          |
-| JCVM Specification         | 3.2     | From GitHub mirror (usasmartcard/Javacard-API)     |
-| JCRE Specification         | 3.2     | From GitHub mirror                                 |
-| JC Platform Options        | 3.2     | Configuration options reference                    |
-| Spec + API Javadoc archive | 3.2.0   | Oracle spec bundle with API documentation          |
-| Applet Developers Guide    | --      | From GitHub mirror                                 |
+tools/                          Formatting and validation tooling (prettier)
+```
 
-## IBM JCOP Product Documentation
+## Specifications
 
-| Document               | Notes                                 |
-| ---------------------- | ------------------------------------- |
-| JCOP Family Overview   | All variants: JCOP10/20/21/21id/31bio |
-| JCOP10 Technical Brief | 8KB EEPROM, SCP01, RSA-1024 max       |
-| JCOP20 Technical Brief | 16KB, SCP02, RSA-2048, VOP Config 2   |
+### [Java Card Platform](specs/javacard/)
 
-## ISO / Reference Materials
+Conformance requirements for the Java Card Classic Edition, transcribed from Oracle's normative
+specifications into versioned, cited Gherkin scenarios.
 
-| Document                       | Source  | Notes                            |
-| ------------------------------ | ------- | -------------------------------- |
-| ISO 14443 Type A (NXP AN10834) | NXP     | Contactless overview for JCOP21+ |
-| ISO 7816-3 (CardWerk)          | Web ref | T=0, T=1 protocol                |
-| ISO 7816-4 (CardWerk)          | Web ref | APDU structure                   |
+- [Application Programming Interface](specs/javacard/application-programming-interface/) -- all API
+  classes across `javacard.framework`, `javacard.security`, `javacardx.*`, and the
+  `java.lang`/`java.io`/`java.rmi` subset
+- [Virtual Machine](specs/javacard/virtual-machine/) -- data types, all 109 bytecodes, CAP file
+  format, token-based linking, language subset
+- [Runtime Environment](specs/javacard/runtime-environment/) -- applet lifecycle, APDU dispatch,
+  firewall, transactions, logical channels, transient objects
 
-## EMV Specifications
+Each scenario is tagged with applicable versions (`@v3.0.5`, `@v3.1`, `@v3.2`) and includes direct
+hyperlinks to the source document (PDF page anchors or Javadoc HTML method anchors).
 
-| Document                            | Version | Notes                                 |
-| ----------------------------------- | ------- | ------------------------------------- |
-| Book 1: ICC to Terminal Interface   | v4.3    | Physical interface, ATR, protocol     |
-| Book 2: Security and Key Management | v4.3    | RSA, SHA-1, certificate chain         |
-| Book 3: Application Specification   | v4.3    | SELECT, GPO, READ RECORD, auth flow   |
-| Book 4: Other Interfaces            | v4.3    | Cardholder/attendant interface        |
-| Contactless Book A                  | v2.6    | Architecture and general requirements |
-| Contactless Book B                  | v2.6    | Entry point specification             |
-| Contactless Book C-2                | v2.6    | Kernel 2 (MasterCard) specification   |
-| Contactless Book D                  | v2.6    | Contactless communication protocol    |
+## Source Documents
 
-## Research
+### GlobalPlatform
 
-| Document                               | Notes                                       |
-| -------------------------------------- | ------------------------------------------- |
-| CARDIS 2023: JavaCard feature adoption | Certified product + OSS feature coverage    |
-| JavaCard Curated Applet List           | Ecosystem catalog for certification testing |
+GP Card Specification versions 2.1.1 through 2.3.1, plus Amendments A (Confidential CCM), B (RAM
+over HTTP), C (Contactless Services), D (SCP03), E (Security Upgrade), UICC Contactless Extension,
+SE Access Control, and migration guidelines. See [docs/globalplatform/](docs/globalplatform/).
 
-## Reference Implementations
+### Java Card
 
-| Archive                           | Notes                                         |
-| --------------------------------- | --------------------------------------------- |
-| Oracle JCDK Simulator (Linux x86) | v25.1, jcsl binary + samples + client libs    |
-| Oracle JCDK Simulator (Windows)   | v25.1, same contents as Linux variant         |
-| Oracle JCDK Tools                 | v25.1, converter + verifier for CAP files     |
-| Oracle JCDK Eclipse Plugin        | v25.1, IDE integration for applet development |
+JCVM and JCRE specification PDFs for versions 2.1.1, 2.2.2, 3.0.5, 3.1, and 3.2 (Classic Edition).
+API Javadoc archives for 3.0.5, 3.1, and 3.2. Applet Developer's Guide. See
+[docs/javacard/](docs/javacard/).
 
-See `reference-implementations/README.md` for extraction and usage instructions.
+### EMV
 
-## Not Freely Available (require account/purchase)
+EMV v4.3 contact Books 1--4 (ICC interface, security, application spec, other interfaces) and
+Contactless v2.6 Books A--D (architecture, entry point, Kernel 2, communication protocol). See
+[docs/emv/](docs/emv/).
 
-- GP UICC Configuration v2.0 (GPC_GUI_010) -- GP portal download flow
+### IBM JCOP
+
+Product documentation for the JCOP smart card OS family (JCOP10, JCOP20, JCOP21, JCOP31bio). See
+[docs/ibm-jcop/](docs/ibm-jcop/).
+
+### ISO / Reference Materials
+
+NXP AN10834 (ISO 14443 Type A contactless selection). CardWerk web references for ISO 7816-3/4. See
+[docs/iso/](docs/iso/).
+
+### Research
+
+CARDIS 2023 paper on Java Card feature adoption and the crocs-muni curated applet list. See
+[docs/research/](docs/research/).
+
+### Reference Implementations
+
+Oracle Java Card Development Kit v25.1 archives (simulator, tools, Eclipse plugin). See
+[docs/reference-implementations/](docs/reference-implementations/).
+
+## Setup
+
+```sh
+# Fetch/update freely available spec PDFs
+./download.sh
+
+# Install formatting tools and git hooks
+./tools/setup.sh
+
+# Format all markdown and feature files
+npm --prefix tools run format
+
+# Check formatting compliance
+npm --prefix tools test
+```
+
+## Not Freely Available
+
+- GP UICC Configuration v2.0 (GPC_GUI_010) -- GP portal
 - GP Amendment B v1.2, C v1.3 -- GP portal (have B v1.1.3, C v1.2)
 - Visa OpenPlatform (VOP) Card Implementation Requirements -- proprietary
-- ISO 7816-3/4 (official) -- CHF 168-258 from ISO (using CardWerk web refs)
+- ISO 7816-3/4 official -- CHF 168--258 from ISO (using CardWerk web refs)
 - JCOP31bio biometric interface -- proprietary NXP extension
